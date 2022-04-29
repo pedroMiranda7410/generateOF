@@ -1,0 +1,21 @@
+qgd-controle-pedidos/ - PEDRO - c1317641 - 2022-03-30 - 2022-04-28
+
+MODIFICAÇÃO DE CLASSE JAVA
+
+ 	qgd-controle-pedidos/src/main/java/br/com/bb/qgd/models/PedidoAed.java#308c45dd87
+	qgd-controle-pedidos/src/main/java/br/com/bb/qgd/rest/PedidosAedResource.java#e70ff141e5
+	qgd-controle-pedidos/src/main/java/br/com/bb/qgd/rest/PedidosAltResource.java#e70ff141e5
+
+    Total: 3 arquivos
+    Pontuação: 10.5 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	qgd-controle-pedidos/pom.xml#ca463d474d
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+Total Geral: 4 arquivos
+Pontuação Geral: 15.5 SISBB
+

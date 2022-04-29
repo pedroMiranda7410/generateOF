@@ -1,0 +1,39 @@
+qgd-credenciamento-api/ - PEDRO - c1317641 - 2022-03-30 - 2022-04-28
+
+MODIFICAÇÃO DE CLASSE JAVA
+
+ 	qgd-credenciamento-api/src/main/java/br/com/bb/qgd/dao/PedidoDao.java#9859705e21
+	qgd-credenciamento-api/src/main/java/br/com/bb/qgd/dao/ProtocoloDao.java#9859705e21
+	qgd-credenciamento-api/src/main/java/br/com/bb/qgd/rest/ProtocoloResource.java#5fee39224e
+	qgd-credenciamento-api/src/main/java/br/com/bb/qgd/models/Pedido.java#64eb155c94
+	qgd-credenciamento-api/src/main/java/br/com/bb/qgd/rest/PedidosResource.java#64eb155c94
+
+    Total: 5 arquivos
+    Pontuação: 17.5 SISBB
+
+CRIAÇÃO DE TESTES
+
+ 	qgd-credenciamento-api/src/test/java/br/com/bb/qgd/HelloWorldResourceTest.java#46716ba106
+	qgd-credenciamento-api/src/test/java/br/com/bb/qgd/rest/PedidosResourceTest.java#46716ba106
+
+    Total: 2 arquivos
+    Pontuação: 16 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	qgd-credenciamento-api/pom.xml#5fee39224e
+	run/docker-compose-vpn.yaml#64eb155c94
+	qgd-credenciamento-api/src/main/resources/application.properties#64eb155c94
+
+    Total: 3 arquivos
+    Pontuação: 15 SISBB
+
+OUTROS
+
+ A	package-lock.json#5fee39224e
+D	qgd-credenciamento-api/src/main/java/br/com/bb/qgd/rest/birra.jpg#5fee39224e
+M	qgd-credenciamento-api/src/main/resources/scripts/carga_testes.sql#64eb155c94
+
+Total Geral: 13 arquivos
+Pontuação Geral: 48.5 SISBB
+

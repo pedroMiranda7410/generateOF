@@ -1,0 +1,21 @@
+qgd-gsti-api/ - PEDRO - c1317641 - 2022-02-28 - 2022-03-30
+
+MODIFICAÇÃO DE CLASSE JAVA
+
+ 	qgd-gsti-api/src/main/java/br/com/bb/qgd/services/RequisicaoService.java#0cbd7b3942
+	qgd-gsti-api/src/main/java/br/com/bb/qgd/dao/FuncionarioDao.java#4e167fbd2b
+	qgd-gsti-api/src/main/java/br/com/bb/qgd/models/Funcionario.java#4e167fbd2b
+
+    Total: 3 arquivos
+    Pontuação: 10.5 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	qgd-gsti-api/pom.xml#9aab21ea35
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+Total Geral: 4 arquivos
+Pontuação Geral: 15.5 SISBB
+

@@ -1,0 +1,12 @@
+des-qgd-gsti-api/ - PEDRO - c1317641 - 2022-02-28 - 2022-03-30
+
+MODIFICAÇÃO DE XML
+
+ 	des-qgd-gsti-api/values.yaml#499c423ac0
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+Total Geral: 1 arquivos
+Pontuação Geral: 5 SISBB
+

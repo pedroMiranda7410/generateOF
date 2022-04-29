@@ -1,0 +1,30 @@
+qgd-fornecedor-pfnweb/ - PEDRO - c1317641 - 2022-02-28 - 2022-03-30
+
+ALTERAÇÃO DE HTML
+
+ 	qgd-fornecedor-pfnweb/src/main/webapp/v1/spas/relatorios/agendamento/relatorios-agendamento-tpl.html#a23ebfa867
+	qgd-fornecedor-pfnweb/src/main/webapp/v1/spas/relatorios/inviabilidade/relatorios-inviabilidade-tpl.html#a23ebfa867
+	qgd-fornecedor-pfnweb/src/main/webapp/v1/spas/relatorios/pendencia/relatorios-pendencia-tpl.html#a23ebfa867
+
+    Total: 3 arquivos
+    Pontuação: 15 SISBB
+
+MODIFICAÇÃO DE JS
+
+ 	qgd-fornecedor-pfnweb/src/main/webapp/v1/spas/relatorios/agendamento/relatorios-agendamento-controller.js#7de33d85f1
+	qgd-fornecedor-pfnweb/src/main/webapp/v1/spas/relatorios/inviabilidade/relatorios-inviabilidade-controller.js#7de33d85f1
+	qgd-fornecedor-pfnweb/src/main/webapp/v1/spas/relatorios/pendencia/relatorios-pendencia-controller.js#7de33d85f1
+
+    Total: 3 arquivos
+    Pontuação: 15 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	qgd-fornecedor-pfnweb/pom.xml#3af1b579f7
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+Total Geral: 7 arquivos
+Pontuação Geral: 35 SISBB
+

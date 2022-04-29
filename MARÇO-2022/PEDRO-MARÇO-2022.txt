@@ -1,0 +1,304 @@
+des-qgd-controle-pedidos/ ************************************************************************************ 
+
+* %as - #4dd8555df1 - v1.0.52 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #6ceafae743 - v1.0.51 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #bdaa44b110 - v1.0.48 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #8868e74db0 - v1.0.47 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+des-qgd-gsti-api/ ******************************************************************************************** 
+
+* %as - #499c423ac0 - v1.1.71 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+qgd-controle-pedidos/ **************************************************************************************** 
+
+* %as - #79665450bf - v1.0.52 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           | 2 +-
+|  src/main/java/br/com/bb/qgd/models/PedidoAed.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #851de74ff0 - v1.0.51 C1317641 Pedro Henrique Queiroz Miranda  
+   .classpath | 6 ------
+   pom.xml    | 2 +-
+   2 files changed, 1 insertion(+), 7 deletions(-)
+
+* %as - #254254fd62 - v1.0.50 - Adicionando campo IntImac em PedidoAED C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |  2 +-
+|  src/main/java/br/com/bb/qgd/models/PedidoAed.java | 19 +++++++++++++++++++
+|  2 files changed, 20 insertions(+), 1 deletion(-)
+
+* %as - #73264debee - v1.0.49 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #0165819a7b - v1.0.50 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               | 2 +-
+|  src/main/java/br/com/bb/qgd/rest/PedidosResource.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #eabf3df785 - Teste subida jenkins C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #d394f3312c - Teste build jenkins C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/test/java/br/com/bb/qgd/dao/EnderecoDaoTest.java | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #048e4660e6 - Subindo para rodar jenkins C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/test/java/br/com/bb/qgd/dao/FornecedorDaoTest.java | 1 -
+|  1 file changed, 1 deletion(-)
+
+* %as - #224d3ef0b2 - Subindo carga de teste para build no jenkins C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/resources/scripts/carga_testes.sql | 6 +++---
+|  1 file changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #83aac66640 - v1.0.50 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #08806f2643 - Adicionado cargas C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/resources/scripts/carga_testes.sql | 55 +++++++++++++++++++++++++++
+|  1 file changed, 55 insertions(+)
+
+* %as - #883936d880 - v1.0.49 - Get all protocolos AED C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               |  2 +-
+|  src/main/java/br/com/bb/qgd/dao/ProtocoloDao.java     | 10 ++++++++++
+|  src/main/java/br/com/bb/qgd/models/Protocolo.java     | 17 +++++++++++++++++
+|  .../java/br/com/bb/qgd/rest/PedidosAedResource.java   |  2 +-
+|  4 files changed, 29 insertions(+), 2 deletions(-)
+
+* %as - #91c54dc32a - v1.0.48 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #20a9b9c87a - Ajustando Pedido AED C1317641 Pedro Henrique Queiroz Miranda| 
+|  run/run-vpn.sh                                    |  2 +-
+|  .../java/br/com/bb/qgd/dao/FornecedorDao.java     | 12 +++++
+|  .../br/com/bb/qgd/rest/PedidosAedResource.java    | 56 ++++++++++++++++++++-
+|  .../br/com/bb/qgd/rest/PedidosAltResource.java    | 10 ++++
+|  4 files changed, 77 insertions(+), 3 deletions(-)
+
+* %as - #702076ade1 - v1.0.47 - V1 de Pedidos AED C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |  2 +-
+|  src/main/java/br/com/bb/qgd/dao/PedidoAedDao.java | 44 ++++++++++++-
+|  .../br/com/bb/qgd/rest/PedidosAedResource.java    | 73 ++++++++++++++-------
+|  3 files changed, 93 insertions(+), 26 deletions(-)
+
+* %as - #89f26f9f34 - Adicionando endpoint gerarNovosPedidosAed C1317641 Pedro Henrique Queiroz Miranda  
+   .classpath                                        |   6 -
+   src/main/java/br/com/bb/qgd/dao/PedidoAedDao.java |  57 ++
+   src/main/java/br/com/bb/qgd/dao/PedidoAltDao.java |   4 -
+   src/main/java/br/com/bb/qgd/models/PedidoAed.java | 645 ++++++++++++++++++++
+   .../br/com/bb/qgd/rest/PedidosAedResource.java    | 179 ++++++
+   .../br/com/bb/qgd/services/PedidoAedService.java  |  19 +
+   6 files changed, 900 insertions(+), 10 deletions(-)
+
+qgd-estatico/ ************************************************************************************************ 
+
+* %as - #e0ffdc8208 - Retirada de aspas duplas C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../form-cadastro-alteracao-sites-ti-controller.js                  | 4 ++--
+|  1 file changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #bc13cbc58f - v2.8.25 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #de8029cb4f - Ajuste de bug para cadastrar site ti C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../form-cadastro-alteracao-sites-ti-controller.js               | 7 +++++--
+|  1 file changed, 5 insertions(+), 2 deletions(-)
+
+* %as - #1e1c33061c - Adicionando ponto e virgula C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../form-cadastro-alteracao-sites-ti-controller.js                    | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #af5c1f0db9 - v2.8.24 - Adicionado na tabela usuarios -detalhar/site-ti as colunas ambiente, equipe e uor para time Odin C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                             | 2 +-
+|  src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html | 6 ++++++
+|  2 files changed, 7 insertions(+), 1 deletion(-)
+
+* %as - #659b84b268 - Adicionando funcionalidade de incluir site C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...form-cadastro-alteracao-sites-ti-controller.js | 50 +++++++++++++--------
+|  .../site-ti/cadastrar/cadastrar-site-ti-tpl.html  |  6 +--
+|  2 files changed, 34 insertions(+), 22 deletions(-)
+
+* %as - #5c3f2ff64f - v2.8.23. Ajuste cadastrar site ti para time Odin - Retirando necessidade de ambiente C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                          |  2 +-
+|  .../form-cadastro-alteracao-sites-ti-controller.js    | 17 +++++++----------
+|  .../qgd/site-ti/cadastrar/cadastrar-site-ti-tpl.html  |  7 ++++---
+|  3 files changed, 12 insertions(+), 14 deletions(-)
+
+* %as - #61da1e2121 - v2.8.22 - Retirando mensagens de erro em Solicitar ALteracao endereço C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js |  24 --
+|  .../consultar-pedidos-controller.js               |  29 ++-
+|  .../solicitar-alteracao-controller.js             | 245 +++++++++-----------
+|  4 files changed, 130 insertions(+), 170 deletions(-)
+
+* %as - #26451e3ac2 - v2.8.21 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                 |  2 +-
+|  .../solicitar-alteracao/solicitar-alteracao-controller.js    | 10 +++++-----
+|  2 files changed, 6 insertions(+), 6 deletions(-)
+
+* %as - #618d4e5420 - Ajustes solicitar alteracao C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                             |  2 +-
+|  spec/consultar-pedidos-nova-conectividade-spec.js        | 14 +++++++++++---
+|  .../consultar-pedidos/consultar-pedidos-controller.js    |  9 ++++++++-
+|  .../consultar-pedidos/consultar-pedidos-tpl.html         |  2 +-
+|  .../solicitar-alteracao-controller.js                    | 12 +++++-------
+|  5 files changed, 26 insertions(+), 13 deletions(-)
+
+* %as - #8cb8b63be3 - v2.8.19 - Funcionalidade solicitar alteração endereço V1 finalizada C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  .../solicitar-alteracao-controller.js             | 190 +++++++++++---------
+|  .../solicitar-alteracao-tpl.html                  |  57 +++++-
+|  3 files changed, 152 insertions(+), 97 deletions(-)
+
+* %as - #7eb01576af - v2.8.18 - Funcionalidade para validação em retorno de mensagens de erro ao processar APIs com dados equivocados C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js |  60 +++++++-
+|  src/app/spas/qgd/componentes/config/config.js     |   8 +-
+|  .../solicitar-alteracao-controller.js             | 158 ++++++++++++++------
+|  .../solicitar-alteracao-services.js               |  12 ++
+|  .../solicitar-alteracao-tpl.html                  |   2 +-
+|  6 files changed, 186 insertions(+), 56 deletions(-)
+
+* %as - #182cfe539a - v2.8.17 - DEVELOPMENT C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js | 2 +-
+|  package.json | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #c9a90abc5d - v2.8.16 - PRODUCTION C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js                                  | 2 +-
+|  package.json                                  | 2 +-
+|  src/app/spas/qgd/componentes/config/config.js | 8 ++++----
+|  3 files changed, 6 insertions(+), 6 deletions(-)
+
+* %as - #00316008bd - v2.8.15 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #76278966ed - Testes AED C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 59 ++++++++++++++++++---
+|  src/app/spas/qgd/componentes/config/config.js     |  8 +--
+|  2 files changed, 55 insertions(+), 12 deletions(-)
+
+* %as - #4af041650e - v2.8.14 - Banco para development C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js | 2 +-
+|  package.json | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #faa1272138 - Tentativa de deploy AIC C1317641 Pedro Henrique Queiroz Miranda  
+   package-lock.json | 2 +-
+   package.json      | 1 -
+   2 files changed, 1 insertion(+), 2 deletions(-)
+
+* %as - #23c4f95342 - Adicionando script build - package.json C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                  | 1 +
+|  src/app/spas/qgd/componentes/config/config.js | 8 ++++----
+|  2 files changed, 5 insertions(+), 4 deletions(-)
+
+* %as - #824b34dffc - PRODUÇÃO - v2.8.1 C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js                                                          | 2 +-
+|  package.json                                                          | 2 +-
+|  .../solicitar-alteracao/solicitar-alteracao-tpl.html                  | 2 +-
+|  3 files changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #fae47cbae5 - Invertendo itens consulta protocolo C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../consultar-pedidos/consultar-pedidos-tpl.html                   | 2 +-
+|  .../solicitar-instalacao/solicitar-instalacao-controller.js        | 5 ++++-
+|  2 files changed, 5 insertions(+), 2 deletions(-)
+
+* %as - #a45d93a250 - v2.8.0 C1317641 Pedro Henrique Queiroz Miranda  
+   package.json | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #f112f9eee0 - Solicitar alteraçao endereço - Nova conectividade C1317641 Pedro Henrique Queiroz Miranda  
+   .../modelos/modelo_alteracao.csv                  |   2 +-
+   .../modelos/modelo_internet_alt_endereco.csv      |   4 +-
+   .../modelos/modelo_pae_alt_endereco.csv           |   4 +-
+   .../modelos/modelo_renap_alt_endereco.csv         |   4 +-
+   .../solicitar-alteracao-controller.js             | 427 ++++++++++++++++----
+   .../solicitar-alteracao-services.js               |  13 +
+   .../solicitar-alteracao-tpl.html                  |   2 -
+   7 files changed, 371 insertions(+), 85 deletions(-)
+
+qgd-fornecedor-pfnweb/ *************************************************************************************** 
+
+* %as - #a23ebfa867 - Ajustando coluna de mensagem sober limite de dias relatorios C1317641 Pedro Henrique Queiroz Miranda  
+   .../v1/spas/relatorios/agendamento/relatorios-agendamento-tpl.html    | 2 +-
+   .../spas/relatorios/inviabilidade/relatorios-inviabilidade-tpl.html   | 2 +-
+   .../webapp/v1/spas/relatorios/pendencia/relatorios-pendencia-tpl.html | 2 +-
+   3 files changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #d8bbf8c5c1 - Alterando data de busca relatorios C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../v1/spas/relatorios/agendamento/relatorios-agendamento-tpl.html    | 2 +-
+|  .../spas/relatorios/inviabilidade/relatorios-inviabilidade-tpl.html   | 2 +-
+|  .../webapp/v1/spas/relatorios/pendencia/relatorios-pendencia-tpl.html | 2 +-
+|  3 files changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #3af1b579f7 - v2.9.60-SNAPSHOT C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #7c5369621b - Ajustando data de relatórios para 31 dias max C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../v1/spas/relatorios/agendamento/relatorios-agendamento-tpl.html  | 4 ++--
+|  .../spas/relatorios/inviabilidade/relatorios-inviabilidade-tpl.html | 4 ++--
+|  .../v1/spas/relatorios/pendencia/relatorios-pendencia-tpl.html      | 4 ++--
+|  3 files changed, 6 insertions(+), 6 deletions(-)
+
+* %as - #4e75ee198f - v2.9.54 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #7ae6083e0b - v2.9.53 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #7de33d85f1 - Tratamento de quebra de linha para ambientes C1317641 Pedro Henrique Queiroz Miranda  
+   .../spas/relatorios/agendamento/relatorios-agendamento-controller.js  | 2 +-
+   .../relatorios/inviabilidade/relatorios-inviabilidade-controller.js   | 2 +-
+   .../v1/spas/relatorios/pendencia/relatorios-pendencia-controller.js   | 2 +-
+   3 files changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #428e5162b1 - Retirada de comentarios C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../agendamento/relatorios-agendamento-controller.js           | 5 -----
+|  .../inviabilidade/relatorios-inviabilidade-controller.js       | 9 ---------
+|  2 files changed, 14 deletions(-)
+
+* %as - #e616c81e32 - Ajuste relatorio inviabilidade C1317641 Pedro Henrique Queiroz Miranda  
+   .../relatorios/inviabilidade/relatorios-inviabilidade-controller.js   | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+qgd-gsti-api/ ************************************************************************************************ 
+
+* %as - #9aab21ea35 - v1.1.71 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #0cbd7b3942 - Preparando para merge na master C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/services/RequisicaoService.java | 1 -
+|  1 file changed, 1 deletion(-)
+
+* %as - #4e167fbd2b - Adicionando campo Uor localizacao e nome equipe em busca de funcionarios C1317641 Pedro Henrique Queiroz Miranda  
+   .../java/br/com/bb/qgd/dao/FuncionarioDao.java    |  7 ++++-
+   .../java/br/com/bb/qgd/models/Funcionario.java    | 31 +++++++++++++++++++++
+   2 files changed, 37 insertions(+), 1 deletion(-)
+
+qgd-gsti-rotinas/ ******************************************************************************************** 
+
+* %as - #130a9bc54d - Teste pedidos C1317641 Pedro Henrique Queiroz Miranda  
+   .../br/com/bb/qgd/rest/PedidosResourceTest.java   | 25 +++++++++++++++++++++
+   1 file changed, 25 insertions(+)
+

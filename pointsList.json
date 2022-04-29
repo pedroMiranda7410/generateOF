@@ -1,0 +1,194 @@
+{
+    "points": [
+        {
+            "name": "ADIÇÃO DE CLASSE JAVA\n",
+            "value": 5.5,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Criação de objetos de Integração e Negócio Java",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "MODIFICAÇÃO DE CLASSE JAVA\n",
+            "value": 3.5,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Alteração de Objetos de Integração e Negócio Java",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "MODIFICAÇÃO DE JAVA COMPONENTE\n",
+            "value": 9,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Alteração de Objeto Java Componente VXML",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE TESTES\n",
+            "value": 8,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Criação de objeto de teste automatizado",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE HTML\n",
+            "value": 10,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Criação de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "ALTERAÇÃO DE HTML\n",
+            "value": 5,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Alteração de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE JS\n",
+            "value": 10,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Criação JavaScript",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "MODIFICAÇÃO DE JS\n",
+            "value": 5,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Alteração JavaScript",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE XML\n",
+            "value": 10,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Criação de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "MODIFICAÇÃO DE XML\n",
+            "value": 5,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Alteração de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "OUTROS\n"
+        },
+        {
+            "name": "",
+            "value": 19,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Tarefas correlacionadas à Implementação",
+                "Participar em “ritos” de sala ágil",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "",
+            "value": 17,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Tarefas correlacionadas à Implementação",
+                "Realizar refinamento de requisitos (sprint em andamento)",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "",
+            "value": 9,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Tarefas correlacionadas à Implementação",
+                "Realizar refinamento de história (s) (próxima sprint)",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE CSS\n",
+            "value": 8,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Criação CSS ou SCSS",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "MODIFICAÇÃO DE CSS\n",
+            "value": 4,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Plataforma Distribuída",
+                "Alteração CSS ou SCSS",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE OPERAÇÃO\n",
+            "value": 40,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Softwares para Integração de Ambiente Tradicional e Cloud",
+                "Construção de Componente de Integração",
+                "N/A",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE REPOSITÓRIO\n",
+            "value": 30,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Serviços de integração externa",
+                "Criar projeto BW, criar repositório GIT, configurar conexões externas; configurar transportes e configurar segurança. ",
+                "N/A",
+                "N/A"
+            ]
+        }
+    ]
+}

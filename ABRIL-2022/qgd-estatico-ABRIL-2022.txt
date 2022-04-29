@@ -1,0 +1,37 @@
+qgd-estatico/ - PEDRO - c1317641 - 2022-03-30 - 2022-04-28
+
+CRIAÇÃO DE HTML
+
+ 	qgd-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/modal/_modal-new-site-tpl.html#1caef7a1e5
+
+    Total: 1 arquivos
+    Pontuação: 10 SISBB
+
+ALTERAÇÃO DE HTML
+
+ 	qgd-estatico/src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html#033d55a65b
+	qgd-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti.html#1caef7a1e5
+	qgd-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-tpl.html#1caef7a1e5
+
+    Total: 3 arquivos
+    Pontuação: 15 SISBB
+
+MODIFICAÇÃO DE JS
+
+ 	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-controller.js#f83cc18714
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-controller.js#f83cc18714
+	spec/form-cadastro-alteracao-sites-ti-componete-spec.js#1caef7a1e5
+	spec/solicitar-alteracao-nova-conectividade-spec.js#1caef7a1e5
+	qgd-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti-controller.js#1caef7a1e5
+	qgd-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-controller.js#1caef7a1e5
+
+    Total: 6 arquivos
+    Pontuação: 30 SISBB
+
+OUTROS
+
+ M	package.json#1caef7a1e5
+
+Total Geral: 11 arquivos
+Pontuação Geral: 55 SISBB
+

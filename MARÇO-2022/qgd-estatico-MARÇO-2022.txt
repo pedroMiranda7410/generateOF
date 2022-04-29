@@ -1,0 +1,39 @@
+qgd-estatico/ - PEDRO - c1317641 - 2022-02-28 - 2022-03-30
+
+ALTERAÇÃO DE HTML
+
+ 	qgd-estatico/src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html#af5c1f0db9
+	qgd-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-tpl.html#659b84b268
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-tpl.html#618d4e5420
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-tpl.html#8cb8b63be3
+
+    Total: 4 arquivos
+    Pontuação: 20 SISBB
+
+MODIFICAÇÃO DE JS
+
+ 	qgd-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti-controller.js#e0ffdc8208
+	spec/solicitar-alteracao-nova-conectividade-spec.js#61da1e2121
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-controller.js#61da1e2121
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-controller.js#61da1e2121
+	spec/consultar-pedidos-nova-conectividade-spec.js#618d4e5420
+	qgd-estatico/src/app/spas/qgd/componentes/config/config.js#7eb01576af
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-services.js#7eb01576af
+	Gruntfile.js#182cfe539a
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-controller.js#fae47cbae5
+
+    Total: 9 arquivos
+    Pontuação: 45 SISBB
+
+OUTROS
+
+ M	package.json#bc13cbc58f
+M	package-lock.json#faa1272138
+M	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_alteracao.csv#f112f9eee0
+M	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_internet_alt_endereco.csv#f112f9eee0
+M	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_pae_alt_endereco.csv#f112f9eee0
+M	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_renap_alt_endereco.csv#f112f9eee0
+
+Total Geral: 19 arquivos
+Pontuação Geral: 65 SISBB
+
