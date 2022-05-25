@@ -1,18 +1,42 @@
 des-qgd-controle-pedidos/ ************************************************************************************ 
 
+* %as - #2e68bccc0e - v1.0.57 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #f951309b8d - v1.0.56 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
 * %as - #32adabd16a - v1.0.54 C1317641 Pedro Henrique Queiroz Miranda| 
 |  values.yaml | 2 +-
 |  1 file changed, 1 insertion(+), 1 deletion(-)
 
-* %as - #c5f0f736eb - 1.0.53 C1317641 Pedro Henrique Queiroz Miranda| 
-|  values.yaml | 2 +-
-|  1 file changed, 1 insertion(+), 1 deletion(-)
-
-* %as - #1434a9fa50 - Alterando replicaCount para 3 C1317641 Pedro Henrique Queiroz Miranda  
+* %as - #c5f0f736eb - 1.0.53 C1317641 Pedro Henrique Queiroz Miranda  
    values.yaml | 2 +-
    1 file changed, 1 insertion(+), 1 deletion(-)
 
 des-qgd-credenciamento-api/ ********************************************************************************** 
+
+* %as - #121a67ddcc - v1.0.4 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #b306863f39 - v0.1.10 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #4e0a33b184 - v0.1.9 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #ac6f6f409f - v0.1.8 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #9ea57304cd - v0.1.7 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
 
 * %as - #d9b39a2223 - v0.1.6 C1317641 Pedro Henrique Queiroz Miranda| 
 |  values.yaml | 2 +-
@@ -22,7 +46,168 @@ des-qgd-credenciamento-api/ ****************************************************
    values.yaml | 2 +-
    1 file changed, 1 insertion(+), 1 deletion(-)
 
+des-qgd-credenciamento-controle-email/ *********************************************************************** 
+
+* %as - #155fc3824d - redeploy C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+des-qgd-credenciamento-email/ ******************************************************************************** 
+
+* %as - #e5376536be - Redeploy C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 8 ++++----
+|  1 file changed, 4 insertions(+), 4 deletions(-)
+
+* %as - #7ad6c5fbe8 - Alterando  para .qgd C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 6 +++---
+   1 file changed, 3 insertions(+), 3 deletions(-)
+
+des-qgd-credenciamento-rotinas/ ****************************************************************************** 
+
+* %as - #840d38359a - 1.1.12 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #9c58a90780 - v1.1.11 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #22f37238c3 - v1.1.10 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #586ac45357 - v1.1.9 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #7d70f37b8f - v1.1.7 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #642be82d6e - v1.1.6 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #4e0ab40adc - v1.1.5 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #259db413ad - v1.1.4 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #14ec88cdfa - v1.1.3 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #133a3d03dd - v1.1.2 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #a5e148242f - v1.1.1 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #8b6b268a04 - v1.0.9 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #74533f4382 - v1.0.8 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #a8dc4d8b4e - v1.0.7 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #3a5c7a50a7 - v1.0.6 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #6c76c3aa90 - v1.0.5 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #ea4d98870a - v1.0.4 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #e71dc1cb5f - v1.0.3 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #6b49ee8c44 - v1.0.2 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #253adc1ed3 - Re-deploy C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+des-qgd-gsti-api/ ******************************************************************************************** 
+
+* %as - #1108390ac8 - v1.1.76 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #8f42aa3ecb - v1.1.75 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #eb1dcc2246 - v1.1.74 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #3ad36d7b38 - v1.1.73 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #b03e2622c4 - v1.1.72 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #2189f8ff62 - v1.1.73 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #56ae2cd57c - v1.1.71 C1317641 Pedro Henrique Queiroz Miranda| 
+|  values.yaml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #312d559679 - v1.1.72 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+prd-qgd-gsti-api/ ******************************************************************************************** 
+
+* %as - #9c78ef2ae2 - v1.1.71 C1317641 Pedro Henrique Queiroz Miranda  
+   values.yaml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
 qgd-controle-pedidos/ **************************************************************************************** 
+
+* %as - #8d8da51fd3 - v1.0.57 getFrontend_error_messages C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                                  | 2 +-
+|  src/main/java/br/com/bb/qgd/models/PedidoAed.java        | 2 +-
+|  src/main/java/br/com/bb/qgd/rest/PedidosAedResource.java | 1 +
+|  3 files changed, 3 insertions(+), 2 deletions(-)
+
+* %as - #a0940e3ba1 - v1.0.56 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #62ba828398 - v1.0.55 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #90d962599e - Ajustando pedidos para receber mensagem de erro do front C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/models/Pedido.java        | 17 +++++++++++++++++
+|  src/main/java/br/com/bb/qgd/models/PedidoAed.java     | 17 +++++++++++++++++
+|  src/main/java/br/com/bb/qgd/models/PedidoAlt.java     | 17 +++++++++++++++++
+|  .../java/br/com/bb/qgd/rest/PedidosAedResource.java   |  8 +++++++-
+|  .../java/br/com/bb/qgd/rest/PedidosAltResource.java   |  9 ++++++++-
+|  src/main/java/br/com/bb/qgd/rest/PedidosResource.java |  9 ++++++++-
+|  6 files changed, 74 insertions(+), 3 deletions(-)
 
 * %as - #ca463d474d - v1.0.54 C1317641 Pedro Henrique Queiroz Miranda| 
 |  pom.xml | 2 +-
@@ -40,6 +225,76 @@ qgd-controle-pedidos/ **********************************************************
    4 files changed, 8 insertions(+), 9 deletions(-)
 
 qgd-credenciamento-api/ ************************************************************************************** 
+
+* %as - #d5a67b7f99 - v1.0.4 - Adicionando pedidos Cancelamento em busca de protocolos C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml                                           |   2 +-
+   .../br/com/bb/qgd/dao/PedidoCancelamentoDao.java  |  23 +-
+   src/main/java/br/com/bb/qgd/dao/ProtocoloDao.java |  14 +-
+   src/main/java/br/com/bb/qgd/models/PedidoCan.java | 341 --------------------
+   src/main/java/br/com/bb/qgd/models/Protocolo.java |  14 +-
+   5 files changed, 30 insertions(+), 364 deletions(-)
+
+* %as - #d544bdb2b0 - Adicionando model Pedido Cancelamento C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/models/PedidoCan.java | 341 ++++++++++++++++++++
+|  src/main/java/br/com/bb/qgd/models/Protocolo.java |  24 +-
+|  2 files changed, 363 insertions(+), 2 deletions(-)
+
+* %as - #2a999d1973 - Retirando fornecedor de pedidos C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/models/Pedido.java | 12 ------------
+|  1 file changed, 12 deletions(-)
+
+* %as - #0e83919d2d - v0.2.1 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               |  2 +-
+|  src/main/java/br/com/bb/qgd/rest/PedidosResource.java | 15 ---------------
+|  2 files changed, 1 insertion(+), 16 deletions(-)
+
+* %as - #f1f9187a2f - v0.2.0 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #d178d3a0c9 - v0.2.0 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #5499b6c55c - v0.2.0 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #c18657063e - v0.1.12 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #a1b151b1f4 - v0.1.11 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #ed969a29d9 - v0.1.11 Salvando ID_FORNECEDOR em pedidos C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                              |  2 +-
+|  src/main/java/br/com/bb/qgd/models/Pedido.java       | 18 ++++++++++--------
+|  .../java/br/com/bb/qgd/rest/PedidosResource.java     |  2 +-
+|  3 files changed, 12 insertions(+), 10 deletions(-)
+
+* %as - #c15e3a676b - v0.1.10 - ALterando buscar nr Contrato C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               | 2 +-
+|  src/main/java/br/com/bb/qgd/dao/PedidoDao.java        | 6 ++++--
+|  src/main/java/br/com/bb/qgd/rest/PedidosResource.java | 2 +-
+|  3 files changed, 6 insertions(+), 4 deletions(-)
+
+* %as - #deed589e8e - v0.1.9 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               | 2 +-
+|  src/main/java/br/com/bb/qgd/rest/PedidosResource.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #8faab6e58e - v0.1.8 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               | 2 +-
+|  src/main/java/br/com/bb/qgd/rest/PedidosResource.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #096d3e4321 - v0.1.7 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml                                               | 2 +-
+   src/main/java/br/com/bb/qgd/models/Pedido.java        | 6 ++++--
+   src/main/java/br/com/bb/qgd/rest/PedidosResource.java | 3 +++
+   3 files changed, 8 insertions(+), 3 deletions(-)
 
 * %as - #51139a8815 - Removendo node modules C1317641 Pedro Henrique Queiroz Miranda| 
 |  node_modules/.bin/esparse                         |     1 -
@@ -4200,6 +4455,240 @@ qgd-credenciamento-api/ ********************************************************
 
 qgd-credenciamento-estatico/ ********************************************************************************* 
 
+* %as - #cece4a2058 - v2.0.36 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                           | 2 +-
+|  src/app/spas/qgd/desativacao/desativacao-controller.js | 2 +-
+|  src/app/spas/qgd/desativacao/desativacao-services.js   | 6 +++---
+|  3 files changed, 5 insertions(+), 5 deletions(-)
+
+* %as - #cddf879fc3 - Ajuste texto modal solicitado por PO C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/app/spas/qgd/desativacao/desativacao-controller.js | 4 ++--
+|  1 file changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #06e83ad425 - v2.0.35 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                          |  2 +-
+|  .../spas/qgd/desativacao/desativacao-controller.js    | 17 +++++++++--------
+|  2 files changed, 10 insertions(+), 9 deletions(-)
+
+* %as - #7891837241 - v2.0.34 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                           | 2 +-
+|  src/app/spas/qgd/desativacao/desativacao-controller.js | 6 +++---
+|  src/app/spas/qgd/desativacao/desativacao-tpl.html      | 2 +-
+|  3 files changed, 5 insertions(+), 5 deletions(-)
+
+* %as - #08af0f4a73 - v2.0.33 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                          |  2 +-
+|  .../spas/qgd/desativacao/desativacao-controller.js    | 17 +----------------
+|  2 files changed, 2 insertions(+), 17 deletions(-)
+
+* %as - #0b1d6610ca - v2.0.32 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      | 2 +-
+|  src/app/spas/qgd/desativacao/desativacao-tpl.html | 7 ++++---
+|  2 files changed, 5 insertions(+), 4 deletions(-)
+
+* %as - #94135d819d - v2.0.31 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                           | 2 +-
+|  src/app/spas/qgd/desativacao/desativacao-controller.js | 1 -
+|  2 files changed, 1 insertion(+), 2 deletions(-)
+
+* %as - #5eeb795d71 - v2.0.30 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  .../qgd/desativacao/desativacao-controller.js     | 773 ++++++++++----------
+|  .../spas/qgd/desativacao/desativacao-services.js  |  73 +-
+|  src/app/spas/qgd/desativacao/desativacao-tpl.html | 312 +++++++-
+|  .../desativacao/modals/modal-aviso-desativar.html |  22 +
+|  .../modals/modal-confirmacao-desativar.html       |  29 +
+|  .../solicitar-instalacao-controller.js            |   5 +-
+|  7 files changed, 807 insertions(+), 409 deletions(-)
+
+* %as - #68cdb26798 - v2.0.29 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                  | 2 +-
+|  src/app/spas/qgd/consultar-pedidos/consultar-pedidos-tpl.html | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #452dba00fd - v2.0.28 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  .../consultar-pedidos-controller.js               | 180 ++++-----
+|  .../consultar-pedidos/consultar-pedidos-tpl.html  |   8 +-
+|  .../qgd/desativacao/desativacao-controller.js     | 403 +++++++++++++++++++-
+|  4 files changed, 459 insertions(+), 134 deletions(-)
+
+* %as - #c73a485233 - v2.0.27 - Base estrutural para funcionalidade Desativacao Circuito C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  src/app/spas/qgd/desativacao/desativacao-app.html | 95 +++++++++++++++++++++
+|  .../qgd/desativacao/desativacao-controller.js     | 32 +++++++
+|  .../spas/qgd/desativacao/desativacao-modules.js   | 47 ++++++++++
+|  .../spas/qgd/desativacao/desativacao-routes.js    | 46 ++++++++++
+|  .../spas/qgd/desativacao/desativacao-services.js  | 35 ++++++++
+|  src/app/spas/qgd/desativacao/desativacao-tpl.html |  1 +
+|  7 files changed, 257 insertions(+), 1 deletion(-)
+
+* %as - #a34bb7db29 - v2.0.26 - Ajustando texto de modal (IDBB Maiúsculo) C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                          | 2 +-
+|  .../modals/modal-confirmacao-cancelar-circuito.html                   | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #8fb29f6851 - v2.0.25 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                          | 2 +-
+|  .../spas/qgd/solicitar-instalacao/modals/modal-aviso-cancelar.html    | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #a764efef60 - v2.0.24 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                          | 2 +-
+|  .../spas/qgd/solicitar-instalacao/modals/modal-aviso-cancelar.html    | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #263dbdbcb3 - v2.0.23 - Tirando espaço em nome req solicitação instalação C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                        | 2 +-
+|  .../qgd/solicitar-instalacao/solicitar-instalacao-controller.js     | 4 ++--
+|  2 files changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #7d169885a9 - v2.0.22 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  .../solicitar-instalacao-controller.js            | 25 +--------------------
+|  2 files changed, 2 insertions(+), 25 deletions(-)
+
+* %as - #6c615aac38 - v2.0.21 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                        | 2 +-
+|  src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-tpl.html | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #0050229888 - v2.0.20 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                          | 2 +-
+|  .../spas/qgd/solicitar-instalacao/solicitar-instalacao-controller.js  | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #f40ebecccf - v2.0.19 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                      | 2 +-
+|  .../qgd/solicitar-instalacao/solicitar-instalacao-controller.js   | 6 +++---
+|  2 files changed, 4 insertions(+), 4 deletions(-)
+
+* %as - #b73fb6d9e2 - v2.0.18 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                        | 2 +-
+|  src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-tpl.html | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #46456dbf00 - v2.0.17 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  .../solicitar-instalacao-controller.js            | 39 ++++++++++++++++++---
+|  2 files changed, 35 insertions(+), 6 deletions(-)
+
+* %as - #e34934a29e - Ajuste de caminho pra modal solicitar instalacao v2.0.16 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                    | 2 +-
+|  .../qgd/solicitar-instalacao/solicitar-instalacao-controller.js | 8 ++++----
+|  2 files changed, 5 insertions(+), 5 deletions(-)
+
+* %as - #62080b45e6 - v2.0.15 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  .../solicitar-instalacao-controller.js            | 33 +++------------------
+|  2 files changed, 5 insertions(+), 30 deletions(-)
+
+* %as - #c11acd0e9b - v2.0.14 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #c414022375 - v2.0.14 C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../consultar-pedidos-controller.js               |   2 +-
+|  .../modal-confirmacao-cancelar-circuito.html      |   5 +-
+|  .../solicitar-instalacao-controller.js            | 207 ++++++++++++--------
+|  .../solicitar-instalacao-services.js              |  36 ++--
+|  .../solicitar-instalacao-tpl.html                 |   3 +
+|  5 files changed, 151 insertions(+), 102 deletions(-)
+
+* %as - #dc8cd9c4f3 - v2.0.13 - Ajuste funcionalidade de rodar rotina em controle pedidos C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                       |  2 +-
+|  .../consultar-pedidos/consultar-pedidos-tpl.html   | 20 ++++++++++----------
+|  2 files changed, 11 insertions(+), 11 deletions(-)
+
+* %as - #c245543ab4 - v2.0.12 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  .../consultar-pedidos-controller.js               | 27 +++++++++++++++++++++
+|  .../consultar-pedidos-services.js                 | 12 +++++++++
+|  .../solicitar-instalacao-controller.js            | 23 ------------------
+|  .../solicitar-instalacao-services.js              | 13 ----------
+|  5 files changed, 40 insertions(+), 37 deletions(-)
+
+* %as - #c38c192698 - v2.0.11 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  .../consultar-pedidos/consultar-pedidos-tpl.html  | 21 +++++++++++++++++++
+|  .../solicitar-instalacao-controller.js            | 23 +++++++++++++++++++++
+|  .../solicitar-instalacao-services.js              | 14 +++++++++++++
+|  4 files changed, 59 insertions(+), 1 deletion(-)
+
+* %as - #a189447b72 - v2.0.10 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                          | 2 +-
+|  .../spas/qgd/solicitar-instalacao/solicitar-instalacao-controller.js  | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #9d5f082224 - v2.0.9 - Ajustando endpoint C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                      | 2 +-
+|  spec/consultar-pedidos-spec.js                                    | 6 +++---
+|  src/app/spas/qgd/consultar-pedidos/consultar-pedidos-services.js  | 2 +-
+|  .../spas/qgd/solicitar-instalacao/modelos/modelo_internet_CRD.csv | 2 +-
+|  .../qgd/solicitar-instalacao/solicitar-instalacao-services.js     | 2 +-
+|  5 files changed, 7 insertions(+), 7 deletions(-)
+
+* %as - #4c0e817248 - v2.0.8 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   10 +-
+|  spec/consultar-pedidos-spec.js                    | 1055 ++++++++++++++++++-
+|  .../consultar-pedidos-controller.js               |  773 +++++++++++++-
+|  .../consultar-pedidos-services.js                 |   27 +-
+|  .../consultar-pedidos/consultar-pedidos-tpl.html  |  477 ++++++++-
+|  .../modelos/modelo_internet_CRD.csv               |    2 +-
+|  .../modelos/modelo_internet_CRD_2.csv             |   11 +
+|  .../solicitar-instalacao-controller.js            |  193 +++-
+|  .../solicitar-instalacao-services.js              |  121 ++-
+|  .../solicitar-instalacao-tpl.html                 |  189 +++-
+|  10 files changed, 2814 insertions(+), 44 deletions(-)
+
+* %as - #fec133d2cd - v2.0.7 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                        | 2 +-
+|  src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-tpl.html | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #d760aede8b - v2.0.6 - Alterando nome planilha C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                          | 2 +-
+|  .../modelos/{modelo_internet.csv => modelo_internet_CRD.csv}          | 0
+|  src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-tpl.html   | 2 +-
+|  3 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #dd3c8d1842 - v2.0.5 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #8e1243dc5e - Ajustando Planilha de solicitar Instalação C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../consultar-pedidos-modules.js                  |  2 +-
+|  src/app/spas/qgd/qgd-estatico-modules.js          |  2 +-
+|  .../modelos/modelo_internet.csv                   |  4 ++--
+|  .../solicitar-instalacao/modelos/modelo_pae.csv   |  2 --
+|  .../solicitar-instalacao/modelos/modelo_renap.csv |  2 --
+|  .../solicitar-instalacao-app.html                 |  8 -------
+|  .../solicitar-instalacao-controller.js            | 23 ++++++++++-----------
+|  .../solicitar-instalacao-modules.js               |  2 +-
+|  8 files changed, 16 insertions(+), 29 deletions(-)
+
+* %as - #a74e04213b - v2.0.4 Alterando contexto em consultar pedidosv C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                  | 2 +-
+|  src/app/spas/qgd/consultar-pedidos/consultar-pedidos-app.html | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #d4d7c24802 - v2.0.3 C1317641 Pedro Henrique Queiroz Miranda  
+   package.json | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #2a097c434e - v2.0.2 - staticPath: '/qgd-credenciamento' C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                                        | 2 +-
+|  src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-app.html | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #b968768a34 - v2.0.1 C1317641 Pedro Henrique Queiroz Miranda  
+   package.json | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #c62d0eca38 - adicionando o line number C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../spas/qgd/solicitar-instalacao/solicitar-instalacao-controller.js   | 1 +
+|  1 file changed, 1 insertion(+)
+
 * %as - #923bbf53ea - v2.0.0 C1317641 Pedro Henrique Queiroz Miranda| 
 |  package.json | 2 +-
 |  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -4208,154 +4697,685 @@ qgd-credenciamento-estatico/ ***************************************************
 |  package.json | 2 +-
 |  1 file changed, 1 insertion(+), 1 deletion(-)
 
-* %as - #b3821d2895 - v0.0.2 - adicionando funcionalidade de solicitar instalacao e consultar pedidos para menu C1317641 Pedro Henrique Queiroz Miranda| 
-|  config/dev.json                                   |    3 +
-|  config/piloto.json                                |    3 +
-|  config/prod.json                                  |    3 +
-|  package.json                                      |    6 +-
-|  spec/cadastrar-site-ti-controller-spec.js         |  155 --
-|  spec/consultar-pedidos-nova-conectividade-spec.js |  586 -------
-|  spec/consultar-pedidos-spec.js                    |  107 ++
-|  spec/dashboard-siteTi-controller-spec.js          |  236 ---
-|  ...circuito-nova-conectividade-controller-spec.js |  487 ------
-|  spec/detalhar-circuitos-controller-spec.js        |  169 --
-|  spec/detalhar-sites-ti-controller-spec.js         | 1707 -------------------
-|  ...-cadastro-alteracao-sites-ti-componete-spec.js |  219 ---
-|  spec/grafico-coluna-siteTi-controller-spec.js     |  100 --
-|  spec/grafico-pizza-siteTi-controller-spec.js      |  104 --
-|  spec/listar-siteTi-controller-spec.js             |  250 ---
-|  ...solicitar-alteracao-nova-conectividade-spec.js |  295 ----
-|  ...olicitar-instalacao-nova-conectividade-spec.js |  471 -----
-|  spec/solicitar-instalacao-spec.js                 |  210 +++
-|  ...ar-internet-descentralizada-controller-spec.js |  538 ------
-|  .../detalhar-circuitos-controller.js              |  107 --
-|  .../detalhar-circuitos-service.js                 |   85 -
-|  .../detalhar-circuitos/detalhar-circuitos.html    |  321 ----
-|  .../listar-circuitos/detalheCircuitos.html        |  114 --
-|  .../listar-circuitos/listar-circuitos-app.html    |  120 --
-|  .../listar-circuitos-controller.js                |  237 ---
-|  .../listar-circuitos/listar-circuitos-modules.js  |   39 -
-|  .../listar-circuitos/listar-circuitos-routes.js   |   46 -
-|  .../listar-circuitos/listar-circuitos-service.js  |   58 -
-|  .../listar-circuitos/listar-circuitos.html        |  212 ---
-|  src/app/spas/qgd/componentes/config/config.js     |    2 +
-|  .../form-cadastro-alteracao-sites-ti-componete.js |    9 -
-|  ...form-cadastro-alteracao-sites-ti-controller.js |  211 ---
-|  .../form-cadastro-alteracao-sites-ti-service.js   |   52 -
-|  .../form-cadastro-alteracao-sites-ti.html         |  229 ---
-|  .../modal/_modal-confirmacao-tpl.html             |   18 -
-|  .../modal/_modal-new-site-tpl.html                |   21 -
-|  .../graficos/coluna/grafico-coluna-componente.js  |  123 --
-|  .../graficos/coluna/grafico-coluna-tpl.html       |    2 -
-|  .../graficos/pizza/grafico-pizza-componente.js    |   71 -
-|  .../graficos/pizza/grafico-pizza-tpl.html         |    2 -
-|  .../consultar-pedidos-app.html}                   |   31 +-
-|  .../consultar-pedidos-controller.js               |   24 +
-|  .../consultar-pedidos-modules.js                  |   12 +-
-|  .../consultar-pedidos/consultar-pedidos-routes.js |    7 +-
-|  .../consultar-pedidos-services.js                 |   24 +
-|  .../consultar-pedidos/consultar-pedidos-tpl.html  |    2 +
-|  .../internet-descentralizada-service.js           |   15 -
-|  .../solicitar/internet-descentralizada.css        |  231 ---
-|  .../solicitar/modal-confirmation.html             |   51 -
-|  .../solicitar/modal-for-user-information.html     |   53 -
-|  .../solicitar-internet-descentralizada-app.html   |  105 --
-|  ...licitar-internet-descentralizada-controller.js |  466 -----
-|  .../solicitar-internet-descentralizada-modules.js |   40 -
-|  .../solicitar-internet-descentralizada-routes.js  |   47 -
-|  .../solicitar-internet-descentralizada-service.js |   54 -
-|  .../solicitar-internet-descentralizada-tpl.html   |  729 --------
-|  .../consultar-pedidos/consultar-pedidos-app.html  |  104 --
-|  .../consultar-pedidos-controller.js               |  558 ------
-|  .../consultar-pedidos-services.js                 |   42 -
-|  .../consultar-pedidos/consultar-pedidos-tpl.html  |  231 ---
-|  ...desativar-circuito-nova-conectividade-app.html |  189 --
-|  ...ivar-circuito-nova-conectividade-controller.js |  397 -----
-|  ...sativar-circuito-nova-conectividade-modules.js |   40 -
-|  ...esativar-circuito-nova-conectividade-routes.js |   47 -
-|  ...sativar-circuito-nova-conectividade-service.js |  174 --
-|  ...desativar-circuito-nova-conectividade-tpl.html |  303 ----
-|  ...desativar-circuito-nova-conectividade-utils.js |   45 -
-|  .../desativar/modal-aviso-desativar.html          |   22 -
-|  .../desativar/modal-confirmacao-desativar.html    |   29 -
-|  .../images/dicas_alteracao.png                    |  Bin 23585 -> 0 bytes
-|  .../modals/modal-exportar-csv.html                |   34 -
-|  .../modelos/modelo_alteracao.csv                  |    2 -
-|  .../modelos/modelo_alteracao_teste.csv            |    2 -
-|  .../modelos/modelo_internet_alt_endereco.csv      |    2 -
-|  .../modelos/modelo_pae_alt_endereco.csv           |    2 -
-|  .../modelos/modelo_renap_alt_endereco.csv         |    2 -
-|  .../solicitar-alteracao-app.html                  |  104 --
-|  .../solicitar-alteracao-controller.js             |  717 --------
-|  .../solicitar-alteracao-modules.js                |   49 -
-|  .../solicitar-alteracao-routes.js                 |   47 -
-|  .../solicitar-alteracao-services.js               |  106 --
-|  .../modals/modal-aviso-cancelar.html              |   22 -
-|  .../modal-confirmacao-cancelar-circuito.html      |   29 -
-|  .../modals/modal-confirmacao.html                 |   28 -
-|  .../solicitar-instalacao-controller.js            |  750 --------
-|  .../solicitar-instalacao-services.js              |  263 ---
-|  .../solicitar-instalacao-tpl.html                 |  509 ------
-|  src/app/spas/qgd/qgd-estatico-modules.js          |   16 +-
-|  .../cadastrar/cadastrar-site-ti-controller.js     |   70 -
-|  .../cadastrar/cadastrar-site-ti-modules.js        |   40 -
-|  .../site-ti/cadastrar/cadastrar-site-ti-routes.js |   47 -
-|  .../cadastrar/cadastrar-site-ti-services.js       |   26 -
-|  .../site-ti/cadastrar/cadastrar-site-ti-tpl.html  |   64 -
-|  .../qgd/site-ti/cadastrar/modal-confirmacao.html  |   28 -
-|  .../spas/qgd/site-ti/dashboard/dashboard-app.html |  126 --
-|  .../qgd/site-ti/dashboard/dashboard-modules.js    |   42 -
-|  .../qgd/site-ti/dashboard/dashboard-routes.js     |   48 -
-|  .../qgd/site-ti/dashboard/dashboard-service.js    |   65 -
-|  .../dashboard/dashboard-siteTi-controller.js      |  146 --
-|  .../qgd/site-ti/dashboard/dashboard-siteTi.html   |   43 -
-|  .../site-ti/desativar/desativar-siteTi-tpl.html   |    5 -
-|  .../site-ti/detalhar/_modal-desativar-site.html   |   33 -
-|  .../site-ti/detalhar/_modal-novo-ambiente.html    |   30 -
-|  .../detalhar/detalhar-sites-ti-controller.js      |  696 --------
-|  .../site-ti/detalhar/detalhar-sites-ti-service.js |  189 --
-|  .../qgd/site-ti/detalhar/detalhar-sites-ti.html   |  576 -------
-|  .../qgd/site-ti/listar-sitesTi/detalheSites.html  |  114 --
-|  .../listar-sitesTi/listar-siteTi-controller.js    |  229 ---
-|  .../qgd/site-ti/listar-sitesTi/listar-siteTi.html |  297 ----
-|  .../listar-sitesTi/listar-sitesTi-app.html        |  151 --
-|  .../listar-sitesTi/listar-sitesTi-modules.js      |   39 -
-|  .../listar-sitesTi/listar-sitesTi-routes.js       |   62 -
-|  .../listar-sitesTi/listar-sitesTi-service.js      |   63 -
-|  .../images/dicas_internet.png                     |  Bin
-|  .../solicitar-instalacao/images/dicas_pae.png     |  Bin
-|  .../solicitar-instalacao/images/dicas_renap.png   |  Bin
-|  .../modals/modal-aviso-cancelar.html              |    0
-|  .../modal-confirmacao-cancelar-circuito.html      |    0
-|  .../modals/modal-confirmacao.html                 |    0
-|  .../modals/modal-exportar-csv.html                |    0
-|  .../modelos/modelo_internet.csv                   |    0
-|  .../modelos/modelo_internet_com_menos_colunas.csv |    0
-|  .../solicitar-instalacao/modelos/modelo_pae.csv   |    0
-|  .../solicitar-instalacao/modelos/modelo_renap.csv |    0
-|  .../solicitar-instalacao-app.html                 |   28 +-
-|  .../solicitar-instalacao-controller.js            |  438 +++++
-|  .../solicitar-instalacao-modules.js               |    6 +-
-|  .../solicitar-instalacao-routes.js                |    0
-|  .../solicitar-instalacao-services.js              |   36 +
-|  .../solicitar-instalacao-tpl.html}                |  135 +-
-|  130 files changed, 941 insertions(+), 17415 deletions(-)
+* %as - #b3821d2895 - v0.0.2 - adicionando funcionalidade de solicitar instalacao e consultar pedidos para menu C1317641 Pedro Henrique Queiroz Miranda  
+   config/dev.json                                   |    3 +
+   config/piloto.json                                |    3 +
+   config/prod.json                                  |    3 +
+   package.json                                      |    6 +-
+   spec/cadastrar-site-ti-controller-spec.js         |  155 --
+   spec/consultar-pedidos-nova-conectividade-spec.js |  586 -------
+   spec/consultar-pedidos-spec.js                    |  107 ++
+   spec/dashboard-siteTi-controller-spec.js          |  236 ---
+   ...circuito-nova-conectividade-controller-spec.js |  487 ------
+   spec/detalhar-circuitos-controller-spec.js        |  169 --
+   spec/detalhar-sites-ti-controller-spec.js         | 1707 -------------------
+   ...-cadastro-alteracao-sites-ti-componete-spec.js |  219 ---
+   spec/grafico-coluna-siteTi-controller-spec.js     |  100 --
+   spec/grafico-pizza-siteTi-controller-spec.js      |  104 --
+   spec/listar-siteTi-controller-spec.js             |  250 ---
+   ...solicitar-alteracao-nova-conectividade-spec.js |  295 ----
+   ...olicitar-instalacao-nova-conectividade-spec.js |  471 -----
+   spec/solicitar-instalacao-spec.js                 |  210 +++
+   ...ar-internet-descentralizada-controller-spec.js |  538 ------
+   .../detalhar-circuitos-controller.js              |  107 --
+   .../detalhar-circuitos-service.js                 |   85 -
+   .../detalhar-circuitos/detalhar-circuitos.html    |  321 ----
+   .../listar-circuitos/detalheCircuitos.html        |  114 --
+   .../listar-circuitos/listar-circuitos-app.html    |  120 --
+   .../listar-circuitos-controller.js                |  237 ---
+   .../listar-circuitos/listar-circuitos-modules.js  |   39 -
+   .../listar-circuitos/listar-circuitos-routes.js   |   46 -
+   .../listar-circuitos/listar-circuitos-service.js  |   58 -
+   .../listar-circuitos/listar-circuitos.html        |  212 ---
+   src/app/spas/qgd/componentes/config/config.js     |    2 +
+   .../form-cadastro-alteracao-sites-ti-componete.js |    9 -
+   ...form-cadastro-alteracao-sites-ti-controller.js |  211 ---
+   .../form-cadastro-alteracao-sites-ti-service.js   |   52 -
+   .../form-cadastro-alteracao-sites-ti.html         |  229 ---
+   .../modal/_modal-confirmacao-tpl.html             |   18 -
+   .../modal/_modal-new-site-tpl.html                |   21 -
+   .../graficos/coluna/grafico-coluna-componente.js  |  123 --
+   .../graficos/coluna/grafico-coluna-tpl.html       |    2 -
+   .../graficos/pizza/grafico-pizza-componente.js    |   71 -
+   .../graficos/pizza/grafico-pizza-tpl.html         |    2 -
+   .../consultar-pedidos-app.html}                   |   31 +-
+   .../consultar-pedidos-controller.js               |   24 +
+   .../consultar-pedidos-modules.js                  |   12 +-
+   .../consultar-pedidos/consultar-pedidos-routes.js |    7 +-
+   .../consultar-pedidos-services.js                 |   24 +
+   .../consultar-pedidos/consultar-pedidos-tpl.html  |    2 +
+   .../internet-descentralizada-service.js           |   15 -
+   .../solicitar/internet-descentralizada.css        |  231 ---
+   .../solicitar/modal-confirmation.html             |   51 -
+   .../solicitar/modal-for-user-information.html     |   53 -
+   .../solicitar-internet-descentralizada-app.html   |  105 --
+   ...licitar-internet-descentralizada-controller.js |  466 -----
+   .../solicitar-internet-descentralizada-modules.js |   40 -
+   .../solicitar-internet-descentralizada-routes.js  |   47 -
+   .../solicitar-internet-descentralizada-service.js |   54 -
+   .../solicitar-internet-descentralizada-tpl.html   |  729 --------
+   .../consultar-pedidos/consultar-pedidos-app.html  |  104 --
+   .../consultar-pedidos-controller.js               |  558 ------
+   .../consultar-pedidos-services.js                 |   42 -
+   .../consultar-pedidos/consultar-pedidos-tpl.html  |  231 ---
+   ...desativar-circuito-nova-conectividade-app.html |  189 --
+   ...ivar-circuito-nova-conectividade-controller.js |  397 -----
+   ...sativar-circuito-nova-conectividade-modules.js |   40 -
+   ...esativar-circuito-nova-conectividade-routes.js |   47 -
+   ...sativar-circuito-nova-conectividade-service.js |  174 --
+   ...desativar-circuito-nova-conectividade-tpl.html |  303 ----
+   ...desativar-circuito-nova-conectividade-utils.js |   45 -
+   .../desativar/modal-aviso-desativar.html          |   22 -
+   .../desativar/modal-confirmacao-desativar.html    |   29 -
+   .../images/dicas_alteracao.png                    |  Bin 23585 -> 0 bytes
+   .../modals/modal-exportar-csv.html                |   34 -
+   .../modelos/modelo_alteracao.csv                  |    2 -
+   .../modelos/modelo_alteracao_teste.csv            |    2 -
+   .../modelos/modelo_internet_alt_endereco.csv      |    2 -
+   .../modelos/modelo_pae_alt_endereco.csv           |    2 -
+   .../modelos/modelo_renap_alt_endereco.csv         |    2 -
+   .../solicitar-alteracao-app.html                  |  104 --
+   .../solicitar-alteracao-controller.js             |  717 --------
+   .../solicitar-alteracao-modules.js                |   49 -
+   .../solicitar-alteracao-routes.js                 |   47 -
+   .../solicitar-alteracao-services.js               |  106 --
+   .../modals/modal-aviso-cancelar.html              |   22 -
+   .../modal-confirmacao-cancelar-circuito.html      |   29 -
+   .../modals/modal-confirmacao.html                 |   28 -
+   .../solicitar-instalacao-controller.js            |  750 --------
+   .../solicitar-instalacao-services.js              |  263 ---
+   .../solicitar-instalacao-tpl.html                 |  509 ------
+   src/app/spas/qgd/qgd-estatico-modules.js          |   16 +-
+   .../cadastrar/cadastrar-site-ti-controller.js     |   70 -
+   .../cadastrar/cadastrar-site-ti-modules.js        |   40 -
+   .../site-ti/cadastrar/cadastrar-site-ti-routes.js |   47 -
+   .../cadastrar/cadastrar-site-ti-services.js       |   26 -
+   .../site-ti/cadastrar/cadastrar-site-ti-tpl.html  |   64 -
+   .../qgd/site-ti/cadastrar/modal-confirmacao.html  |   28 -
+   .../spas/qgd/site-ti/dashboard/dashboard-app.html |  126 --
+   .../qgd/site-ti/dashboard/dashboard-modules.js    |   42 -
+   .../qgd/site-ti/dashboard/dashboard-routes.js     |   48 -
+   .../qgd/site-ti/dashboard/dashboard-service.js    |   65 -
+   .../dashboard/dashboard-siteTi-controller.js      |  146 --
+   .../qgd/site-ti/dashboard/dashboard-siteTi.html   |   43 -
+   .../site-ti/desativar/desativar-siteTi-tpl.html   |    5 -
+   .../site-ti/detalhar/_modal-desativar-site.html   |   33 -
+   .../site-ti/detalhar/_modal-novo-ambiente.html    |   30 -
+   .../detalhar/detalhar-sites-ti-controller.js      |  696 --------
+   .../site-ti/detalhar/detalhar-sites-ti-service.js |  189 --
+   .../qgd/site-ti/detalhar/detalhar-sites-ti.html   |  576 -------
+   .../qgd/site-ti/listar-sitesTi/detalheSites.html  |  114 --
+   .../listar-sitesTi/listar-siteTi-controller.js    |  229 ---
+   .../qgd/site-ti/listar-sitesTi/listar-siteTi.html |  297 ----
+   .../listar-sitesTi/listar-sitesTi-app.html        |  151 --
+   .../listar-sitesTi/listar-sitesTi-modules.js      |   39 -
+   .../listar-sitesTi/listar-sitesTi-routes.js       |   62 -
+   .../listar-sitesTi/listar-sitesTi-service.js      |   63 -
+   .../images/dicas_internet.png                     |  Bin
+   .../solicitar-instalacao/images/dicas_pae.png     |  Bin
+   .../solicitar-instalacao/images/dicas_renap.png   |  Bin
+   .../modals/modal-aviso-cancelar.html              |    0
+   .../modal-confirmacao-cancelar-circuito.html      |    0
+   .../modals/modal-confirmacao.html                 |    0
+   .../modals/modal-exportar-csv.html                |    0
+   .../modelos/modelo_internet.csv                   |    0
+   .../modelos/modelo_internet_com_menos_colunas.csv |    0
+   .../solicitar-instalacao/modelos/modelo_pae.csv   |    0
+   .../solicitar-instalacao/modelos/modelo_renap.csv |    0
+   .../solicitar-instalacao-app.html                 |   28 +-
+   .../solicitar-instalacao-controller.js            |  438 +++++
+   .../solicitar-instalacao-modules.js               |    6 +-
+   .../solicitar-instalacao-routes.js                |    0
+   .../solicitar-instalacao-services.js              |   36 +
+   .../solicitar-instalacao-tpl.html}                |  135 +-
+   130 files changed, 941 insertions(+), 17415 deletions(-)
 
-* %as - #e11512f45a - Adicionando angularjs C1317641 Pedro Henrique Queiroz Miranda| 
-|  .editorconfig                                     |   15 +
-|  .gitignore                                        |  637 +++++++
-|  .jshintrc                                         |   62 +
-|  .npmignore                                        |   12 +
-|  Gruntfile.js                                      |  180 ++
-|  WebContent/META-INF/MANIFEST.MF                   |    3 +
-|  config/constant-template.ejs                      |    7 +
-|  config/default.json                               |    8 +
-|  config/dev.json                                   |   14 +
-|  config/local.json                                 |   10 +
-|  config/piloto.json                                |    9 +
-|  config/prod.json                                  |   14 +
-|  karma.conf.js                                     |  126 ++
-|  package.json                                      |   48 +
+qgd-credenciamento-rotinas/ ********************************************************************************** 
+
+* %as - #311f908582 - v1.1.12 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #a23466f953 - Ajuste de inserir valor mensal no pedido por nr_contrato C1317641 Pedro Henrique Queiroz Miranda| 
+|  run/docker-compose-vpn.yaml                       |  1 +
+|  src/main/java/br/com/bb/qgd/dao/LoteDao.java      | 32 +++++++++++++++------
+|  src/main/java/br/com/bb/qgd/dao/PedidosDao.java   |  6 ++--
+|  .../br/com/bb/qgd/services/RotinasService.java    | 26 ++++++++---------
+|  4 files changed, 40 insertions(+), 25 deletions(-)
+
+* %as - #6c4efea60f - v1.1.11 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |   2 +-
+|  src/main/java/br/com/bb/qgd/dao/LoteDao.java      |  47 +++++++
+|  src/main/java/br/com/bb/qgd/dao/PedidosDao.java   |  15 ++
+|  .../java/br/com/bb/qgd/models/pedidos/Lote.java   | 144 ++++++++++++++++++++
+|  .../br/com/bb/qgd/services/RotinasService.java    |  44 ++++--
+|  5 files changed, 240 insertions(+), 12 deletions(-)
+
+* %as - #2a1f891fa5 - v1.1.10 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                                   | 2 +-
+|  src/main/java/br/com/bb/qgd/services/CircuitoService.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #26740d0d1b - v1.1.9 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml                                                     | 2 +-
+   src/main/java/br/com/bb/qgd/services/RequisicaoService.java | 2 +-
+   2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #26436b446a - Subindo toString() C1317641 Pedro Henrique Queiroz Miranda  
+   .../java/br/com/bb/qgd/models/RequisicaoCancelamentoCircuito.java   | 4 ++++
+   1 file changed, 4 insertions(+)
+
+* %as - #259b682e49 - v1.1.7 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                                  | 2 +-
+|  src/main/java/br/com/bb/qgd/services/RotinasService.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #261c20520c - v1.1.6 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |   2 +-
+|  src/main/java/br/com/bb/qgd/dao/CircuitoDao.java  |   2 +-
+|  .../br/com/bb/qgd/models/pedidos/Endereco.java    |   2 +-
+|  .../br/com/bb/qgd/services/RequisicaoService.java |   2 +-
+|  .../br/com/bb/qgd/services/RotinasService.java    |   1 +
+|  src/main/java/br/com/bb/qgd/utils/Utils.java      | 157 +++++++-------------
+|  6 files changed, 57 insertions(+), 109 deletions(-)
+
+* %as - #3b525c3734 - v1.1.5 - Ajuste de formulário criação de REQ C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                                     |  2 +-
+|  src/main/java/br/com/bb/qgd/services/RequisicaoService.java | 10 +++++++---
+|  2 files changed, 8 insertions(+), 4 deletions(-)
+
+* %as - #8396059c73 - v1.1.4 Retirando ID_FORNECEDOR em pedidos e ajuste de variáveis de ambiente C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                               |  2 +-
+|  run/docker-compose-vpn.yaml                           |  4 ++++
+|  run/docker-compose.yaml                               |  2 ++
+|  src/main/java/br/com/bb/qgd/dao/PedidosDao.java       |  2 +-
+|  .../java/br/com/bb/qgd/models/pedidos/Pedidos.java    | 17 -----------------
+|  src/main/resources/application.properties             |  2 +-
+|  6 files changed, 9 insertions(+), 20 deletions(-)
+
+* %as - #81ca111b89 - v1.1.3 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |   2 +-
+|  run/docker-compose-vpn.yaml                       | 107 +++++++++
+|  run/run-vpn.sh                                    | 230 ++++++++++++++++++++
+|  .../br/com/bb/qgd/models/pedidos/Pedidos.java     |   5 +-
+|  4 files changed, 342 insertions(+), 2 deletions(-)
+
+* %as - #e7efdedac1 - v1.1.2 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #7e38741142 - v1.1.1 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                                   | 2 +-
+|  src/main/java/br/com/bb/qgd/services/CircuitoService.java | 8 ++++----
+|  2 files changed, 5 insertions(+), 5 deletions(-)
+
+* %as - #3e5887b2b2 - v1.1.0 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           | 2 +-
+|  src/main/java/br/com/bb/qgd/config/AppConfig.java | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #f9a096b4de - v1.0.11 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #069a022bb0 - v1.0.10 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #937c701ea2 - v1.0.10 - Adicionado dados do fornecedor e endereço pelo pedido C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |   2 +-
+|  src/main/java/br/com/bb/qgd/dao/PedidosDao.java   |  28 ++++
+|  .../java/br/com/bb/qgd/models/InternetCrd.java    |  31 +++--
+|  .../br/com/bb/qgd/models/pedidos/Endereco.java    | 120 ++++++++++++++++
+|  .../com/bb/qgd/models/pedidos/Fornecedores.java   | 144 ++++++++++++++++++++
+|  .../br/com/bb/qgd/models/pedidos/Pedidos.java     |  56 +++++++-
+|  .../br/com/bb/qgd/services/CircuitoService.java   |  19 +--
+|  .../br/com/bb/qgd/services/RequisicaoService.java |  21 ---
+|  .../br/com/bb/qgd/services/RotinasService.java    | 129 +++++++++++-------
+|  9 files changed, 445 insertions(+), 105 deletions(-)
+
+* %as - #58c71ffb96 - v1.0.9 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #eddda2a2c0 - Retirando 'Notas' C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/services/CircuitoService.java | 1 -
+|  1 file changed, 1 deletion(-)
+
+* %as - #6e82f38f17 - Ajuste erro C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/utils/Utils.java | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #7cc047c68e - v1.0.8 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #d8c63fc988 - Setando valores null para formulario req C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../br/com/bb/qgd/services/RequisicaoService.java | 22 +++++++
+|  .../br/com/bb/qgd/services/RotinasService.java    | 23 +++----
+|  src/main/java/br/com/bb/qgd/utils/Utils.java      | 73 +++++++++++++++++++++
+|  3 files changed, 107 insertions(+), 11 deletions(-)
+
+* %as - #f7881659c9 - v1.0.7 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |  2 +-
+|  .../br/com/bb/qgd/services/CircuitoService.java   | 26 ++++++++++-----------
+|  2 files changed, 14 insertions(+), 14 deletions(-)
+
+* %as - #0c0d7ccb13 - Alterando faixa idbb v1.0.6 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |  2 +-
+|  .../br/com/bb/qgd/services/CircuitoService.java   | 39 ++++++++++-----------
+|  src/main/java/br/com/bb/qgd/utils/Utils.java      |  3 +-
+|  3 files changed, 22 insertions(+), 22 deletions(-)
+
+* %as - #163d5f5bd1 - v1.0.5 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #db3af3d620 - v1.0.5 C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/models/InternetCrd.java       | 5 ++++-
+|  src/main/java/br/com/bb/qgd/services/CircuitoService.java | 4 ++--
+|  2 files changed, 6 insertions(+), 3 deletions(-)
+
+* %as - #f37870c53b - v1.0.4 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #000ce3b90d - Adicionando LOGGER C1317641 Pedro Henrique Queiroz Miranda| 
+|  src/main/java/br/com/bb/qgd/services/CircuitoService.java | 1 +
+|  1 file changed, 1 insertion(+)
+
+* %as - #dbc669a3dd - Alterando formulário para criação de IC C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../java/br/com/bb/qgd/models/InternetCrd.java    |  4 +++
+|  .../br/com/bb/qgd/services/CircuitoService.java   | 38 ++++++++++-----------
+|  2 files changed, 23 insertions(+), 19 deletions(-)
+
+* %as - #056c2c77e8 - v1.0.3 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #0a88219ffc - Alterar formulário criação circuito C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../br/com/bb/qgd/services/CircuitoService.java   | 23 +++++++++++++++++----
+|  1 file changed, 19 insertions(+), 4 deletions(-)
+
+* %as - #343f10a1dd - v1.0.2 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #ff1d5665e7 - Enviando arquivos  para lógica de criação IC e REQ C1317641 Pedro Henrique Queiroz Miranda  
+   src/main/java/br/com/bb/qgd/dao/CircuitoDao.java  |  67 +++
+   src/main/java/br/com/bb/qgd/dao/PedidosDao.java   |  90 ++-
+   .../java/br/com/bb/qgd/models/InternetCrd.java    | 359 ++++++++++++
+   .../java/br/com/bb/qgd/models/Requisicao.java     |  46 ++
+   ...equisicaoInstalacaoInternetCredenciamento.java | 411 +++++++++++++
+   .../br/com/bb/qgd/models/pedidos/Pedidos.java     |  30 +-
+   .../java/br/com/bb/qgd/rest/RotinasResource.java  |  28 +-
+   .../br/com/bb/qgd/services/CircuitoService.java   | 168 ++++++
+   .../br/com/bb/qgd/services/RequisicaoService.java |  65 +++
+   .../br/com/bb/qgd/services/RotinasService.java    | 230 ++++++--
+   src/main/java/br/com/bb/qgd/utils/Utils.java      | 612 ++++----------------
+   11 files changed, 1509 insertions(+), 597 deletions(-)
+
+* %as - #b3b3373597 - Consulta simples para teste C1317641 Pedro Henrique Queiroz Miranda  
+   src/main/java/br/com/bb/qgd/dao/PedidosDao.java   |  56 ++++
+   src/main/java/br/com/bb/qgd/models/Pedidos.java   | 282 ++++++++++++++++++++
+   .../br/com/bb/qgd/rest/HelloWorldResources.java   |  44 ---
+   .../java/br/com/bb/qgd/rest/RotinasResource.java  |  69 +++++
+   src/main/resources/application.properties         |  67 +++++
+   target/classes/application.properties             |  67 +++++
+   6 files changed, 541 insertions(+), 44 deletions(-)
+
+* %as - #5a8ef0b0c8 - Arquivos iniciais C1317641 Pedro Henrique Queiroz Miranda  
+   CHANGELOG.md                                      |  19 ++
+   Dockerfile                                        |   4 +
+   Dockerfile.dev                                    |   9 +
+   README.md                                         | 100 +++++++
+   mvnw                                              | 310 ++++++++++++++++++++
+   mvnw.cmd                                          | 182 ++++++++++++
+   pom.xml                                           | 219 ++++++++++++++
+   run/docker-compose.yaml                           |  78 +++++
+   run/run.bat                                       |  52 ++++
+   run/run.sh                                        | 192 ++++++++++++
+   src/main/java/br/com/bb/qgd/config/AppConfig.java |  28 ++
+   .../qgd/exceptions/ChavesMonitoradasSistema.java  |  25 ++
+   .../br/com/bb/qgd/exceptions/ErrosSistema.java    |  36 +++
+   .../bb/qgd/integration/InterfaceConsumidor.java   |  23 ++
+   .../br/com/bb/qgd/rest/HelloWorldResources.java   |  44 +++
+   src/main/resources/META-INF/resources/index.html  | 152 ++++++++++
+   src/main/resources/application.properties         |  28 ++
+   src/main/resources/scripts/carga_testes.sql       |  14 +
+   .../br/com/bb/qgd/HelloWorldResourceTest.java     |  21 ++
+   .../br/com/bb/qgd/NativeHelloWorldResourceIT.java |   8 +
+   target/classes/META-INF/resources/index.html      | 152 ++++++++++
+   target/classes/application.properties             |  28 ++
+   .../classes/br/com/bb/qgd/config/AppConfig.class  | Bin 0 -> 1143 bytes
+   .../qgd/exceptions/ChavesMonitoradasSistema.class | Bin 0 -> 1943 bytes
+   .../br/com/bb/qgd/exceptions/ErrosSistema.class   | Bin 0 -> 2945 bytes
+   .../bb/qgd/integration/InterfaceConsumidor.class  | Bin 0 -> 410 bytes
+   .../br/com/bb/qgd/rest/HelloWorldResources.class  | Bin 0 -> 2157 bytes
+   target/classes/scripts/carga_testes.sql           |  14 +
+   .../br/com/bb/qgd/HelloWorldResourceTest.class    | Bin 0 -> 1390 bytes
+   .../com/bb/qgd/NativeHelloWorldResourceIT.class   | Bin 0 -> 433 bytes
+   30 files changed, 1738 insertions(+)
+
+qgd-estatico/ ************************************************************************************************ 
+
+* %as - #54377c8dc4 - Ajuste erros C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../desativar-circuito-nova-conectividade-controller.js        | 9 +--------
+|  1 file changed, 1 insertion(+), 8 deletions(-)
+
+* %as - #a4a95369a2 - v2.8.69 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #fe90033324 - Console para acessos em desativação C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../desativar-circuito-nova-conectividade-controller.js        | 9 ++++++++-
+|  1 file changed, 8 insertions(+), 1 deletion(-)
+
+* %as - #107aba5e93 - Substituindo checagem pendente validaçao cancelamento solicitacao C1317641 Pedro Henrique Queiroz Miranda  
+   .../solicitar-instalacao/solicitar-instalacao-controller.js          | 2 +-
+   .../solicitar-instalacao/solicitar-instalacao-tpl.html               | 3 ++-
+   2 files changed, 3 insertions(+), 2 deletions(-)
+
+* %as - #8c81e6dcdb - DEVELOPMENT C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #2e6d9d2836 - Adicionando force em grunt build - package.json C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #0d6f52b1c4 - Adicionando propriedade build em package.json C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 1 +
+|  1 file changed, 1 insertion(+)
+
+* %as - #8b6f3b7333 - Adicionando propriedade engine no package.json C1317641 Pedro Henrique Queiroz Miranda| 
+|  package-lock.json                                 | 15 +++-
+|  package.json                                      |  7 +-
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 81 +++++++++++++++++----
+|  3 files changed, 86 insertions(+), 17 deletions(-)
+
+* %as - #82b5dae966 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 339 ++++++--------------
+|  1 file changed, 99 insertions(+), 240 deletions(-)
+
+* %as - #fe04cf281e - Ajustando testes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/consultar-pedidos-nova-conectividade-spec.js | 493 +++++++++++++++++++-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 402 ++++++++--------
+|  src/app/spas/qgd/componentes/config/config.js     |   8 +-
+|  .../consultar-pedidos-controller.js               |   8 +-
+|  4 files changed, 697 insertions(+), 214 deletions(-)
+
+* %as - #a5227a0318 - Comentando solicitar instalaçao C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 70 ++++++++++-----------
+|  1 file changed, 35 insertions(+), 35 deletions(-)
+
+* %as - #ed3e87fb63 - v2.8.59 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 317 ++++++++++++++++----
+|  2 files changed, 263 insertions(+), 56 deletions(-)
+
+* %as - #244b3d3d4c - Ajustes C1317641 Pedro Henrique Queiroz Miranda  
+   ...ar-internet-descentralizada-controller-spec.js | 1060 +++++++++----------
+   1 file changed, 530 insertions(+), 530 deletions(-)
+
+* %as - #cde29c1e1c - Ajustes C1317641 Pedro Henrique Queiroz Miranda  
+   ...olicitar-instalacao-nova-conectividade-spec.js | 124 ++++++++++----------
+   1 file changed, 62 insertions(+), 62 deletions(-)
+
+* %as - #a1854ea91d - v2.8.58 - PRODUCTION C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js | 2 +-
+|  package.json | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #03dc33fba3 - v2.8.57 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 401 ++++++++++++++------
+|  2 files changed, 279 insertions(+), 124 deletions(-)
+
+* %as - #a4ba931a94 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 46 +++++++++++----------
+|  1 file changed, 24 insertions(+), 22 deletions(-)
+
+* %as - #3d0d9f3483 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 11 +++--------
+|  1 file changed, 3 insertions(+), 8 deletions(-)
+
+* %as - #5a25674b5b - Delaying flush C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 14 ++++++++++++++
+|  1 file changed, 14 insertions(+)
+
+* %as - #df5f1e93cc - v2.8.56 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 60 +++++++++++++++++++--
+|  2 files changed, 56 insertions(+), 6 deletions(-)
+
+* %as - #bfb01bb7a9 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 4 +++-
+|  1 file changed, 3 insertions(+), 1 deletion(-)
+
+* %as - #53fbea1369 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 169 --------------------
+|  ...solicitar-alteracao-nova-conectividade-spec.js |  39 ++---
+|  2 files changed, 9 insertions(+), 199 deletions(-)
+
+* %as - #dda16700be - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/2-solicitar-alteracao-nova-conectividade-spec.js | 5 ++---
+|  1 file changed, 2 insertions(+), 3 deletions(-)
+
+* %as - #4eecc43d44 - v2.8.55 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 170 ++++++++++++++++++++
+|  ...solicitar-alteracao-nova-conectividade-spec.js |   6 +-
+|  3 files changed, 174 insertions(+), 4 deletions(-)
+
+* %as - #175fb8333b - Ajuste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 48 ++++++++++-----------
+|  1 file changed, 24 insertions(+), 24 deletions(-)
+
+* %as - #e94de8302a - Ajuste C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 10 +++++-----
+|  1 file changed, 5 insertions(+), 5 deletions(-)
+
+* %as - #3812bff342 - v2.8.54 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 31 +++++++++++++++++++--
+|  2 files changed, 30 insertions(+), 3 deletions(-)
+
+* %as - #ad2b3eab71 - Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 22 ++++++++-------------
+|  1 file changed, 8 insertions(+), 14 deletions(-)
+
+* %as - #ed7a477dad - v2.8.53 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #3a3296da63 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  karma.conf.js                                     |  2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 54 ++++++++++-----------
+|  2 files changed, 28 insertions(+), 28 deletions(-)
+
+* %as - #9b24bec482 - v2.8.52 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #206ead1246 - Testando config karma - retirar testes C1317641 Pedro Henrique Queiroz Miranda| 
+|  karma.conf.js | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #b8e0ff46f6 - v2.8.51 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #341cd526f8 - Ajuste CatVel C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 35 ++++++++++-----------
+|  1 file changed, 16 insertions(+), 19 deletions(-)
+
+* %as - #8747c1978d - Ajuste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 62 ++++++++++-----------
+|  1 file changed, 31 insertions(+), 31 deletions(-)
+
+* %as - #3491e1347b - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 42 ++++++++++-----------
+|  1 file changed, 21 insertions(+), 21 deletions(-)
+
+* %as - #5e04cc2558 - Rollback C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 62 +++++++++++----------
+|  1 file changed, 33 insertions(+), 29 deletions(-)
+
+* %as - #1acd57f38e - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 6 +++---
+|  1 file changed, 3 insertions(+), 3 deletions(-)
+
+* %as - #fc39df709f - v2.8.50 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #bbc39e8c2f - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  karma.conf.js                                     |  7 +---
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 15 ++++----
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 42 ++++++++++-----------
+|  3 files changed, 30 insertions(+), 34 deletions(-)
+
+* %as - #ed1ca88d01 - Alterando karma para realizar deploy C1317641 Pedro Henrique Queiroz Miranda| 
+|  karma.conf.js | 7 ++++++-
+|  1 file changed, 6 insertions(+), 1 deletion(-)
+
+* %as - #61acdbb301 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 67 +++------------------
+|  1 file changed, 7 insertions(+), 60 deletions(-)
+
+* %as - #73ecd96c27 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 35 +++++++++++----------
+|  1 file changed, 19 insertions(+), 16 deletions(-)
+
+* %as - #21679d43ba - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 32 ++++++++++-----------
+|  1 file changed, 16 insertions(+), 16 deletions(-)
+
+* %as - #4d5811d28c - Ajuste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 56 ++++++++++-----------
+|  1 file changed, 28 insertions(+), 28 deletions(-)
+
+* %as - #3eb4807657 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 109 ++++++++++----------
+|  1 file changed, 54 insertions(+), 55 deletions(-)
+
+* %as - #54270ad903 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 42 ++++++++++-----------
+|  1 file changed, 21 insertions(+), 21 deletions(-)
+
+* %as - #7c9bb484ac - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 111 ++++++++++++++------
+|  1 file changed, 81 insertions(+), 30 deletions(-)
+
+* %as - #3fdefbf644 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 18 +++++++++---------
+|  1 file changed, 9 insertions(+), 9 deletions(-)
+
+* %as - #d0794ab495 - Ajustes C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #8982a3ef54 - Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 4 ++--
+|  1 file changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #ef4f438280 - v2.8.49 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 161 ++------------------
+|  2 files changed, 17 insertions(+), 146 deletions(-)
+
+* %as - #27f7ee6fdf - v2.8.48 - Adicionando testes C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 127 ++++++++++++++++++++
+|  2 files changed, 128 insertions(+), 1 deletion(-)
+
+* %as - #9ad0e82c8c - Ajuste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 28 ++++++++++-----------
+|  1 file changed, 14 insertions(+), 14 deletions(-)
+
+* %as - #8c481adfdf - Ajuste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 18 +++++----
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 42 ++++++++++-----------
+|  2 files changed, 31 insertions(+), 29 deletions(-)
+
+* %as - #fc144b35d2 - Ajustando teste solicitar instalacao C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 42 ++++++++++-----------
+|  1 file changed, 21 insertions(+), 21 deletions(-)
+
+* %as - #bfd1d5544f - Ajustando testes pedido instalacao C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 230 ++++++++++----------
+|  1 file changed, 117 insertions(+), 113 deletions(-)
+
+* %as - #d3885736b9 - v2.8.47 - Testes C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 116 ++++++++++++--------
+|  .../solicitar-alteracao-controller.js             |   8 +-
+|  3 files changed, 76 insertions(+), 50 deletions(-)
+
+* %as - #8517ac0fcc - Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 209 ++++++--------------
+|  1 file changed, 59 insertions(+), 150 deletions(-)
+
+* %as - #60d807b118 - |Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 84 ++++++++++-----------
+|  1 file changed, 42 insertions(+), 42 deletions(-)
+
+* %as - #f3a644cccf - Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  spec/solicitar-alteracao-nova-conectividade-spec.js | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #f06ff69d9c - Retirando aspas duplas v2.8.46 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 244 ++++++++++----------
+|  2 files changed, 123 insertions(+), 123 deletions(-)
+
+* %as - #f5aa2fbbfd - v2.8.45 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |  2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 22 ++++++++++-----------
+|  2 files changed, 12 insertions(+), 12 deletions(-)
+
+* %as - #9d2baa60ef - Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 176 ++++++++++----------
+|  1 file changed, 88 insertions(+), 88 deletions(-)
+
+* %as - #5e42eb9f05 - Teste C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 84 ++++++++++-----------
+|  1 file changed, 42 insertions(+), 42 deletions(-)
+
+* %as - #945be45d01 - v2.8.44 - adicionando testes C1317641 Pedro Henrique Queiroz Miranda  
+   package.json                                      |   2 +-
+   ...solicitar-alteracao-nova-conectividade-spec.js | 405 +++++++++++---------
+   .../solicitar-alteracao-controller.js             |  24 +-
+   3 files changed, 232 insertions(+), 199 deletions(-)
+
+* %as - #28a84833d7 - v2.8.37 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json                                      |   2 +-
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 306 ++++++++++----------
+|  2 files changed, 154 insertions(+), 154 deletions(-)
+
+* %as - #42dbf5052f - v2.8.36 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #c7cf27097a - v2.8.35 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #0d204e8e3e - Reintegrando testes C1317641 Pedro Henrique Queiroz Miranda| 
+|  ...solicitar-alteracao-nova-conectividade-spec.js | 295 +++++++++++
+|  ...olicitar-instalacao-nova-conectividade-spec.js | 471 +++++++++++++++++
+|  ...ar-internet-descentralizada-controller-spec.js | 538 ++++++++++++++++++++
+|  3 files changed, 1304 insertions(+)
+
+* %as - #6c70939bfa - v2.8.34 C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js                                                    | 2 +-
+|  package.json                                                    | 2 +-
+|  src/app/spas/qgd/componentes/config/config.js                   | 8 ++++----
+|  .../solicitar-alteracao/solicitar-alteracao-tpl.html            | 2 +-
+|  4 files changed, 7 insertions(+), 7 deletions(-)
+
+* %as - #369ae92674 - Adicionando testes - Faltando os nova-conectividades C1317641 Pedro Henrique Queiroz Miranda| 
 |  spec/cadastrar-site-ti-controller-spec.js         |  155 ++
 |  spec/consultar-pedidos-nova-conectividade-spec.js |  586 +++++++
 |  spec/dashboard-siteTi-controller-spec.js          |  236 +++
@@ -4366,485 +5386,93 @@ qgd-credenciamento-estatico/ ***************************************************
 |  spec/grafico-coluna-siteTi-controller-spec.js     |  100 ++
 |  spec/grafico-pizza-siteTi-controller-spec.js      |  104 ++
 |  spec/listar-siteTi-controller-spec.js             |  250 +++
-|  ...solicitar-alteracao-nova-conectividade-spec.js |  295 ++++
-|  ...olicitar-instalacao-nova-conectividade-spec.js |  471 +++++
-|  ...ar-internet-descentralizada-controller-spec.js |  538 ++++++
-|  src/app/scripts/dicas_internet.png                |  Bin 0 -> 70112 bytes
-|  src/app/scripts/dicas_pae.png                     |  Bin 0 -> 71167 bytes
-|  src/app/scripts/dicas_renap.png                   |  Bin 0 -> 79580 bytes
-|  src/app/scripts/highcharts-more.js                |   58 +
-|  src/app/scripts/highcharts.js                     |  393 +++++
-|  .../assets/images/Grafico_Consumo-f169ff39.png    |  Bin 0 -> 15397 bytes
-|  .../qgd/assets/images/imagem_modelo_alteracao.png |  Bin 0 -> 23585 bytes
-|  .../qgd/assets/images/imagem_modelo_internet.png  |  Bin 0 -> 70112 bytes
-|  .../spas/qgd/assets/images/imagem_modelo_pae.png  |  Bin 0 -> 71167 bytes
-|  .../qgd/assets/images/imagem_modelo_renap.png     |  Bin 0 -> 79580 bytes
-|  .../spas/qgd/assets/images/statusEmAndamento.svg  |   13 +
-|  src/app/spas/qgd/assets/images/statusFalha.svg    |   13 +
-|  src/app/spas/qgd/assets/images/statusSucesso.svg  |   13 +
-|  .../detalhar-circuitos-controller.js              |  107 ++
-|  .../detalhar-circuitos-service.js                 |   85 +
-|  .../detalhar-circuitos/detalhar-circuitos.html    |  321 ++++
-|  .../listar-circuitos/detalheCircuitos.html        |  114 ++
-|  .../listar-circuitos/listar-circuitos-app.html    |  120 ++
-|  .../listar-circuitos-controller.js                |  237 +++
-|  .../listar-circuitos/listar-circuitos-modules.js  |   39 +
-|  .../listar-circuitos/listar-circuitos-routes.js   |   46 +
-|  .../listar-circuitos/listar-circuitos-service.js  |   58 +
-|  .../listar-circuitos/listar-circuitos.html        |  212 +++
-|  src/app/spas/qgd/componentes/config/config.js     |   11 +
-|  .../form-cadastro-alteracao-sites-ti-componete.js |    9 +
-|  ...form-cadastro-alteracao-sites-ti-controller.js |  211 +++
-|  .../form-cadastro-alteracao-sites-ti-service.js   |   52 +
-|  .../form-cadastro-alteracao-sites-ti.html         |  229 +++
-|  .../modal/_modal-confirmacao-tpl.html             |   18 +
-|  .../modal/_modal-new-site-tpl.html                |   21 +
-|  .../graficos/coluna/grafico-coluna-componente.js  |  123 ++
-|  .../graficos/coluna/grafico-coluna-tpl.html       |    2 +
-|  .../graficos/pizza/grafico-pizza-componente.js    |   71 +
-|  .../graficos/pizza/grafico-pizza-tpl.html         |    2 +
-|  src/app/spas/qgd/dicas_internet.png               |  Bin 0 -> 70112 bytes
-|  src/app/spas/qgd/dicas_pae.png                    |  Bin 0 -> 71167 bytes
-|  src/app/spas/qgd/dicas_renap.png                  |  Bin 0 -> 79580 bytes
-|  .../internet-descentralizada-service.js           |   15 +
-|  .../solicitar/internet-descentralizada.css        |  231 +++
-|  .../solicitar/modal-confirmation.html             |   51 +
-|  .../solicitar/modal-for-user-information.html     |   53 +
-|  .../solicitar-internet-descentralizada-app.html   |  105 ++
-|  ...licitar-internet-descentralizada-controller.js |  466 +++++
-|  .../solicitar-internet-descentralizada-modules.js |   40 +
-|  .../solicitar-internet-descentralizada-routes.js  |   47 +
-|  .../solicitar-internet-descentralizada-service.js |   54 +
-|  .../solicitar-internet-descentralizada-tpl.html   |  729 ++++++++
-|  .../consultar-pedidos/consultar-pedidos-app.html  |  104 ++
-|  .../consultar-pedidos-controller.js               |  558 ++++++
-|  .../consultar-pedidos-modules.js                  |   49 +
-|  .../consultar-pedidos/consultar-pedidos-routes.js |   47 +
-|  .../consultar-pedidos-services.js                 |   42 +
-|  .../consultar-pedidos/consultar-pedidos-tpl.html  |  231 +++
-|  ...desativar-circuito-nova-conectividade-app.html |  189 ++
-|  ...ivar-circuito-nova-conectividade-controller.js |  397 +++++
-|  ...sativar-circuito-nova-conectividade-modules.js |   40 +
-|  ...esativar-circuito-nova-conectividade-routes.js |   47 +
-|  ...sativar-circuito-nova-conectividade-service.js |  174 ++
-|  ...desativar-circuito-nova-conectividade-tpl.html |  303 ++++
-|  ...desativar-circuito-nova-conectividade-utils.js |   45 +
-|  .../desativar/modal-aviso-desativar.html          |   22 +
-|  .../desativar/modal-confirmacao-desativar.html    |   29 +
-|  .../images/dicas_alteracao.png                    |  Bin 0 -> 23585 bytes
-|  .../modals/modal-aviso-cancelar.html              |   22 +
-|  .../modal-confirmacao-cancelar-circuito.html      |   29 +
-|  .../modals/modal-confirmacao.html                 |   28 +
-|  .../modals/modal-exportar-csv.html                |   34 +
-|  .../modelos/modelo_alteracao.csv                  |    2 +
-|  .../modelos/modelo_alteracao_teste.csv            |    2 +
-|  .../modelos/modelo_internet_alt_endereco.csv      |    2 +
-|  .../modelos/modelo_pae_alt_endereco.csv           |    2 +
-|  .../modelos/modelo_renap_alt_endereco.csv         |    2 +
-|  .../solicitar-alteracao-app.html                  |  104 ++
-|  .../solicitar-alteracao-controller.js             |  717 ++++++++
-|  .../solicitar-alteracao-modules.js                |   49 +
-|  .../solicitar-alteracao-routes.js                 |   47 +
-|  .../solicitar-alteracao-services.js               |  106 ++
-|  .../solicitar-alteracao-tpl.html                  |  321 ++++
-|  .../images/dicas_internet.png                     |  Bin 0 -> 70112 bytes
-|  .../solicitar-instalacao/images/dicas_pae.png     |  Bin 0 -> 71167 bytes
-|  .../solicitar-instalacao/images/dicas_renap.png   |  Bin 0 -> 79580 bytes
-|  .../modals/modal-aviso-cancelar.html              |   22 +
-|  .../modal-confirmacao-cancelar-circuito.html      |   29 +
-|  .../modals/modal-confirmacao.html                 |   28 +
-|  .../modals/modal-exportar-csv.html                |   44 +
-|  .../modelos/modelo_internet.csv                   |    2 +
-|  .../modelos/modelo_internet_com_menos_colunas.csv |    2 +
-|  .../solicitar-instalacao/modelos/modelo_pae.csv   |    2 +
-|  .../solicitar-instalacao/modelos/modelo_renap.csv |    2 +
-|  .../solicitar-instalacao-app.html                 |  104 ++
-|  .../solicitar-instalacao-controller.js            |  750 ++++++++
-|  .../solicitar-instalacao-modules.js               |   49 +
-|  .../solicitar-instalacao-routes.js                |   47 +
-|  .../solicitar-instalacao-services.js              |  263 +++
-|  .../solicitar-instalacao-tpl.html                 |  509 ++++++
-|  src/app/spas/qgd/qgd-estatico-modules.js          |   55 +
-|  src/app/spas/qgd/qgd-estatico.css                 |  184 ++
-|  .../site-ti/cadastrar/cadastrar-site-ti-app.html  |  104 ++
-|  .../cadastrar/cadastrar-site-ti-controller.js     |   70 +
-|  .../cadastrar/cadastrar-site-ti-modules.js        |   40 +
-|  .../site-ti/cadastrar/cadastrar-site-ti-routes.js |   47 +
-|  .../cadastrar/cadastrar-site-ti-services.js       |   26 +
-|  .../site-ti/cadastrar/cadastrar-site-ti-tpl.html  |   64 +
-|  .../qgd/site-ti/cadastrar/modal-confirmacao.html  |   28 +
-|  .../spas/qgd/site-ti/dashboard/dashboard-app.html |  126 ++
-|  .../qgd/site-ti/dashboard/dashboard-modules.js    |   42 +
-|  .../qgd/site-ti/dashboard/dashboard-routes.js     |   48 +
-|  .../qgd/site-ti/dashboard/dashboard-service.js    |   65 +
-|  .../dashboard/dashboard-siteTi-controller.js      |  146 ++
-|  .../qgd/site-ti/dashboard/dashboard-siteTi.html   |   43 +
-|  .../site-ti/desativar/desativar-siteTi-tpl.html   |    5 +
-|  .../site-ti/detalhar/_modal-desativar-site.html   |   33 +
-|  .../site-ti/detalhar/_modal-novo-ambiente.html    |   30 +
-|  .../detalhar/detalhar-sites-ti-controller.js      |  696 ++++++++
-|  .../site-ti/detalhar/detalhar-sites-ti-service.js |  189 ++
-|  .../qgd/site-ti/detalhar/detalhar-sites-ti.html   |  576 +++++++
-|  .../qgd/site-ti/listar-sitesTi/detalheSites.html  |  114 ++
-|  .../listar-sitesTi/listar-siteTi-controller.js    |  229 +++
-|  .../qgd/site-ti/listar-sitesTi/listar-siteTi.html |  297 ++++
-|  .../listar-sitesTi/listar-sitesTi-app.html        |  151 ++
-|  .../listar-sitesTi/listar-sitesTi-modules.js      |   39 +
-|  .../listar-sitesTi/listar-sitesTi-routes.js       |   62 +
-|  .../listar-sitesTi/listar-sitesTi-service.js      |   63 +
-|  src/assets/global.css                             |    0
-|  src/assets/images/Grafico_Consumo-f169ff39.png    |  Bin 0 -> 15397 bytes
-|  src/assets/images/dicas_internet.png              |  Bin 0 -> 70112 bytes
-|  src/assets/images/dicas_pae.png                   |  Bin 0 -> 71167 bytes
-|  src/assets/images/dicas_renap.png                 |  Bin 0 -> 79580 bytes
-|  src/assets/images/imagem_modelo_alteracao.png     |  Bin 0 -> 23585 bytes
-|  src/assets/images/statusEmAndamento.svg           |   13 +
-|  src/assets/images/statusFalha.svg                 |   13 +
-|  src/assets/images/statusSucesso.svg               |   13 +
-|  src/index.html                                    |   20 +
-|  ssl/Readme.md                                     |    1 +
-|  ssl/livereload.crt                                |   19 +
-|  ssl/livereload.csr                                |   16 +
-|  ssl/livereload.key                                |   27 +
-|  ...lityData-a8b04c800ee33d1aefb952f21049e3b4.code |  Bin 0 -> 2568 bytes
-|  .../Base-4c5d4fe2dc4093c0d4b972baaa70c227.code    |  Bin 0 -> 1384 bytes
-|  .../Channel-78ea03e096175cb51e830e69a7d5ba62.code |  Bin 0 -> 4808 bytes
-|  .../Config-3df194716243893ee19690857ce8e9ed.code  |  Bin 0 -> 4888 bytes
-|  .../Console-a041d1d3c0f38f472806bf3f81efc71e.code |  Bin 0 -> 3112 bytes
-|  ...onstants-d25bf35b6174072b37f19541ae2da470.code |  Bin 0 -> 2352 bytes
-|  .../Context-79cc1e273d8be562bccefbc790e0bb0a.code |  Bin 0 -> 5168 bytes
-|  ...tTagKeys-de1b573e6d86120cdce6c2c1027f1f18.code |  Bin 0 -> 3552 bytes
-|  ...tManager-da8251227258593c29afd4a7f00c71ca.code |  Bin 0 -> 5128 bytes
-|  ...dManager-b3411a863ba8cd82f60b7d4dea180080.code |  Bin 0 -> 5816 bytes
-|  .../Data-99dfd48ddddc88cb1bb7546bacc3ba11.code    |  Bin 0 -> 2704 bytes
-|  ...ataPoint-11dae0b3d503fd29a93edf433146f624.code |  Bin 0 -> 1408 bytes
-|  ...ointType-4a3d4fc898a6f4afe2e51df752da3199.code |  Bin 0 -> 1384 bytes
-|  .../Domain-c1ad967bce419bc3879f4dff2041abec.code  |  Bin 0 -> 1392 bytes
-|  ...Envelope-a34d20dfc0ed14053f24de2ae4d2e3a8.code |  Bin 0 -> 1544 bytes
-|  ...eFactory-8016ec24d32d1a88e956732c3fd47ad1.code |  Bin 0 -> 7064 bytes
-|  ...ventData-11d3cb4cdfb2eb81782800318969232a.code |  Bin 0 -> 2864 bytes
-|  ...tionData-355dac0f775b6c0fb739ab669d511bd3.code |  Bin 0 -> 2568 bytes
-|  ...nDetails-e4910b78e7450e21c0dc8fc2431251e7.code |  Bin 0 -> 1304 bytes
-|  ...ceptions-ce3515b131df2975e128a395ad483526.code |  Bin 0 -> 3640 bytes
-|  ...ndencies-6f86248c9aaf2ead3e35a72bbdccef53.code |  Bin 0 -> 4640 bytes
-|  ...cyParser-cce3b6e92fc71131deb2e576212b2a7d.code |  Bin 0 -> 3824 bytes
-|  ...stParser-de9ae7dde7a38b9d900cfe5a1510fde3.code |  Bin 0 -> 5496 bytes
-|  ...Requests-4eabf0ca5b07c20c8dcd71fe63806043.code |  Bin 0 -> 5536 bytes
-|  .../Logging-5770d5197b0cf4f7d5d57a495d74dae1.code |  Bin 0 -> 2056 bytes
-|  ...sageData-d79b5ee6f7b7c080013fb57f08d7b553.code |  Bin 0 -> 2560 bytes
-|  ...tricData-a515aa23153c17d851a485ab3ebfe918.code |  Bin 0 -> 2560 bytes
-|  ...deClient-c8b8720283e5366683778453de992d75.code |  Bin 0 -> 3584 bytes
-|  ...ViewData-fea5450469e3a6a955bd9e6071cd3f00.code |  Bin 0 -> 2568 bytes
-|  ...formance-0efcb0e268376fb12b1c41ec6e79bfdf.code |  Bin 0 -> 5024 bytes
-|  ...encyData-dc4d421bdc084be111d266be52f87626.code |  Bin 0 -> 2584 bytes
-|  ...uestData-317d985ee189cdfa08ec23015efbb509.code |  Bin 0 -> 2560 bytes
-|  ...stParser-d4ed67e81977989c10d027d39762c377.code |  Bin 0 -> 1880 bytes
-|  ...eHeaders-951b93e2da90894e41754234f15d7d53.code |  Bin 0 -> 1536 bytes
-|  ...rocessor-6ea4bb431e5ea30ac9d867a80b86550d.code |  Bin 0 -> 2240 bytes
-|  .../Sender-164e8c64c948a361878eecada5c5ed72.code  |  Bin 0 -> 12064 bytes
-|  ...ityLevel-964e25da1b4ea9da0d91f617086b7f8c.code |  Bin 0 -> 1504 bytes
-|  ...ackFrame-537ff530d2c38c67257c1b1c5efea114.code |  Bin 0 -> 1296 bytes
-|  ...ryClient-5a39e3c1a2d65e809d3c398d4f7dd982.code |  Bin 0 -> 7296 bytes
-|  ...etryType-f1bb2d3cb5bced7ad9fc13e5d47572ba.code |  Bin 0 -> 2656 bytes
-|  .../Util-98469b8b2f5d9d29849fbab9c01f98b8.code    |  Bin 0 -> 8584 bytes
-|  ...insights-a46ef9bc228c6c006b9f2f611adde35d.code |  Bin 0 -> 8152 bytes
-|  ...bindings-3df5c8ee749d27d1f935b9a6f1b5cc28.code |  Bin 0 -> 7480 bytes
-|  ...bindings-5dbccbe23bea19b219468599f7ee17a4.code |  Bin 0 -> 7488 bytes
-|  ...bindings-f4b3550a67bd3264e949c0362a53e41e.code |  Bin 0 -> 7480 bytes
-|  ...handling-07f8d29ad398e95d202cd587a6b8daeb.code |  Bin 0 -> 1792 bytes
-|  ...handling-66f8a404c71ae2abfca64be14c7b4512.code |  Bin 0 -> 1792 bytes
-|  ...handling-cd0a92728b520684b81046055d2b5663.code |  Bin 0 -> 1792 bytes
-|  ...lipboard-1e1732ea0701b77ce2b84e90b656ba34.code |  Bin 0 -> 2920 bytes
-|  ...lipboard-fab8674c9a0907a838fd870759b6ffed.code |  Bin 0 -> 2232 bytes
-|  ...rd-utils-eb7e1a246b3e34d14d68642a16bd2b90.code |  Bin 0 -> 2800 bytes
-|  ...reporter-420019d841c640701b2e646efb6191fb.code |  Bin 0 -> 4128 bytes
-|  ...reporter-8fee55b20fa6af299787cb5e2cb0d607.code |  Bin 0 -> 4128 bytes
-|  ...reporter-979992fde078956d06ccfc03ade674a4.code |  Bin 0 -> 2896 bytes
-|  ...reporter-99a092aa86a557c6307c4196a3a866bd.code |  Bin 0 -> 1904 bytes
-|  ...cs-codec-e0ff9cc97be5c1ab33206ef606b41429.code |  Bin 0 -> 3400 bytes
-|  ...bcs-data-2540330f14861235b11e5ccff5f3fe1d.code |  Bin 0 -> 5032 bytes
-|  .../dialog-1bddf61a9a403fd2284c4603cc2de384.code  |  Bin 0 -> 8008 bytes
-|  ...Emitter2-6365bceeeef793567e7f3e703c05b3b0.code |  Bin 0 -> 1872 bytes
-|  ...end-node-21d7bcd720760eb8a2f1fdf88d83082c.code |  Bin 0 -> 1976 bytes
-|  ...end-node-8b8bae5f2bc66abd612c6d0427f8143e.code |  Bin 0 -> 1968 bytes
-|  ...end-node-d13ec02abd2f5ea49c208375e5e28670.code |  Bin 0 -> 1976 bytes
-|  .../fs-0af168eff94e1b5d91f7786a0228d236.code      |  Bin 0 -> 1792 bytes
-|  ...ceful-fs-ab21b6aa861b1ddc39a1f09feb6d1f44.code |  Bin 0 -> 11432 bytes
-|  .../index-0a115799e21356f24ed0f121f6ec3121.code   |  Bin 0 -> 7280 bytes
-|  .../index-17fc2610b89f89efa216bad9cd148677.code   |  Bin 0 -> 1528 bytes
-|  .../index-18247e1c9ac2dca2a31d02515c9ff5c0.code   |  Bin 0 -> 3960 bytes
-|  .../index-345f66c0046046b7b6804501caee5dda.code   |  Bin 0 -> 5192 bytes
-|  .../index-473eb0057289dd6bf6faf11691594e8a.code   |  Bin 0 -> 1160 bytes
-|  .../index-47df40ff18186d4460c0ec4f1859c063.code   |  Bin 0 -> 2720 bytes
-|  .../index-4f111e59940a86bdf1f482b7db44a68e.code   |  Bin 0 -> 8208 bytes
-|  .../index-550168a9fd136f248623601a22492a89.code   |  Bin 0 -> 1160 bytes
-|  .../index-6529c2a88917b58abe203c710307221f.code   |  Bin 0 -> 3128 bytes
-|  .../index-74eb0718c7ae52828efe08104608c676.code   |  Bin 0 -> 3856 bytes
-|  .../index-74ebe31825aee3545508889ca3f74add.code   |  Bin 0 -> 3088 bytes
-|  .../index-886d400e72b6de561b4a0f66eccd750a.code   |  Bin 0 -> 1672 bytes
-|  .../index-897563aa63f5c3c2ab211631671d85e1.code   |  Bin 0 -> 3128 bytes
-|  .../index-9419daf904615a095ced7ada3d8a17e9.code   |  Bin 0 -> 3440 bytes
-|  .../index-9db46fd09a301dba05f183d9509a5439.code   |  Bin 0 -> 3208 bytes
-|  .../index-a07acf9734acc531d443a9839ad09528.code   |  Bin 0 -> 1160 bytes
-|  .../index-aa7c12779de9c548ed962dccc34fe9c2.code   |  Bin 0 -> 1680 bytes
-|  .../index-b8f65988ebcfaf2547aac6a5aff961cf.code   |  Bin 0 -> 1936 bytes
-|  .../index-bb00a854eeed8ab44b9ac11d8b0d72d4.code   |  Bin 0 -> 3088 bytes
-|  .../index-be73f0ff91ea7ba108a1b2b8e9a9479b.code   |  Bin 0 -> 3128 bytes
-|  .../index-c1fc95ff01547f6ca748f6beb4818df1.code   |  Bin 0 -> 1640 bytes
-|  .../index-cf1921ac16d887df14be4672f00a1aad.code   |  Bin 0 -> 4624 bytes
-|  .../index-d7804ca55e74873e2e91a7954a0d1353.code   |  Bin 0 -> 1528 bytes
-|  .../index-db352158455239afad6924cc7b0b7211.code   |  Bin 0 -> 3208 bytes
-|  .../index-eea82fa8e9999159df93b2cdb937f56d.code   |  Bin 0 -> 3088 bytes
-|  ...lization-5e9909d3ac7d80250744f47fbdc01978.code |  Bin 0 -> 2392 bytes
-|  ...internal-5be935c0a5ef661d933b3accee0e0fbe.code |  Bin 0 -> 4144 bytes
-|  ...renderer-cc597d792dc0aa161c615d56f6ed78e9.code |  Bin 0 -> 2312 bytes
-|  ...al-utils-ce04c7b91267849f166807f853898cb9.code |  Bin 0 -> 2296 bytes
-|  .../keytar-28349a99936256ef9c159da4e2df3c61.code  |  Bin 0 -> 2360 bytes
-|  ...-streams-c15652b9825eea6acd39e3891b411a05.code |  Bin 0 -> 1304 bytes
-|  .../main-607528d097eabd74f62cc04b544397c2.code    |  Bin 0 -> 1066688 bytes
-|  .../main-68935303dd6cdb2f6bf9008a871a66d7.code    |  Bin 0 -> 58872 bytes
-|  ...main.nls-956ad8c538a19e90932a98f85a89fd06.code |  Bin 0 -> 14456 bytes
-|  .../net-1853f2d03dff329fffa769ff0dc63cc0.code     |  Bin 0 -> 11080 bytes
-|  ...niguruma-96821338770b5812b9fd2a0e3c5bbbc1.code |  Bin 0 -> 4144 bytes
-|  .../paths-cd1505d524078d653ef4b7fdcc71eb37.code   |  Bin 0 -> 1496 bytes
-|  .../paths-f674ffb496d5c6d248682c8533d7bdeb.code   |  Bin 0 -> 1496 bytes
-|  ...olyfills-cca83a712557f28d09b594ba71df6fce.code |  Bin 0 -> 10968 bytes
-|  ...-monitor-5e44d6eea0d02c910d3ceab774582288.code |  Bin 0 -> 2184 bytes
-|  .../safer-4f29b55c7daa96d2baeefa86390690d3.code   |  Bin 0 -> 2264 bytes
-|  .../safer-dab40b6b24eb168fefa526d9bb95d7a4.code   |  Bin 0 -> 2264 bytes
-|  .../safer-ddaee6c5af8bad5a993b3c0fec2a7a8b.code   |  Bin 0 -> 2272 bytes
-|  ...cs-codec-8639d0ba96accac266c3b673ef730f30.code |  Bin 0 -> 1968 bytes
-|  ...bcs-data-c17bea10c32a39bebc806252f61b0867.code |  Bin 0 -> 7168 bytes
-|  ...enerated-edd46a18070a4b1de9af9fcf3faee47b.code |  Bin 0 -> 30888 bytes
-|  .../screen-02af49bce7f621fcbe0a24ba2eceb9f4.code  |  Bin 0 -> 1296 bytes
-|  ...mver-umd-2dc558f83c5146e3bba42956f922d040.code |  Bin 0 -> 99136 bytes
-|  ...mver-umd-eadff3a77dcb7fb78a4ef080869b067e.code |  Bin 0 -> 96776 bytes
-|  ...cessMain-6a477d31ed7cc912edfc1e90668e15f4.code |  Bin 0 -> 682904 bytes
-|  ...Main.nls-9489c7a745a78650ec8ed665280718b7.code |  Bin 0 -> 8416 bytes
-|  .../sqlite3-6695c45ae01b19f73b09836a79964900.code |  Bin 0 -> 6352 bytes
-|  .../sqlite3-816574f98bfb862eda1972ed0e40cd3c.code |  Bin 0 -> 6144 bytes
-|  .../streams-1ecd1052bd3eb01039b2ea7bbc3da07f.code |  Bin 0 -> 3312 bytes
-|  .../streams-742e552e2ceb2e20a4c49cb770486feb.code |  Bin 0 -> 3320 bytes
-|  .../streams-b82eeb40a2c5eb050394d2573cdd2991.code |  Bin 0 -> 3320 bytes
-|  ...terminal-bed81baa08e185a48838c5ca3d5c3064.code |  Bin 0 -> 5784 bytes
-|  ...Terminal-06f7e290042d783281c1481bceb0e801.code |  Bin 0 -> 6056 bytes
-|  .../utf16-deb512a72891d46433d7707b23e9f746.code   |  Bin 0 -> 2944 bytes
-|  .../utf32-342cf4c0f924a5ab4ae0fbf7d10e63bf.code   |  Bin 0 -> 3192 bytes
-|  .../utf7-0c842ee6c2cd9b1d7c06088fc03ddb0f.code    |  Bin 0 -> 3840 bytes
-|  .../utils-c5299336dba28a2b37f3dba8812869c9.code   |  Bin 0 -> 1192 bytes
-|  ...top.main-f4bc6ce220b8d1eace5d5f18337d764d.code |  Bin 0 -> 7976896 bytes
-|  ...main.nls-1eb26667a0cadd2701f485c06634c86d.code |  Bin 0 -> 335992 bytes
-|  292 files changed, 20122 insertions(+)
+|  src/app/spas/qgd/componentes/config/config.js     |    8 +-
+|  11 files changed, 4017 insertions(+), 4 deletions(-)
 
-* %as - #c4bba5bdab - deletando angular 9 C1317641 Pedro Henrique Queiroz Miranda| 
-|  .browserslistrc                                   |    17 -
-|  .editorconfig                                     |    16 -
-|  .eslintrc.json                                    |    63 -
-|  .gitignore                                        |     1 -
-|  .npmignore                                        |     7 -
-|  .prettierignore                                   |     3 -
-|  .prettierrc.json                                  |    16 -
-|  .vscode/extensions.json                           |    10 -
-|  .vscode/settings.json                             |     6 -
-|  CHANGELOG.md                                      |    33 -
-|  README.md                                         |   103 -
-|  angular.json                                      |   132 -
-|  .../report-html/base.css                          |   224 -
-|  .../report-html/block-navigation.js               |    87 -
-|  .../report-html/favicon.png                       |   Bin 540 -> 0 bytes
-|  .../report-html/index.html                        |   176 -
-|  .../report-html/prettify.css                      |     1 -
-|  .../report-html/prettify.js                       |     2 -
-|  .../report-html/sort-arrow-sprite.png             |   Bin 209 -> 0 bytes
-|  .../report-html/sorter.js                         |   196 -
-|  .../report-html/src/app/app.component.ts.html     |   130 -
-|  .../src/app/home/home.component.ts.html           |   220 -
-|  .../report-html/src/app/home/index.html           |   116 -
-|  .../report-html/src/app/index.html                |   131 -
-|  .../report-html/src/app/layout/index.html         |   116 -
-|  .../src/app/layout/layout.component.ts.html       |   211 -
-|  .../src/app/pesquisa-cliente/index.html           |   131 -
-|  .../pesquisa-cliente.component.ts.html            |   235 -
-|  .../pesquisa-cliente.service.ts.html              |   202 -
-|  .../app/transloco-testing-utils.module.ts.html    |   142 -
-|  .../report-html/src/index.html                    |   116 -
-|  .../report-html/src/test.ts.html                  |   178 -
-|  .../report-lcov/lcov-report/base.css              |   224 -
-|  .../report-lcov/lcov-report/block-navigation.js   |    87 -
-|  .../report-lcov/lcov-report/favicon.png           |   Bin 540 -> 0 bytes
-|  .../report-lcov/lcov-report/index.html            |   176 -
-|  .../report-lcov/lcov-report/prettify.css          |     1 -
-|  .../report-lcov/lcov-report/prettify.js           |     2 -
-|  .../report-lcov/lcov-report/sort-arrow-sprite.png |   Bin 209 -> 0 bytes
-|  .../report-lcov/lcov-report/sorter.js             |   196 -
-|  .../lcov-report/src/app/app.component.ts.html     |   130 -
-|  .../src/app/home/home.component.ts.html           |   220 -
-|  .../lcov-report/src/app/home/index.html           |   116 -
-|  .../report-lcov/lcov-report/src/app/index.html    |   131 -
-|  .../lcov-report/src/app/layout/index.html         |   116 -
-|  .../src/app/layout/layout.component.ts.html       |   211 -
-|  .../src/app/pesquisa-cliente/index.html           |   131 -
-|  .../pesquisa-cliente.component.ts.html            |   235 -
-|  .../pesquisa-cliente.service.ts.html              |   202 -
-|  .../app/transloco-testing-utils.module.ts.html    |   142 -
-|  .../report-lcov/lcov-report/src/index.html        |   116 -
-|  .../report-lcov/lcov-report/src/test.ts.html      |   178 -
-|  .../report-lcov/lcov.info                         |   167 -
-|  coverage/typescript/lcov/lcov.info                |   167 -
-|  gaw-reverse-conf.json                             |    18 -
-|  karma.conf.js                                     |    61 -
-|  package-lock.json                                 | 14359 ------------------
-|  package.json                                      |    75 -
-|  src/app/app-routing.module.ts                     |    46 -
-|  src/app/app.component.html                        |     4 -
-|  src/app/app.component.scss                        |     0
-|  src/app/app.component.spec.ts                     |    38 -
-|  src/app/app.component.ts                          |    15 -
-|  src/app/app.module.ts                             |   113 -
-|  src/app/home/home.component.html                  |   164 -
-|  src/app/home/home.component.scss                  |    59 -
-|  src/app/home/home.component.spec.ts               |    51 -
-|  src/app/home/home.component.ts                    |    45 -
-|  src/app/interfaces/circuitos.ts                   |     0
-|  src/app/interfaces/site_ti.ts                     |    30 -
-|  src/app/layout/layout.component.html              |    19 -
-|  src/app/layout/layout.component.scss              |    18 -
-|  src/app/layout/layout.component.spec.ts           |   148 -
-|  src/app/layout/layout.component.ts                |    42 -
-|  .../pesquisa-cliente.component.html               |   206 -
-|  .../pesquisa-cliente.component.scss               |     0
-|  .../pesquisa-cliente.component.spec.ts            |   171 -
-|  .../pesquisa-cliente.component.ts                 |    70 -
-|  .../pesquisa-cliente.service.spec.ts              |    67 -
-|  .../pesquisa-cliente/pesquisa-cliente.service.ts  |    56 -
-|  .../solicitar-instalacao.component.html           |   227 -
-|  .../solicitar-instalacao.component.scss           |     0
-|  .../solicitar-instalacao.component.spec.ts        |     0
-|  .../solicitar-instalacao.component.ts             |   153 -
-|  .../solicitar-instalacao.service.spec.ts          |     0
-|  .../solicitar-instalacao.service.ts               |   229 -
-|  src/app/transloco-root.module.ts                  |    39 -
-|  src/app/transloco-testing-utils.module.ts         |    19 -
-|  src/assets/.gitkeep                               |     0
-|  src/assets/angular-cli.svg                        |    17 -
-|  src/assets/angular.svg                            |     9 -
-|  src/assets/code-white.svg                         |     3 -
-|  src/assets/code.svg                               |     3 -
-|  src/assets/cubes-white.svg                        |    10 -
-|  src/assets/cubes.svg                              |    10 -
-|  src/assets/graduate-white.svg                     |     3 -
-|  src/assets/graduate.svg                           |     3 -
-|  src/assets/i18n/en.json                           |    65 -
-|  src/assets/i18n/es.json                           |    65 -
-|  src/assets/i18n/pt.json                           |    65 -
-|  src/assets/logo.svg                               |     7 -
-|  src/assets/primeng.svg                            |     1 -
-|  src/environments/environment.prod.ts              |     3 -
-|  src/environments/environment.ts                   |    16 -
-|  src/favicon.ico                                   |   Bin 7406 -> 0 bytes
-|  src/index.html                                    |    71 -
-|  src/main.ts                                       |    13 -
-|  src/polyfills.ts                                  |    64 -
-|  src/styles.scss                                   |     6 -
-|  src/test.ts                                       |    31 -
-|  test.ts                                           |    29 -
-|  tsconfig.app.json                                 |    15 -
-|  tsconfig.json                                     |    32 -
-|  tsconfig.spec.json                                |    18 -
-|  www/3rdpartylicenses.txt                          |   396 -
-|  www/assets/angular-cli.svg                        |    17 -
-|  www/assets/angular.svg                            |     9 -
-|  www/assets/code-white.svg                         |     3 -
-|  www/assets/code.svg                               |     3 -
-|  www/assets/cubes-white.svg                        |    10 -
-|  www/assets/cubes.svg                              |    10 -
-|  www/assets/graduate-white.svg                     |     3 -
-|  www/assets/graduate.svg                           |     3 -
-|  www/assets/i18n/en.json                           |    65 -
-|  www/assets/i18n/es.json                           |    65 -
-|  www/assets/i18n/pt.json                           |    65 -
-|  www/assets/logo.svg                               |     7 -
-|  www/assets/primeng.svg                            |     1 -
-|  www/color.6441e63a57ccc5105bad.png                |   Bin 10355 -> 0 bytes
-|  www/favicon.ico                                   |   Bin 7406 -> 0 bytes
-|  www/hue.f8505bd4d6f3e3aa435b.png                  |   Bin 293 -> 0 bytes
-|  www/index.html                                    |    48 -
-|  www/main.09ea94c7892c077b650b.js                  |     1 -
-|  www/polyfills.a2acb43e03b1e9a0d7ae.js             |     1 -
-|  www/primeicons.3a0d4a58da62cf7c55bb.ttf           |   Bin 57384 -> 0 bytes
-|  www/primeicons.c55d94a248721abbd220.svg           |   234 -
-|  www/primeicons.dfbfef2de4bfb34e9722.eot           |   Bin 57560 -> 0 bytes
-|  www/primeicons.e61f3495a7ecd3d571a4.woff          |   Bin 57460 -> 0 bytes
-|  www/runtime.2d9c470522cad1d9f75a.js               |     1 -
-|  www/scripts.fac7a2d65da571cf53b7.js               |     1 -
-|  www/styles.0fe55067d3b495b9a584.css               |     1 -
-|  141 files changed, 24014 deletions(-)
+* %as - #76147d42d6 - Retirando testes C1317641 Pedro Henrique Queiroz Miranda  
+   spec/cadastrar-site-ti-controller-spec.js         |  155 --
+   spec/consultar-pedidos-nova-conectividade-spec.js |  586 -------
+   spec/dashboard-siteTi-controller-spec.js          |  236 ---
+   ...circuito-nova-conectividade-controller-spec.js |  487 ------
+   spec/detalhar-circuitos-controller-spec.js        |  169 --
+   spec/detalhar-sites-ti-controller-spec.js         | 1707 -------------------
+   ...-cadastro-alteracao-sites-ti-componete-spec.js |  219 ---
+   spec/grafico-coluna-siteTi-controller-spec.js     |  100 --
+   spec/grafico-pizza-siteTi-controller-spec.js      |  104 --
+   spec/listar-siteTi-controller-spec.js             |  250 ---
+   ...solicitar-alteracao-nova-conectividade-spec.js |  295 ----
+   ...olicitar-instalacao-nova-conectividade-spec.js |  471 -----
+   ...ar-internet-descentralizada-controller-spec.js |  538 ------
+   13 files changed, 5317 deletions(-)
 
-* %as - #a5905b55bf - Adicionando inicio de funcionalidade solicitar instalação C1317641 Pedro Henrique Queiroz Miranda  
-   gaw-reverse-conf.json                             |  16 +-
-   src/app/app-routing.module.ts                     |   6 +
-   src/app/app.component.html                        |   2 +-
-   src/app/app.module.ts                             |   4 +-
-   src/app/home/home.component.html                  |   6 +
-   src/app/interfaces/circuitos.ts                   |   0
-   src/app/interfaces/site_ti.ts                     |  30 +++
-   .../pesquisa-cliente.component.html               |  69 +++++-
-   .../pesquisa-cliente.component.ts                 |  20 ++
-   .../pesquisa-cliente/pesquisa-cliente.service.ts  |  17 ++
-   .../solicitar-instalacao.component.html           | 227 +++++++++++++++++++
-   .../solicitar-instalacao.component.scss           |   0
-   .../solicitar-instalacao.component.spec.ts        |   0
-   .../solicitar-instalacao.component.ts             | 153 +++++++++++++
-   .../solicitar-instalacao.service.spec.ts          |   0
-   .../solicitar-instalacao.service.ts               | 229 ++++++++++++++++++++
-   src/index.html                                    |  14 +-
-   17 files changed, 770 insertions(+), 23 deletions(-)
-
-qgd-estatico/ ************************************************************************************************ 
-
-* %as - #f83cc18714 - verificando caracteres especiais pedidos AED C1317641 Pedro Henrique Queiroz Miranda| 
-|  .../solicitar-alteracao/solicitar-alteracao-controller.js    |  6 +++---
-|  .../solicitar-instalacao/solicitar-instalacao-controller.js  | 10 ++++------
-|  2 files changed, 7 insertions(+), 9 deletions(-)
-
-* %as - #033d55a65b - Ajustando tabela de funcionarios em detalhar site ti C1317641 Pedro Henrique Queiroz Miranda| 
-|  src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html | 2 ++
-|  1 file changed, 2 insertions(+)
-
-* %as - #1caef7a1e5 - v2.8.26 - Ajuste cadastro site ti para Time Odin C1317641 Pedro Henrique Queiroz Miranda| 
-|  package.json                                      |   2 +-
-|  ...-cadastro-alteracao-sites-ti-componete-spec.js |  80 ++---
-|  ...solicitar-alteracao-nova-conectividade-spec.js |  31 ++
-|  ...form-cadastro-alteracao-sites-ti-controller.js |  52 ++-
-|  .../form-cadastro-alteracao-sites-ti.html         | 340 ++++++++++++--------
-|  .../modal/_modal-new-site-tpl.html                |  21 ++
-|  .../solicitar-alteracao-controller.js             |   3 +-
-|  .../cadastrar/cadastrar-site-ti-controller.js     |   1 +
-|  .../site-ti/cadastrar/cadastrar-site-ti-tpl.html  |  33 +-
-|  9 files changed, 387 insertions(+), 176 deletions(-)
-
-* %as - #7f73893ee3 - Ajustando chamadas solicitar alteracao C1317641 Pedro Henrique Queiroz Miranda  
-   .../solicitar-alteracao-controller.js             | 94 ++++++++++++---------
-   1 file changed, 56 insertions(+), 38 deletions(-)
-
-qgd-fornecedor-pfnweb/ *************************************************************************************** 
-
-* %as - #e289992e01 - v2.9.65 Retirando cobertura C1317641 Pedro Henrique Queiroz Miranda| 
-|  pom.xml                                                |  2 +-
-|  .../bb/pfn/qgd/api/resources/FuncionarioResource.java  | 16 +++++++++++++++-
-|  2 files changed, 16 insertions(+), 2 deletions(-)
-
-* %as - #66307de40d - v2.9.64 C1317641 Pedro Henrique Queiroz Miranda| 
-|  pom.xml | 12 ++++++++++--
-|  1 file changed, 10 insertions(+), 2 deletions(-)
-
-* %as - #ce18f797d4 - v2.9.63 C1317641 Pedro Henrique Queiroz Miranda| 
-|  pom.xml | 2 +-
+* %as - #2237766f6b - PRODUCAO - Alterando gruntfile C1317641 Pedro Henrique Queiroz Miranda| 
+|  Gruntfile.js | 2 +-
 |  1 file changed, 1 insertion(+), 1 deletion(-)
 
-* %as - #fdfcf92a17 - Cobrindo código novo para deploy C1317641 Pedro Henrique Queiroz Miranda  
-   .../qgd/api/models/ExcludeFromJacocoGeneratedReport.java    | 11 +++++++++++
-   .../com/bb/pfn/qgd/api/resources/FuncionarioResource.java   |  3 +++
-   .../bb/pfn/qgd/api/resources/FuncionarioResourceTest.java   |  1 +
-   3 files changed, 15 insertions(+)
+* %as - #c22eb70748 - v2.8.33 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #c0dbfd9174 - Subindo ajustes site de ti e retirando opção endereço em solicitar alteração C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../solicitar-alteracao/solicitar-alteracao-tpl.html                  | 2 +-
+|  src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html              | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* %as - #11c8a8a709 - v2.8.32 C1317641 Pedro Henrique Queiroz Miranda| 
+|  package.json | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* %as - #3243c0e0ad - v2.8.31 C1317641 Pedro Henrique Queiroz Miranda  
+   package.json                                      |   2 +-
+   .../solicitar-alteracao-controller.js             | 181 ++++++++++++--------
+   .../solicitar-instalacao-controller.js            |   2 +-
+   3 files changed, 112 insertions(+), 73 deletions(-)
+
+* %as - #2960fd79f2 - v2.8.27 - Ajustando mensagens de erro pra solicitar alteracao endereco C1317641 Pedro Henrique Queiroz Miranda  
+   package.json                                      |   2 +-
+   .../modelos/modelo_internet_alt_endereco.csv      |   1 +
+   .../solicitar-alteracao-controller.js             | 512 ++++++++++++++------
+   .../solicitar-alteracao-tpl.html                  |   2 +-
+   4 files changed, 355 insertions(+), 162 deletions(-)
+
+* %as - #f83cc18714 - verificando caracteres especiais pedidos AED C1317641 Pedro Henrique Queiroz Miranda  
+   .../solicitar-alteracao/solicitar-alteracao-controller.js    |  6 +++---
+   .../solicitar-instalacao/solicitar-instalacao-controller.js  | 10 ++++------
+   2 files changed, 7 insertions(+), 9 deletions(-)
+
+qgd-gsti-api/ ************************************************************************************************ 
+
+* %as - #a0fb4b2e37 - v1.1.76 - Adicionando nova busca de funcionarios para time Odin C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                           |   2 +-
+|  .../java/br/com/bb/qgd/dao/FuncionarioDao.java    |  28 +++---
+|  .../java/br/com/bb/qgd/models/Funcionario.java    | 105 ++++++++++++++++++--
+|  3 files changed, 114 insertions(+), 21 deletions(-)
+
+* %as - #5762fdad5e - Adicionando cnpj em endpoint /circuitos/buscar v1.1.75 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                          |  2 +-
+|  src/main/java/br/com/bb/qgd/dao/CircuitoDao.java |  2 +-
+|  src/main/java/br/com/bb/qgd/models/Circuito.java | 16 ++++++++++++++++
+|  3 files changed, 18 insertions(+), 2 deletions(-)
+
+* %as - #a4b4648a75 - v1.1.74 C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                             |  2 +-
+|  src/main/java/br/com/bb/qgd/models/Funcionario.java | 17 +----------------
+|  2 files changed, 2 insertions(+), 17 deletions(-)
+
+* %as - #c28b21d9c0 - 490418 - CriaçãoBuscaReqCredenciamento C1317641 Pedro Henrique Queiroz Miranda| 
+|  pom.xml                                                |  2 +-
+|  src/main/java/br/com/bb/qgd/dao/CircuitoDao.java       | 15 +++++++++++++++
+|  src/main/java/br/com/bb/qgd/models/Funcionario.java    |  2 +-
+|  src/main/java/br/com/bb/qgd/rest/CircuitoResource.java | 16 ++++++++++++++++
+|  4 files changed, 33 insertions(+), 2 deletions(-)
+
+* %as - #0f9e88d673 - Ajustando model funcionario C1317641 Pedro Henrique Queiroz Miranda| 
+|  .../java/br/com/bb/qgd/models/Funcionario.java    | 56 ---------------------
+|  1 file changed, 56 deletions(-)
+
+* %as - #4428b302d3 - v1.1.72 C1317641 Pedro Henrique Queiroz Miranda  
+   pom.xml                                           |  2 +-
+   .../java/br/com/bb/qgd/dao/FuncionarioDao.java    | 13 ++++
+   .../java/br/com/bb/qgd/models/Funcionario.java    | 79 +++++++++++++++++++++
+   3 files changed, 93 insertions(+), 1 deletion(-)
 

@@ -1,0 +1,12 @@
+des-qgd-credenciamento-rotinas/ - PEDRO - c1317641 - 2022-04-07 - 2022-05-18
+
+MODIFICAÇÃO DE XML
+
+ 	des-qgd-credenciamento-rotinas/values.yaml#840d38359a
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+Total Geral: 1 arquivos
+Pontuação Geral: 5 SISBB
+

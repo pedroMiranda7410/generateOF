@@ -1,8 +1,8 @@
-des-qgd-controle-pedidos/ - PEDRO - c1317641 - 2022-03-30 - 2022-04-28
+des-qgd-controle-pedidos/ - PEDRO - c1317641 - 2022-04-07 - 2022-05-18
 
 MODIFICAÇÃO DE XML
 
- 	des-qgd-controle-pedidos/values.yaml#32adabd16a
+ 	des-qgd-controle-pedidos/values.yaml#2e68bccc0e
 
     Total: 1 arquivos
     Pontuação: 5 SISBB

@@ -1,17 +1,14 @@
 const user = require('./user.json');
+const passwords = require('./passwords.json');
 const pointsList = require('./pointsList.json');
-const utils = require('./utilScripts.js');
 const fs = require('fs');
-
-const args = utils.getArgs();
-//console.log(args);
 
 // VERIFICAR VARIÁVEIS GLOBAIS
 var directory = user.directory;
 var directoryOF = user.directoryOF;
 var yourName = user.yourName;
 var yourKey = user.yourKey;
-var yourPassword = user.yourPassword;
+var yourPassword = passwords.sisbb;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
 var histories = user.histories;
@@ -19,6 +16,9 @@ var operations = user.operations;
 var repositories = user.repositories;
 let baseXLS = user.baseXLS;
 let points = user.points;
+let repeatFiles = user.repeatFiles;
+let userHermes = user.userHermes;
+let passHermes = user.passHermes;
 
 let files = user.files;
 
@@ -50,6 +50,8 @@ var createXMLOptions = pointsList.points[8].options;
 var alterXMLOptions = pointsList.points[9].options;
 var createCSSOptions = pointsList.points[10].options;
 var alterCSSOptions = pointsList.points[11].options;
+
+var othersFinalQTD = 0;
 
 function writeToFiles(QTD, points, options, tmpFile, files, rowCounter) {
 
@@ -124,20 +126,70 @@ async function processLineByLine() {
       var alterXMLQTD = 0;
       var othersQTD = 0;
 
-      var hashCommit = "###########";
       var verifyWithoutNodeModules = true;
+      var verifyWithoutWWW = true;
+      var verifyWithoutTarget = true;
+      var verifyWithoutEnv = true;
+      var verifyWithoutGitIgnore = true;
+      var verifyWithoutDockerfile = true;
+      var verifyWithoutMvnw = true;
+      var verifyWithoutJenkinsfile = true;
+      var verifyWithoutJacoco = true;
+      var verifyWithoutGruntfile = true;
+      var verifyWithoutCoverage = true;
+      var verifyWithoutSpec = true;
+      var verifyWithoutWrapper = true;
+      var verifyWithoutClasspath = true;
+      var verifyWithoutdockerignore = true;
+      var verifyWithoutbbdev = true;
+      var verifyWithoutideia = true;
+      var verifyWithoutWebContent = true;
+      var verifyWithoutMd = true;
+      var verifyWithoutpackage_lock = true;
+
+      var hashCommit = "###########";
 
       for (var o = 0; o < commits.length; o++) {
 
         var line = commits[o];
-        verifyWithoutNodeModules = !line.includes('node_modules');
 
-        if (line.includes("commit:") && verifyWithoutNodeModules)
+        verifyWithoutNodeModules = !line.includes('node_modules');
+        verifyWithoutWWW = !line.includes('www');
+        verifyWithoutTarget = !line.includes('target');
+        verifyWithoutEnv = !line.includes('.env');
+        verifyWithoutGitIgnore = !line.includes('.gitignore');
+        verifyWithoutDockerfile = !line.includes('Dockerfile');
+        verifyWithoutMvnw = !line.includes('mvnw');
+        verifyWithoutJenkinsfile = !line.includes('Jenkinsfile');
+        verifyWithoutJacoco = !line.includes('jacoco');
+        verifyWithoutCoverage = !line.includes('coverage');
+        verifyWithoutWrapper = !line.includes('wrapper');
+        verifyWithoutClasspath = !line.includes('.classpath');
+        verifyWithoutdockerignore = !line.includes('.dockerignore');
+        verifyWithoutbbdev = !line.includes('.bbdev');
+        verifyWithoutideia = !line.includes('.idea');
+        verifyWithoutWebContent = !line.includes('WebContent');
+        verifyWithoutMd = !line.includes('.md');
+        verifyWithoutpackage_lock = !line.includes('package-lock');
+
+        if (line.includes("commit:") && verifyWithoutNodeModules && verifyWithoutWWW 
+        && verifyWithoutTarget && verifyWithoutEnv && verifyWithoutGitIgnore && verifyWithoutMvnw 
+        && verifyWithoutDockerfile && verifyWithoutJenkinsfile && verifyWithoutJacoco && verifyWithoutGruntfile && verifyWithoutCoverage  && verifyWithoutSpec && verifyWithoutWrapper  && verifyWithoutClasspath
+        && verifyWithoutdockerignore && verifyWithoutbbdev && verifyWithoutideia && verifyWithoutWebContent && verifyWithoutMd && verifyWithoutpackage_lock)
           hashCommit = line.split("#")[1];
 
-        if (!linesFromInput.includes(line) && verifyWithoutNodeModules) {
+        var condition = true;
 
-          if (!line.includes("commit:") && line != "") {
+        if (repeatFiles == false || repeatFiles == "false" )
+          condition = !linesFromInput.includes(line)
+
+        if (condition) {
+
+          if (!line.includes("commit:") && line != "" && verifyWithoutNodeModules && verifyWithoutWWW 
+          && verifyWithoutTarget && verifyWithoutEnv && verifyWithoutGitIgnore 
+          && verifyWithoutMvnw && verifyWithoutDockerfile && verifyWithoutJenkinsfile 
+          && verifyWithoutJacoco && verifyWithoutGruntfile && verifyWithoutCoverage  && verifyWithoutSpec && verifyWithoutWrapper  && verifyWithoutClasspath
+          && verifyWithoutdockerignore && verifyWithoutbbdev && verifyWithoutideia && verifyWithoutWebContent && verifyWithoutMd && verifyWithoutpackage_lock) {
 
             linesFromInput.push(line);
 
@@ -203,7 +255,7 @@ async function processLineByLine() {
                 createHTML += `${line.substring(1)}#${hashCommit}\n`;
                 gitFiles.push(line + " (+" + createHTMLPoints + "pts)");
                 createHTMLQTD++;
-              } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties")) {
+              } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json")) {
 
                 if (extension == "minimal") {
                   if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -217,7 +269,7 @@ async function processLineByLine() {
                   alterXMLQTD++;
                 }
 
-              } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties") {
+              } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json") {
 
                 if (extension == "minimal") {
                   if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -272,7 +324,7 @@ async function processLineByLine() {
 
       var totalQtd = createJavaQTD + alterJavaQTD + alterJavaCompQTD + createJavaTestQTD
         + createHTMLQTD + alterHTMLQTD + createJSQTD + alterJSQTD + createXMLQTD
-        + createCSSQTD + alterCSSQTD + alterXMLQTD + othersQTD;
+        + createCSSQTD + alterCSSQTD + alterXMLQTD;
 
       var totalSISBB = (createJavaQTD * createJavaPoints)
         + (alterJavaQTD * alterJavaPoints)
@@ -285,6 +337,8 @@ async function processLineByLine() {
         + (createCSSQTD * createCSSPoints)
         + (alterCSSQTD * alterCSSPoints)
         + (alterXMLQTD * alterXMLPoints);
+
+      othersFinalQTD += othersQTD;
 
       tmpFile += `Total Geral: ${totalQtd} arquivos\n`;
       tmpFile += `Pontuação Geral: ${totalSISBB}pts\n\n`;
@@ -326,6 +380,10 @@ async function processLineByLine() {
   }
 
   var arquivos = await execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} arquivos`);
+
+  if (othersFinalQTD > 0)
+    arquivos = await execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`);
+
   var char = returnSISBBStatus(diffDays);
   var pontuacao = await execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char}`);
 
@@ -513,6 +571,8 @@ async function updateUserJsonFile(points, files) {
 
   var filePath = `${directoryOF}/user.json`;
 
+  await execShellCommand('find . -name "user.json" -type f -delete');
+
   var opStr = "";
 
   if (operations) {
@@ -525,7 +585,7 @@ async function updateUserJsonFile(points, files) {
     });
     opStr = opStr.slice(0, -1);
     opStr += "]";
-  }
+  } else { opStr = "[]" }
 
   var repoStr = "";
 
@@ -539,7 +599,7 @@ async function updateUserJsonFile(points, files) {
     });
     repoStr = repoStr.slice(0, -1);
     repoStr += "]";
-  }
+  } else { repoStr = "[]" }
 
   var histStr = "";
 
@@ -553,7 +613,7 @@ async function updateUserJsonFile(points, files) {
     });
     histStr = histStr.slice(0, -1);
     histStr += "]";
-  }
+  } else { histStr = "[]" }
 
   var filesStr = "";
 
@@ -568,55 +628,31 @@ async function updateUserJsonFile(points, files) {
     });
     filesStr = filesStr.slice(0, -1);
     filesStr += `]`;
-  }
+  } else { filesStr = "[]" }
+
+  if (!repeatFiles)
+    repeatFiles = "false";
 
   var userJsonFile = `{
     "directory": "${directory}",
     "directoryOF": "${directoryOF}",
     "yourName": "${yourName}",
     "yourKey": "${yourKey}",
-    "yourPassword": "${yourPassword}",
+    "userHermes": "${userHermes}",
     "choosenDate": "${choosenDate}",
     "otherDate": "${otherDate}",
     "operations": ${opStr},
     "repositories": ${repoStr},
     "histories": ${histStr},
     "baseXLS": "${baseXLS}",
+    "repeatFiles": "${repeatFiles}",
     "points": "${points}",
     "files": ${filesStr}
 }`;
 
-  await execShellCommand('find . -name "user.json" -type f -delete');
-
   fs.writeFile(filePath, userJsonFile, function (err) {
     if (err) { return console.log(err); }
   });
-
-}
-
-function a() {
-
-  const https = require('https')
-  const options = {
-    hostname: 'example.com',
-    port: 443,
-    path: '/todos',
-    method: 'GET'
-  }
-
-  const req = https.request(options, res => {
-    console.log(`statusCode: ${res.statusCode}`)
-
-    res.on('data', d => {
-      process.stdout.write(d)
-    })
-  })
-
-  req.on('error', error => {
-    console.error(error)
-  })
-
-  req.end()
 
 }
 

@@ -1,0 +1,194 @@
+qgd-credenciamento-estatico/ - PEDRO - c1317641 - 2022-04-07 - 2022-05-18
+
+CRIAÇÃO DE HTML
+
+ 	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-app.html#c73a485233
+	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-tpl.html#c73a485233
+	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-tpl.html#b3821d2895
+
+    Total: 3 arquivos
+    Pontuação: 30 SISBB
+
+ALTERAÇÃO DE HTML
+
+ 	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-tpl.html#68cdb26798
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modals/modal-confirmacao-cancelar-circuito.html#a34bb7db29
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modals/modal-aviso-cancelar.html#8fb29f6851
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-tpl.html#6c615aac38
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-app.html#8e1243dc5e
+	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-app.html#a74e04213b
+
+    Total: 6 arquivos
+    Pontuação: 30 SISBB
+
+CRIAÇÃO DE JS
+
+ 	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-controller.js#c73a485233
+	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-modules.js#c73a485233
+	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-routes.js#c73a485233
+	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-services.js#c73a485233
+	spec/consultar-pedidos-spec.js#b3821d2895
+	spec/solicitar-instalacao-spec.js#b3821d2895
+	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-controller.js#b3821d2895
+	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-services.js#b3821d2895
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-controller.js#b3821d2895
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-services.js#b3821d2895
+
+    Total: 10 arquivos
+    Pontuação: 100 SISBB
+
+MODIFICAÇÃO DE JS
+
+ 	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-controller.js#452dba00fd
+	qgd-credenciamento-estatico/src/app/spas/qgd/desativacao/desativacao-controller.js#452dba00fd
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-controller.js#263dbdbcb3
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-services.js#c414022375
+	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-services.js#c245543ab4
+	spec/consultar-pedidos-spec.js#9d5f082224
+	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-modules.js#8e1243dc5e
+	qgd-credenciamento-estatico/src/app/spas/qgd/qgd-estatico-modules.js#8e1243dc5e
+	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-modules.js#8e1243dc5e
+	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/config/config.js#b3821d2895
+
+    Total: 10 arquivos
+    Pontuação: 50 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	package.json#68cdb26798
+	config/dev.json#b3821d2895
+	config/piloto.json#b3821d2895
+	config/prod.json#b3821d2895
+
+    Total: 4 arquivos
+    Pontuação: 20 SISBB
+
+OUTROS
+
+ M	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet_CRD.csv#9d5f082224
+A	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet_CRD_2.csv#4c0e817248
+R100	src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet.csv	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet_CRD.csv#d760aede8b
+M	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet.csv#8e1243dc5e
+D	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_pae.csv#8e1243dc5e
+D	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_renap.csv#8e1243dc5e
+D	spec/cadastrar-site-ti-controller-spec.js#b3821d2895
+D	spec/consultar-pedidos-nova-conectividade-spec.js#b3821d2895
+D	spec/dashboard-siteTi-controller-spec.js#b3821d2895
+D	spec/desativar-circuito-nova-conectividade-controller-spec.js#b3821d2895
+D	spec/detalhar-circuitos-controller-spec.js#b3821d2895
+D	spec/detalhar-sites-ti-controller-spec.js#b3821d2895
+D	spec/form-cadastro-alteracao-sites-ti-componete-spec.js#b3821d2895
+D	spec/grafico-coluna-siteTi-controller-spec.js#b3821d2895
+D	spec/grafico-pizza-siteTi-controller-spec.js#b3821d2895
+D	spec/listar-siteTi-controller-spec.js#b3821d2895
+D	spec/solicitar-alteracao-nova-conectividade-spec.js#b3821d2895
+D	spec/solicitar-instalacao-nova-conectividade-spec.js#b3821d2895
+D	spec/solicitar-internet-descentralizada-controller-spec.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/detalhar-circuitos/detalhar-circuitos-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/detalhar-circuitos/detalhar-circuitos-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/detalhar-circuitos/detalhar-circuitos.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/detalheCircuitos.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/listar-circuitos-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/listar-circuitos-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/listar-circuitos-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/listar-circuitos-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/listar-circuitos-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/circuito/listar-circuitos/listar-circuitos.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti-componete.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/form-cadastro-alteracao-sites-ti.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/modal/_modal-confirmacao-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/form-cadastro-alteracao-sites-ti/modal/_modal-new-site-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/graficos/coluna/grafico-coluna-componente.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/graficos/coluna/grafico-coluna-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/graficos/pizza/grafico-pizza-componente.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/componentes/graficos/pizza/grafico-pizza-tpl.html#b3821d2895
+R064	src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-app.html	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-app.html#b3821d2895
+R077	src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-modules.js	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-modules.js#b3821d2895
+R088	src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-routes.js	qgd-credenciamento-estatico/src/app/spas/qgd/consultar-pedidos/consultar-pedidos-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/internet-descentralizada-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/internet-descentralizada.css#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/modal-confirmation.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/modal-for-user-information.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/solicitar-internet-descentralizada-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/solicitar-internet-descentralizada-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/solicitar-internet-descentralizada-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/solicitar-internet-descentralizada-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/solicitar-internet-descentralizada-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/internet-descentralizada/solicitar/solicitar-internet-descentralizada-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-services.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/desativar-circuito-nova-conectividade-utils.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/modal-aviso-desativar.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/desativar/modal-confirmacao-desativar.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/images/dicas_alteracao.png#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modals/modal-exportar-csv.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_alteracao.csv#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_alteracao_teste.csv#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_internet_alt_endereco.csv#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_pae_alt_endereco.csv#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_renap_alt_endereco.csv#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-services.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modals/modal-aviso-cancelar.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modals/modal-confirmacao-cancelar-circuito.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modals/modal-confirmacao.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-services.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-services.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/cadastrar/cadastrar-site-ti-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/cadastrar/modal-confirmacao.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/dashboard/dashboard-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/dashboard/dashboard-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/dashboard/dashboard-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/dashboard/dashboard-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/dashboard/dashboard-siteTi-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/dashboard/dashboard-siteTi.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/desativar/desativar-siteTi-tpl.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/detalhar/_modal-desativar-site.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/detalhar/_modal-novo-ambiente.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti-service.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/detalheSites.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/listar-siteTi-controller.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/listar-siteTi.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/listar-sitesTi-app.html#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/listar-sitesTi-modules.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/listar-sitesTi-routes.js#b3821d2895
+D	qgd-credenciamento-estatico/src/app/spas/qgd/site-ti/listar-sitesTi/listar-sitesTi-service.js#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/images/dicas_internet.png	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/images/dicas_internet.png#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/images/dicas_pae.png	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/images/dicas_pae.png#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/images/dicas_renap.png	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/images/dicas_renap.png#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modals/modal-aviso-cancelar.html	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modals/modal-aviso-cancelar.html#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modals/modal-confirmacao-cancelar-circuito.html	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modals/modal-confirmacao-cancelar-circuito.html#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modals/modal-confirmacao.html	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modals/modal-confirmacao.html#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modals/modal-exportar-csv.html	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modals/modal-exportar-csv.html#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modelos/modelo_internet.csv	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet.csv#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modelos/modelo_internet_com_menos_colunas.csv	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_internet_com_menos_colunas.csv#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modelos/modelo_pae.csv	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_pae.csv#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/modelos/modelo_renap.csv	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/modelos/modelo_renap.csv#b3821d2895
+R062	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-app.html	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-app.html#b3821d2895
+R083	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-modules.js	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-modules.js#b3821d2895
+R100	src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-routes.js	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-routes.js#b3821d2895
+R062	src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-tpl.html	qgd-credenciamento-estatico/src/app/spas/qgd/solicitar-instalacao/solicitar-instalacao-tpl.html#b3821d2895
+
+Total Geral: 33 arquivos
+Pontuação Geral: 230 SISBB
+

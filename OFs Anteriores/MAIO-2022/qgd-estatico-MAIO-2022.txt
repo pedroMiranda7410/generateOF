@@ -1,0 +1,76 @@
+qgd-estatico/ - PEDRO - c1317641 - 2022-04-07 - 2022-05-18
+
+ALTERAÇÃO DE HTML
+
+ 	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-tpl.html#107aba5e93
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-tpl.html#6c70939bfa
+	qgd-estatico/src/app/spas/qgd/site-ti/detalhar/detalhar-sites-ti.html#c0dbfd9174
+
+    Total: 3 arquivos
+    Pontuação: 15 SISBB
+
+CRIAÇÃO DE JS
+
+ 	spec/2-solicitar-alteracao-nova-conectividade-spec.js#4eecc43d44
+	spec/solicitar-alteracao-nova-conectividade-spec.js#0d204e8e3e
+	spec/solicitar-instalacao-nova-conectividade-spec.js#0d204e8e3e
+	spec/solicitar-internet-descentralizada-controller-spec.js#0d204e8e3e
+	spec/cadastrar-site-ti-controller-spec.js#369ae92674
+	spec/consultar-pedidos-nova-conectividade-spec.js#369ae92674
+	spec/dashboard-siteTi-controller-spec.js#369ae92674
+	spec/desativar-circuito-nova-conectividade-controller-spec.js#369ae92674
+	spec/detalhar-circuitos-controller-spec.js#369ae92674
+	spec/detalhar-sites-ti-controller-spec.js#369ae92674
+	spec/form-cadastro-alteracao-sites-ti-componete-spec.js#369ae92674
+	spec/grafico-coluna-siteTi-controller-spec.js#369ae92674
+	spec/grafico-pizza-siteTi-controller-spec.js#369ae92674
+	spec/listar-siteTi-controller-spec.js#369ae92674
+
+    Total: 14 arquivos
+    Pontuação: 140 SISBB
+
+MODIFICAÇÃO DE JS
+
+ 	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-instalacao/solicitar-instalacao-controller.js#107aba5e93
+	Gruntfile.js#8c81e6dcdb
+	spec/solicitar-instalacao-nova-conectividade-spec.js#8b6f3b7333
+	spec/solicitar-alteracao-nova-conectividade-spec.js#82b5dae966
+	spec/consultar-pedidos-nova-conectividade-spec.js#fe04cf281e
+	qgd-estatico/src/app/spas/qgd/componentes/config/config.js#fe04cf281e
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/consultar-pedidos/consultar-pedidos-controller.js#fe04cf281e
+	spec/solicitar-internet-descentralizada-controller-spec.js#244b3d3d4c
+	spec/2-solicitar-alteracao-nova-conectividade-spec.js#dda16700be
+	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/solicitar-alteracao-controller.js#d3885736b9
+
+    Total: 10 arquivos
+    Pontuação: 50 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	package.json#2e6d9d2836
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+OUTROS
+
+ D	spec/2-solicitar-alteracao-nova-conectividade-spec.js#53fbea1369
+M	karma.conf.js#3a3296da63
+D	spec/cadastrar-site-ti-controller-spec.js#76147d42d6
+D	spec/consultar-pedidos-nova-conectividade-spec.js#76147d42d6
+D	spec/dashboard-siteTi-controller-spec.js#76147d42d6
+D	spec/desativar-circuito-nova-conectividade-controller-spec.js#76147d42d6
+D	spec/detalhar-circuitos-controller-spec.js#76147d42d6
+D	spec/detalhar-sites-ti-controller-spec.js#76147d42d6
+D	spec/form-cadastro-alteracao-sites-ti-componete-spec.js#76147d42d6
+D	spec/grafico-coluna-siteTi-controller-spec.js#76147d42d6
+D	spec/grafico-pizza-siteTi-controller-spec.js#76147d42d6
+D	spec/listar-siteTi-controller-spec.js#76147d42d6
+D	spec/solicitar-alteracao-nova-conectividade-spec.js#76147d42d6
+D	spec/solicitar-instalacao-nova-conectividade-spec.js#76147d42d6
+D	spec/solicitar-internet-descentralizada-controller-spec.js#76147d42d6
+M	qgd-estatico/src/app/spas/qgd/nova-conectividade/solicitar-alteracao/modelos/modelo_internet_alt_endereco.csv#2960fd79f2
+
+Total Geral: 28 arquivos
+Pontuação Geral: 210 SISBB
+

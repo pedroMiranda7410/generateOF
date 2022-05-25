@@ -1,4 +1,5 @@
 const user = require('./user.json');
+const passwords = require('./passwords.json');
 const pointsList = require('./pointsList.json');
 const fs = require('fs');
 const readline = require('readline');
@@ -15,6 +16,7 @@ var histories = user.histories;
 var operations = user.operations;
 var repositories = user.repositories;
 let baseXLS = user.baseXLS;
+let repeatFiles = user.repeatFiles;
 
 var createJavaPoints = pointsList.points[0].value;
 var alterJavaPoints = pointsList.points[1].value;
@@ -93,6 +95,7 @@ var createXMLFinalQTD = 0;
 var alterXMLFinalQTD = 0;
 var createCSSFinalQTD = 0;
 var alterCSSFinalQTD = 0;
+var othersFinalQTD = 0;
 
 var data = new Date();
 var month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"][data.getMonth()].toUpperCase();
@@ -256,6 +259,26 @@ async function processLineByLine() {
       var createXMLQTD = 0;
       var alterXMLQTD = 0;
       var createCSSQTD = 0;
+      var verifyWithoutNodeModules = true;
+      var verifyWithoutWWW = true;
+      var verifyWithoutTarget = true;
+      var verifyWithoutEnv = true;
+      var verifyWithoutGitIgnore = true;
+      var verifyWithoutDockerfile = true;
+      var verifyWithoutMvnw = true;
+      var verifyWithoutJenkinsfile = true;
+      var verifyWithoutJacoco = true;
+      var verifyWithoutGruntfile = true;
+      var verifyWithoutCoverage = true;
+      var verifyWithoutSpec = true;
+      var verifyWithoutWrapper = true;
+      var verifyWithoutClasspath = true;
+      var verifyWithoutdockerignore = true;
+      var verifyWithoutbbdev = true;
+      var verifyWithoutideia = true;
+      var verifyWithoutWebContent = true;
+      var verifyWithoutMd = true;
+      var verifyWithoutpackage_lock = true;
       var alterCSSQTD = 0;
       var othersQTD = 0;
 
@@ -264,19 +287,51 @@ async function processLineByLine() {
         crlfDelay: Infinity
       });
 
+      
       var hashCommit = "###########";
-      var verifyWithoutNodeModules = true;
 
       for await (var line of rl) {
-        
         verifyWithoutNodeModules = !line.includes('node_modules');
+        verifyWithoutWWW = !line.includes('www');
+        verifyWithoutTarget = !line.includes('target');
+        verifyWithoutEnv = !line.includes('.env');
+        verifyWithoutGitIgnore = !line.includes('.gitignore');
+        verifyWithoutDockerfile = !line.includes('Dockerfile');
+        verifyWithoutMvnw = !line.includes('mvnw');
+        verifyWithoutJenkinsfile = !line.includes('Jenkinsfile');
+        verifyWithoutJacoco = !line.includes('jacoco');
+        verifyWithoutCoverage = !line.includes('coverage');
+        verifyWithoutWrapper = !line.includes('wrapper');
+        verifyWithoutClasspath = !line.includes('.classpath');
+        verifyWithoutdockerignore = !line.includes('.dockerignore');
+        verifyWithoutbbdev = !line.includes('.bbdev');
+        verifyWithoutideia = !line.includes('.idea');
+        verifyWithoutWebContent = !line.includes('WebContent');
+        verifyWithoutMd = !line.includes('.md');
+        verifyWithoutpackage_lock = !line.includes('package-lock');
+        
 
-        if (line.includes("commit:") && verifyWithoutNodeModules)
+        if (line.includes("commit:") && verifyWithoutNodeModules 
+        && verifyWithoutWWW && verifyWithoutTarget && verifyWithoutEnv 
+        && verifyWithoutGitIgnore && verifyWithoutMvnw && verifyWithoutDockerfile 
+        && verifyWithoutJenkinsfile && verifyWithoutJacoco && verifyWithoutGruntfile 
+        && verifyWithoutCoverage && verifyWithoutSpec && verifyWithoutWrapper && verifyWithoutClasspath
+        && verifyWithoutdockerignore && verifyWithoutbbdev && verifyWithoutideia && verifyWithoutWebContent && verifyWithoutMd && verifyWithoutpackage_lock)
           hashCommit = line.split("#")[1];
 
-        if (!linesFromInput.includes(line) && verifyWithoutNodeModules) {
+        var condition = true;
 
-          if (!line.includes("commit:") && line != "") {
+        if (repeatFiles == false || repeatFiles == "false")
+          condition = !linesFromInput.includes(line)
+
+        if (condition) {
+
+          if (!line.includes("commit:") && line != "" && verifyWithoutNodeModules 
+          && verifyWithoutWWW && verifyWithoutTarget && verifyWithoutEnv 
+          && verifyWithoutGitIgnore && verifyWithoutMvnw && verifyWithoutDockerfile
+          && verifyWithoutJenkinsfile && verifyWithoutJacoco 
+          && verifyWithoutGruntfile && verifyWithoutCoverage  && verifyWithoutSpec && verifyWithoutWrapper && verifyWithoutClasspath
+          && verifyWithoutdockerignore && verifyWithoutbbdev && verifyWithoutideia && verifyWithoutWebContent && verifyWithoutMd && verifyWithoutpackage_lock)  {
 
             linesFromInput.push(line);
 
@@ -331,7 +386,7 @@ async function processLineByLine() {
               } else if (type == "A" && (extension == "html" || extension == "xhtml")) {
                 createHTML += `${line.substring(1)}#${hashCommit}\n`;
                 createHTMLQTD++;
-              } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties")) {
+              } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json")) {
 
                 if (extension == "minimal") {
                   if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -343,7 +398,7 @@ async function processLineByLine() {
                   alterXMLQTD++;
                 }
 
-              } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties") {
+              } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json") {
 
                 if (extension == "minimal") {
                   if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -403,7 +458,7 @@ async function processLineByLine() {
 
       var totalQtd = createJavaQTD + alterJavaQTD + alterJavaCompQTD + createJavaTestQTD
         + createHTMLQTD + alterHTMLQTD + createJSQTD + alterJSQTD + createXMLQTD
-        + createCSSQTD + alterCSSQTD + alterXMLQTD + othersQTD;
+        + createCSSQTD + alterCSSQTD + alterXMLQTD;
 
       var totalSISBB = (createJavaQTD * createJavaPoints)
         + (alterJavaQTD * alterJavaPoints)
@@ -462,6 +517,7 @@ async function processLineByLine() {
       alterXMLFinalQTD += alterXMLQTD;
       createCSSFinalQTD += createCSSQTD;
       alterCSSFinalQTD += alterCSSQTD;
+      othersFinalQTD += othersQTD;
 
       await execShellCommand('find . -name "input.txt" -type f -delete');
 
@@ -510,7 +566,7 @@ async function processLineByLine() {
   if (histories && histories.length > 0 && histories.every(function (i) { return i != "\n"; }))
     rowCounter = addHistoryRito(histories, ritosList, worksheet, rowCounter);
 
-  workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase.xlsx`);
+  workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase2.xlsx`);
 
 }
 

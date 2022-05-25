@@ -1,0 +1,23 @@
+qgd-gsti-api/ - PEDRO - c1317641 - 2022-04-07 - 2022-05-18
+
+MODIFICAÇÃO DE CLASSE JAVA
+
+ 	qgd-gsti-api/src/main/java/br/com/bb/qgd/dao/FuncionarioDao.java#a0fb4b2e37
+	qgd-gsti-api/src/main/java/br/com/bb/qgd/models/Funcionario.java#a0fb4b2e37
+	qgd-gsti-api/src/main/java/br/com/bb/qgd/dao/CircuitoDao.java#5762fdad5e
+	qgd-gsti-api/src/main/java/br/com/bb/qgd/models/Circuito.java#5762fdad5e
+	qgd-gsti-api/src/main/java/br/com/bb/qgd/rest/CircuitoResource.java#c28b21d9c0
+
+    Total: 5 arquivos
+    Pontuação: 17.5 SISBB
+
+MODIFICAÇÃO DE XML
+
+ 	qgd-gsti-api/pom.xml#a0fb4b2e37
+
+    Total: 1 arquivos
+    Pontuação: 5 SISBB
+
+Total Geral: 6 arquivos
+Pontuação Geral: 22.5 SISBB
+

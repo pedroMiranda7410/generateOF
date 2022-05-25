@@ -1,8 +1,8 @@
-des-qgd-controle-pedidos/ - PEDRO - c1317641 - 2022-02-28 - 2022-03-30
+des-qgd-gsti-api/ - PEDRO - c1317641 - 2022-04-07 - 2022-05-18
 
 MODIFICAÇÃO DE XML
 
- 	des-qgd-controle-pedidos/values.yaml#4dd8555df1
+ 	des-qgd-gsti-api/values.yaml#1108390ac8
 
     Total: 1 arquivos
     Pontuação: 5 SISBB

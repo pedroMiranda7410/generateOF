@@ -7,7 +7,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Criação de objetos de Integração e Negócio Java",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -18,7 +18,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Alteração de Objetos de Integração e Negócio Java",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -29,7 +29,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Alteração de Objeto Java Componente VXML",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -40,7 +40,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Criação de objeto de teste automatizado",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -51,7 +51,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Criação de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -62,7 +62,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Alteração de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -73,7 +73,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Criação JavaScript",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -84,7 +84,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Alteração JavaScript",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -95,7 +95,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Criação de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -106,7 +106,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Alteração de tela HTML ou XHTML ou JSP ou XML ou VTL ou XSL ou Swing ou AWT ou XUI ou PHP",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -120,7 +120,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Tarefas correlacionadas à Implementação",
                 "Participar em “ritos” de sala ágil",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -131,7 +131,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Tarefas correlacionadas à Implementação",
                 "Realizar refinamento de requisitos (sprint em andamento)",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -142,7 +142,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Tarefas correlacionadas à Implementação",
                 "Realizar refinamento de história (s) (próxima sprint)",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -153,7 +153,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Criação CSS ou SCSS",
-                "N/A",
+                "Médio",
                 "N/A"
             ]
         },
@@ -164,7 +164,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
                 "Alteração CSS ou SCSS",
-                "N/A",
+                "Médio",
                 "N/A"
             ]
         },
@@ -175,7 +175,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Softwares para Integração de Ambiente Tradicional e Cloud",
                 "Construção de Componente de Integração",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         },
@@ -186,7 +186,7 @@
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Serviços de integração externa",
                 "Criar projeto BW, criar repositório GIT, configurar conexões externas; configurar transportes e configurar segurança. ",
-                "N/A",
+                "Padrão",
                 "N/A"
             ]
         }
