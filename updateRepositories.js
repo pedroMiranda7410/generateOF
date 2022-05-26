@@ -60,8 +60,8 @@ async function gitPullAllRepositories() {
         var generateGitPull = `cd ${directory}/${projectName} && ${getGitPull}`;
         var gitPull = await execShellCommand(generateGitPull);
 
-        if (gitPull.includes("Already up to date.") > 0) { obj.char = '✅'; }
-        if (gitPull.includes("denied") > 0) { i = 9999; }
+        if (gitPull.includes("Already")) { obj.char = '✅'; }
+        else if (gitPull.includes("denied")) { i = 9999; }
         else { obj.char = '📥'; }
 
       }
@@ -71,7 +71,7 @@ async function gitPullAllRepositories() {
       if (obj.char != "🚫") {
         console.log('\t' + obj.char + " " + obj.projectName);
       } else {
-        console.log('\t' + obj.char + " " + obj.projectName + "\n" + obj.status);
+        console.log('\t' + obj.char + " " + obj.projectName);
       }
 
     }

@@ -1,4 +1,3 @@
-const { Console } = require("console");
 
 module.exports.checkValidLineFromCommit = (line) => {
 
