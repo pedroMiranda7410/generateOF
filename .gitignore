@@ -1,8 +1,8 @@
 OFs Anteriores/
+Guia USTIBB/
+node_modules/
 passwords.json
 user.json
 user2.json
-SimuladorBase2.xlsx
-SimuladorBase.xlsx
-Guia USTIBB/
-node_modules/
+*.xlsx
+

@@ -1,4 +1,5 @@
 const user = require('./user.json');
+const negotials = require('./negotials.js');
 const passwords = require('./passwords.json');
 const pointsList = require('./pointsList.json');
 const fs = require('fs');
@@ -30,6 +31,9 @@ var createXMLPoints = pointsList.points[8].value;
 var alterXMLPoints = pointsList.points[9].value;
 var createCSSPoints = pointsList.points[14].value;
 var alterCSSPoints = pointsList.points[15].value;
+var createShellPoints = pointsList.points[18].value;
+var alterShellPoints = pointsList.points[19].value;
+var createSQLPoints = pointsList.points[20].value;
 
 var createJavaOptions = pointsList.points[0].options;
 var alterJavaOptions = pointsList.points[1].options;
@@ -43,6 +47,9 @@ var createXMLOptions = pointsList.points[8].options;
 var alterXMLOptions = pointsList.points[9].options;
 var createCSSOptions = pointsList.points[14].options;
 var alterCSSOptions = pointsList.points[15].options;
+var createShellOptions = pointsList.points[18].options;
+var alterShellOptions = pointsList.points[19].options;
+var createSQLOptions = pointsList.points[20].options;
 
 var ritoOptions1 = pointsList.points[11].options;
 var ritoOptions2 = pointsList.points[12].options;
@@ -69,6 +76,9 @@ var alterXMLTXT = pointsList.points[9].name;
 var othersTXT = pointsList.points[10].name;
 var createCSSTXT = pointsList.points[14].name;
 var alterCSSTXT = pointsList.points[15].name;
+var createShellTXT = pointsList.points[18].name;
+var alterShellTXT = pointsList.points[19].name;
+var createSQLTXT = pointsList.points[20].name;
 
 var createJavaFinal = "";
 var alterJavaFinal = "";
@@ -82,6 +92,9 @@ var createXMLFinal = "";
 var alterXMLFinal = "";
 var createCSSFinal = "";
 var alterCSSFinal = "";
+var createShellFinal = "";
+var alterShellFinal = "";
+var createSQLFinal = "";
 
 var createJavaFinalQTD = 0;
 var alterJavaFinalQTD = 0;
@@ -95,6 +108,9 @@ var createXMLFinalQTD = 0;
 var alterXMLFinalQTD = 0;
 var createCSSFinalQTD = 0;
 var alterCSSFinalQTD = 0;
+var createShellFinalQTD = 0;
+var alterShellFinalQTD = 0;
+var createSQLFinalQTD = 0;
 var othersFinalQTD = 0;
 
 var data = new Date();
@@ -208,6 +224,8 @@ async function processLineByLine() {
   var allProjects = await execShellCommand(cmd);
   allProjects = allProjects.split("\n");
 
+  var totalQtdBkp = 0;
+
   await execShellCommand(`mkdir -p ${month}-${year}`);
   directoryOF = `${directoryOF}/${month}-${year}`;
 
@@ -242,10 +260,13 @@ async function processLineByLine() {
       var alterHTML = "";
       var createJS = "";
       var alterJS = "";
-      var createXML = "";
-      var alterXML = "";
       var createCSS = "";
       var alterCSS = "";
+      var createXML = "";
+      var alterXML = "";
+      var createShell = "";
+      var alterShell = "";
+      var createSQL = "";
       var others = "";
 
       var createJavaQTD = 0;
@@ -256,30 +277,13 @@ async function processLineByLine() {
       var alterHTMLQTD = 0;
       var createJSQTD = 0;
       var alterJSQTD = 0;
+      var createCSSQTD = 0;
+      var alterCSSQTD = 0;
       var createXMLQTD = 0;
       var alterXMLQTD = 0;
-      var createCSSQTD = 0;
-      var verifyWithoutNodeModules = true;
-      var verifyWithoutWWW = true;
-      var verifyWithoutTarget = true;
-      var verifyWithoutEnv = true;
-      var verifyWithoutGitIgnore = true;
-      var verifyWithoutDockerfile = true;
-      var verifyWithoutMvnw = true;
-      var verifyWithoutJenkinsfile = true;
-      var verifyWithoutJacoco = true;
-      var verifyWithoutGruntfile = true;
-      var verifyWithoutCoverage = true;
-      var verifyWithoutSpec = true;
-      var verifyWithoutWrapper = true;
-      var verifyWithoutClasspath = true;
-      var verifyWithoutdockerignore = true;
-      var verifyWithoutbbdev = true;
-      var verifyWithoutideia = true;
-      var verifyWithoutWebContent = true;
-      var verifyWithoutMd = true;
-      var verifyWithoutpackage_lock = true;
-      var alterCSSQTD = 0;
+      var createShellQTD = 0;
+      var alterShellQTD = 0;
+      var createSQLQTD = 0;
       var othersQTD = 0;
 
       const rl = readline.createInterface({
@@ -287,36 +291,12 @@ async function processLineByLine() {
         crlfDelay: Infinity
       });
 
-      
+
       var hashCommit = "###########";
 
       for await (var line of rl) {
-        verifyWithoutNodeModules = !line.includes('node_modules');
-        verifyWithoutWWW = !line.includes('www');
-        verifyWithoutTarget = !line.includes('target');
-        verifyWithoutEnv = !line.includes('.env');
-        verifyWithoutGitIgnore = !line.includes('.gitignore');
-        verifyWithoutDockerfile = !line.includes('Dockerfile');
-        verifyWithoutMvnw = !line.includes('mvnw');
-        verifyWithoutJenkinsfile = !line.includes('Jenkinsfile');
-        verifyWithoutJacoco = !line.includes('jacoco');
-        verifyWithoutCoverage = !line.includes('coverage');
-        verifyWithoutWrapper = !line.includes('wrapper');
-        verifyWithoutClasspath = !line.includes('.classpath');
-        verifyWithoutdockerignore = !line.includes('.dockerignore');
-        verifyWithoutbbdev = !line.includes('.bbdev');
-        verifyWithoutideia = !line.includes('.idea');
-        verifyWithoutWebContent = !line.includes('WebContent');
-        verifyWithoutMd = !line.includes('.md');
-        verifyWithoutpackage_lock = !line.includes('package-lock');
-        
 
-        if (line.includes("commit:") && verifyWithoutNodeModules 
-        && verifyWithoutWWW && verifyWithoutTarget && verifyWithoutEnv 
-        && verifyWithoutGitIgnore && verifyWithoutMvnw && verifyWithoutDockerfile 
-        && verifyWithoutJenkinsfile && verifyWithoutJacoco && verifyWithoutGruntfile 
-        && verifyWithoutCoverage && verifyWithoutSpec && verifyWithoutWrapper && verifyWithoutClasspath
-        && verifyWithoutdockerignore && verifyWithoutbbdev && verifyWithoutideia && verifyWithoutWebContent && verifyWithoutMd && verifyWithoutpackage_lock)
+        if (line.includes("commit:") && negotials.checkValidLineFromCommit(line))
           hashCommit = line.split("#")[1];
 
         var condition = true;
@@ -326,99 +306,63 @@ async function processLineByLine() {
 
         if (condition) {
 
-          if (!line.includes("commit:") && line != "" && verifyWithoutNodeModules 
-          && verifyWithoutWWW && verifyWithoutTarget && verifyWithoutEnv 
-          && verifyWithoutGitIgnore && verifyWithoutMvnw && verifyWithoutDockerfile
-          && verifyWithoutJenkinsfile && verifyWithoutJacoco 
-          && verifyWithoutGruntfile && verifyWithoutCoverage  && verifyWithoutSpec && verifyWithoutWrapper && verifyWithoutClasspath
-          && verifyWithoutdockerignore && verifyWithoutbbdev && verifyWithoutideia && verifyWithoutWebContent && verifyWithoutMd && verifyWithoutpackage_lock)  {
+          if (!line.includes("commit:") && line != "" && negotials.checkValidLineFromCommit(line)) {
 
-            linesFromInput.push(line);
+            var obj = negotials.detectFilesCategory(line, projectName, [], linesFromInput, hashCommit,
+              alterJS, alterJSPoints, alterJSQTD,
+              createJS, createJSPoints, createJSQTD,
+              alterCSS, alterCSSPoints, alterCSSQTD,
+              createCSS, createCSSPoints, createCSSQTD,
+              createJavaTest, createJavaTestPoints, createJavaTestQTD,
+              createJava, createJavaPoints, createJavaQTD,
+              alterJava, alterJavaPoints, alterJavaQTD,
+              alterJavaComp, alterJavaCompPoints, alterJavaCompQTD,
+              alterHTML, alterHTMLPoints, alterHTMLQTD,
+              createHTML, createHTMLPoints, createHTMLQTD,
+              alterXML, alterXMLPoints, alterXMLQTD,
+              createXML, createXMLPoints, createXMLQTD,
+              createShell, createShellPoints, createShellQTD,
+              alterShell, alterShellPoints, alterShellQTD,
+              createSQL, createSQLPoints, createSQLQTD,
+              others, othersQTD
+            );
 
-            var n = line.lastIndexOf("src");
-            var a = line.lastIndexOf("pom");
-            var b = line.lastIndexOf("values");
-
-            if (n > 0) { line = line.substring(0, n) + projectName + line.substring(n); }
-            else if (a > 0) { line = line.substring(0, a) + projectName + line.substring(a); }
-            else if (b > 0) { line = line.substring(0, b) + projectName + line.substring(b); }
-
-            var type = line.charAt(0);
-
-            if (line.lastIndexOf(".") > 0) {
-
-              var extension = line.split(".")[1].split("#")[0];
-
-              if (type == "M" && extension == "js") {
-                alterJS += `${line.substring(1)}#${hashCommit}\n`;
-                alterJSQTD++;
-              } else if (type == "A" && extension == "js") {
-                createJS += `${line.substring(1)}#${hashCommit}\n`;
-                createJSQTD++;
-              } else if (type == "M" && (extension == "css" || extension == "scss")) {
-                alterCSS += `${line.substring(1)}#${hashCommit}\n`;
-                alterCSSQTD++;
-              } else if (type == "A" && (extension == "css" || extension == "scss")) {
-                createCSS += `${line.substring(1)}#${hashCommit}\n`;
-                createCSSQTD++;
-              } else if (type == "M" && extension == "java") {
-                if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-                  createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
-                  createJavaTestQTD++;
-                } else {
-                  alterJava += `${line.substring(1)}#${hashCommit}\n`;
-                  alterJavaQTD++;
-                }
-              } else if (type == "A" && extension == "java") {
-                if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-                  createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
-                  createJavaTestQTD++;
-                } else {
-                  createJava += `${line.substring(1)}#${hashCommit}\n`;
-                  createJavaQTD++;
-                }
-              } else if (type == "D" && extension == "java") {
-                alterJavaComp += `${line.substring(1)}#${hashCommit}\n`;
-                alterJavaCompQTD++;
-              } else if (type == "M" && (extension == "html" || extension == "xhtml")) {
-                alterHTML += `${line.substring(1)}#${hashCommit}\n`;
-                alterHTMLQTD++;
-              } else if (type == "A" && (extension == "html" || extension == "xhtml")) {
-                createHTML += `${line.substring(1)}#${hashCommit}\n`;
-                createHTMLQTD++;
-              } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json")) {
-
-                if (extension == "minimal") {
-                  if (line.split(".")[2].split("#")[0] == "yaml") {
-                    alterXML += `${line.substring(1)}#${hashCommit}\n`;
-                    alterXMLQTD++;
-                  }
-                } else {
-                  alterXML += `${line.substring(1)}#${hashCommit}\n`;
-                  alterXMLQTD++;
-                }
-
-              } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json") {
-
-                if (extension == "minimal") {
-                  if (line.split(".")[2].split("#")[0] == "yaml") {
-                    createXML += `${line.substring(1)}#${hashCommit}\n`;
-                    createXMLQTD++;
-                  }
-                } else {
-                  createXML += `${line.substring(1)}#${hashCommit}\n`;
-                  createXMLQTD++;
-                }
-
-              } else {
-                others += `${line}#${hashCommit}\n`;
-                othersQTD++;
-              }
-
-            } else {
-              others += `${line}#${hashCommit}\n`;
-              othersQTD++;
-            }
+            line = obj.line;
+            projectName = obj.projectName;
+            linesFromInput = obj.linesFromInput;
+            hashCommit = obj.hashCommit;
+            alterJS = obj.alterJS;
+            alterJSQTD = obj.alterJSQTD;
+            createJS = obj.createJS;
+            createJSQTD = obj.createJSQTD;
+            alterCSS = obj.alterCSS;
+            alterCSSQTD = obj.alterCSSQTD;
+            createCSS = obj.createCSS;
+            createCSSQTD = obj.createCSSQTD;
+            createJavaTest = obj.createJavaTest;
+            createJavaTestQTD = obj.createJavaTestQTD;
+            createJava = obj.createJava;
+            createJavaQTD = obj.createJavaQTD;
+            alterJava = obj.alterJava;
+            alterJavaQTD = obj.alterJavaQTD;
+            alterJavaComp = obj.alterJavaComp;
+            alterJavaCompQTD = obj.alterJavaCompQTD;
+            alterHTML = obj.alterHTML;
+            alterHTMLQTD = obj.alterHTMLQTD;
+            createHTML = obj.createHTML;
+            createHTMLQTD = obj.createHTMLQTD;
+            alterXML = obj.alterXML;
+            alterXMLQTD = obj.alterXMLQTD;
+            createXML = obj.createXML;
+            createXMLQTD = obj.createXMLQTD;
+            alterShell = obj.alterShell;
+            alterShellQTD = obj.alterShellQTD;
+            createShell = obj.createShell;
+            createShellQTD = obj.createShellQTD;
+            createSQL = obj.createSQL;
+            createSQLQTD = obj.createSQLQTD;
+            others = obj.others;
+            othersQTD = obj.othersQTD;
 
           }
 
@@ -452,13 +396,19 @@ async function processLineByLine() {
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
       tmpResult = writeToFiles(alterCSSQTD, alterCSSPoints, alterCSSOptions, tmpFile, alterCSS, alterCSSTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
+      tmpResult = writeToFiles(createShellQTD, createShellPoints, createShellOptions, tmpFile, createShell, createShellTXT, worksheet, rowCounter);
+      tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
+      tmpResult = writeToFiles(alterShellQTD, alterShellPoints, alterShellOptions, tmpFile, alterShell, alterShellTXT, worksheet, rowCounter);
+      tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
+      tmpResult = writeToFiles(createSQLQTD, createSQLPoints, createShellOptions, tmpFile, createSQL, createSQLTXT, worksheet, rowCounter);
+      tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
 
       if (othersQTD > 0)
         tmpFile += `${othersTXT}\n ${others}\n`;
 
       var totalQtd = createJavaQTD + alterJavaQTD + alterJavaCompQTD + createJavaTestQTD
         + createHTMLQTD + alterHTMLQTD + createJSQTD + alterJSQTD + createXMLQTD
-        + createCSSQTD + alterCSSQTD + alterXMLQTD;
+        + createCSSQTD + alterCSSQTD + alterXMLQTD + createShellQTD + alterShellQTD + createSQLQTD;
 
       var totalSISBB = (createJavaQTD * createJavaPoints)
         + (alterJavaQTD * alterJavaPoints)
@@ -470,7 +420,12 @@ async function processLineByLine() {
         + (alterJSQTD * alterJSPoints)
         + (createCSSQTD * createCSSPoints)
         + (alterCSSQTD * alterCSSPoints)
-        + (alterXMLQTD * alterXMLPoints);
+        + (alterXMLQTD * alterXMLPoints)
+        + (createShellQTD * createShellPoints)
+        + (alterShellQTD * alterShellPoints)
+        + (createSQLQTD * createSQLPoints);
+
+      totalQtdBkp += totalQtd;
 
       tmpFile += `Total Geral: ${totalQtd} arquivos\n`;
       tmpFile += `Pontuação Geral: ${totalSISBB} SISBB\n\n`;
@@ -504,6 +459,9 @@ async function processLineByLine() {
       alterXMLFinal += alterXML;
       createCSSFinal += createCSS;
       alterCSSFinal += alterCSS;
+      createShellFinal += createShell;
+      alterShellFinal += alterShell;
+      createSQLFinal += createSQL;
 
       createJavaFinalQTD += createJavaQTD;
       alterJavaFinalQTD += alterJavaQTD;
@@ -517,6 +475,9 @@ async function processLineByLine() {
       alterXMLFinalQTD += alterXMLQTD;
       createCSSFinalQTD += createCSSQTD;
       alterCSSFinalQTD += alterCSSQTD;
+      createShellFinalQTD += createShellQTD;
+      alterShellFinalQTD += alterShellQTD;
+      createSQLFinalQTD += createSQLQTD;
       othersFinalQTD += othersQTD;
 
       await execShellCommand('find . -name "input.txt" -type f -delete');
@@ -556,6 +517,12 @@ async function processLineByLine() {
   rowCounter = tmpResult.rowCounter;
   tmpResult = writeToXLS(alterCSSFinalQTD, alterCSSOptions, alterCSSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
+  tmpResult = writeToXLS(createShellFinalQTD, createShellOptions, createShellFinal, worksheet, rowCounter);
+  rowCounter = tmpResult.rowCounter;
+  tmpResult = writeToXLS(alterShellFinalQTD, alterShellOptions, alterShellFinal, worksheet, rowCounter);
+  rowCounter = tmpResult.rowCounter;
+  tmpResult = writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
+  rowCounter = tmpResult.rowCounter;
 
   if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
     rowCounter = addHistoryRito(operations, operationList, worksheet, rowCounter);
@@ -567,6 +534,9 @@ async function processLineByLine() {
     rowCounter = addHistoryRito(histories, ritosList, worksheet, rowCounter);
 
   workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase2.xlsx`);
+
+  // var reportMessage = `"${totalQtdBkp} SISBB"`;
+  // await execShellCommand(`notify-send -i face-cool -t 1000 -u low "Pontuação Atual" ${reportMessage}`);
 
 }
 

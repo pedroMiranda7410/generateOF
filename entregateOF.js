@@ -5,7 +5,7 @@ const fs = require('fs');
 const readline = require('readline');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
-let baseXLS = user.baseXLS;
+let baseXLS = user.hermesXLS;
 let userHermes = user.userHermes;
 let passHermes = passwords.hermes;
 

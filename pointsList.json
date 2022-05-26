@@ -17,7 +17,7 @@
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
-                "Alteração de Objetos de Integração e Negócio Java",
+                "Alteração de Objetos de Integração e Negócio Java ",
                 "Padrão",
                 "N/A"
             ]
@@ -187,6 +187,39 @@
                 "Serviços de integração externa",
                 "Criar projeto BW, criar repositório GIT, configurar conexões externas; configurar transportes e configurar segurança. ",
                 "Padrão",
+                "N/A"
+            ]
+        },
+        {
+            "name": "CRIAÇÃO DE SCRIPTS SHELL\n",
+            "value": 4,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Software de Infraestrutura",
+                "Criação de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+                "Baixa",
+                "N/A"
+            ]
+        },
+        {
+            "name": "ALTERAÇÃO DE SCRIPTS SHELL\n",
+            "value": 2,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Software de Infraestrutura",
+                "Alteração de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+                "Baixa",
+                "N/A"
+            ]
+        },
+        {
+            "name": "\n",
+            "value": 16,
+            "options": [
+                "ANÁLISE E PROJETO DE SOFTWARE",
+                "Modelagem estatística",
+                "Construir base para treinamento",
+                "N/A",
                 "N/A"
             ]
         }

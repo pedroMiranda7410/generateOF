@@ -1,19 +1,10 @@
 const user = require('./user.json');
-const pointsList = require('./pointsList.json');
-const fs = require('fs');
-const { Console } = require('console');
+const passwords = require('./passwords.json');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
 var directory = user.directory;
-var directoryOF = user.directoryOF;
-var yourName = user.yourName;
 var yourKey = user.yourKey;
-var yourPassword = user.yourPassword;
-var choosenDate = user.choosenDate;
-var otherDate = user.otherDate;
-var histories = user.histories;
-let baseXLS = user.baseXLS;
-let points = user.points;
+var yourPassword = passwords.sisbb;
 
 function execShellCommand(cmd) {
   const { exec } = require("child_process");
@@ -70,6 +61,7 @@ async function gitPullAllRepositories() {
         var gitPull = await execShellCommand(generateGitPull);
 
         if (gitPull.includes("Already up to date.") > 0) { obj.char = '✅'; }
+        if (gitPull.includes("denied") > 0) { i = 9999; }
         else { obj.char = '📥'; }
 
       }
