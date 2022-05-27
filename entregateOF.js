@@ -1,6 +1,6 @@
 const user = require('./user.json');
 const passwords = require('./passwords.json');
-const negotials = require('./negotials.json');
+const negotials = require('./negotials.js');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
 let baseXLS = user.hermesXLS;
