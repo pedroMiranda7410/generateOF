@@ -152,7 +152,7 @@
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
-                "Criação CSS ou SCSS",
+                "Criação CSS ou SCSS ",
                 "Médio",
                 "N/A"
             ]
@@ -163,7 +163,7 @@
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
-                "Alteração CSS ou SCSS",
+                "Alteração CSS ou SCSS ",
                 "Médio",
                 "N/A"
             ]
@@ -196,7 +196,7 @@
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Software de Infraestrutura",
-                "Criação de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+                "Criação de scripts Shell em \n                 JavaScript, Shell, PowerShell, \n                PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI ",
                 "Baixa",
                 "N/A"
             ]
@@ -207,7 +207,7 @@
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Software de Infraestrutura",
-                "Alteração de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+                "Alteração de scripts Shell em \nJavaScript, Shell, PowerShell, \nPowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI ",
                 "Baixa",
                 "N/A"
             ]
