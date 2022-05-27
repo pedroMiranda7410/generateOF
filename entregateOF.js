@@ -66,6 +66,9 @@ async function readXLS() {
                 if (artefato == "Criação CSS ou SCSS")
                     artefato = "Criação CSS ou SCSS ";
 
+                if (artefato == "Alteração CSS ou SCSS")
+                    artefato = "Alteração CSS ou SCSS ";
+
                 selector = 'button[icon="pi pi-plus"]';
                 await pageGenti.waitForSelector(selector);
                 await pageGenti.click(selector, { delay: delayMedNetwork });
