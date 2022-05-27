@@ -69,6 +69,9 @@ async function readXLS() {
                 if (artefato == "Alteração CSS ou SCSS")
                     artefato = "Alteração CSS ou SCSS ";
 
+                if (artefato == "Software de Infraestrutura")
+                    artefato = "Software de Infraestrutura ";
+
                 selector = 'button[icon="pi pi-plus"]';
                 await pageGenti.waitForSelector(selector);
                 await pageGenti.click(selector, { delay: delayMedNetwork });
