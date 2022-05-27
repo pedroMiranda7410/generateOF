@@ -244,7 +244,14 @@ module.exports.getBusinessDatesCount = (startDate, endDate) => {
 
 module.exports.checkSpacesInStrings = (string) => {
 
-  
+  var arrayStrings = [
+    "Plataforma Distribuída",
+    "Criação de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+    "Alteração de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+  ]
+
+  if (arrayStrings.includes(string))
+    string = string + " ";
 
   return string;
 

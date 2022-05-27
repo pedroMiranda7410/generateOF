@@ -1,8 +1,6 @@
 const user = require('./user.json');
 const passwords = require('./passwords.json');
-const pointsList = require('./pointsList.json');
-const fs = require('fs');
-const readline = require('readline');
+const negotials = require('./negotials.json');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
 let baseXLS = user.hermesXLS;
@@ -53,6 +51,10 @@ async function readXLS() {
             var arquivos = row.getCell(12).value.split("\t");
 
             if (disciplina && disciplina != "" && disciplina != null) {
+
+                disciplina = negotials.checkSpacesInStrings(disciplina);
+                atividade = negotials.checkSpacesInStrings(atividade);
+                artefato = negotials.checkSpacesInStrings(artefato);
 
                 if (atividade == "Plataforma Distribuída")
                     atividade = "Plataforma Distribuída ";
