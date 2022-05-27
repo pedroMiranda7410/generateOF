@@ -20,6 +20,8 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.md')
     && !line.includes('package-lock')
     && !line.includes('.vscode')
+    && !line.includes('.editorconfig')
+    && !line.includes('.DS_Store')
   ) {
     return true;
   }
