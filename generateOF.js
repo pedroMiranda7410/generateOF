@@ -1,6 +1,5 @@
 const user = require('./user.json');
 const negotials = require('./negotials.js');
-const passwords = require('./passwords.json');
 const pointsList = require('./pointsList.json');
 const fs = require('fs');
 const readline = require('readline');
