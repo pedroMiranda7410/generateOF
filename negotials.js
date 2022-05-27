@@ -149,14 +149,16 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         createXMLQTD++;
       }
 
-    } else if (type == "A" && (extension == "sh")) {
-      createShell += `${line.substring(1)}#${hashCommit}\n`;
-      gitFiles.push(line + " (+" + createShellPoints + "pts)");
-      createShellQTD++;
-    } else if (type == "M" && (extension == "sh")) {
-      alterShell += `${line.substring(1)}#${hashCommit}\n`;
-      gitFiles.push(line + " (+" + alterShellPoints + "pts)");
-      alterShellQTD++;
+      // } else if (type == "A" && (extension == "sh")) {
+      //   createShell += `${line.substring(1)}#${hashCommit}\n`;
+      //   gitFiles.push(line + " (+" + createShellPoints + "pts)");
+      //   createShellQTD++;
+      // } else if (type == "M" && (extension == "sh")) {
+      //   alterShell += `${line.substring(1)}#${hashCommit}\n`;
+      //   gitFiles.push(line + " (+" + alterShellPoints + "pts)");
+      //   alterShellQTD++;
+      // } 
+
     } else if ((type == "M" || type == "A") && (extension == "sql")) {
       createSQL += `${line.substring(1)}#${hashCommit}\n`;
       gitFiles.push(line + " (+" + createSQLPoints + "pts)");
@@ -252,13 +254,7 @@ module.exports.checkSpacesInStrings = (string) => {
     "Alteração de Objetos de Integração e Negócio Java",
     "Criação CSS ou SCSS",
     "Alteração CSS ou SCSS",
-    "Software de Infraestrutura",
-    `Criação de scripts Shell em 
-    JavaScript, Shell, PowerShell, 
-    PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI`,
-    `Alteração de scripts Shell em 
-    JavaScript, Shell, PowerShell, 
-    PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI `,
+    "Software de Infraestrutura"
   ]
 
   if (arrayStrings.includes(string))

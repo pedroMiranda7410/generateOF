@@ -73,7 +73,13 @@ async function readXLS() {
 
                 selector = 'p-dropdown[placeholder="Descrição/Artefato"]';
                 await pageGenti.click(selector, { delay: delayFastNetwork });
-                selector = 'li[aria-label="' + artefato + '"]';
+
+                // if (artefato.includes(`Criação de scripts Shell`)) {
+                //     selector = 'li[contains=(.,Criação de scripts Shell)]';
+                // } else {
+                //     selector = 'li[aria-label="' + artefato + '"]';
+                // }
+
                 await pageGenti.click(selector, { delay: delayMedNetwork });
 
                 selector = 'p-dropdown[placeholder="Complexidade"]';
