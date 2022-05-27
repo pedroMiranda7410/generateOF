@@ -241,3 +241,11 @@ module.exports.getBusinessDatesCount = (startDate, endDate) => {
   }
   return count;
 }
+
+module.exports.checkSpacesInStrings = (string) => {
+
+  
+
+  return string;
+
+}
