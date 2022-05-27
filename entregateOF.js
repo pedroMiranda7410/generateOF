@@ -56,24 +56,6 @@ async function readXLS() {
                 atividade = negotials.checkSpacesInStrings(atividade);
                 artefato = negotials.checkSpacesInStrings(artefato);
 
-                if (atividade == "Plataforma Distribuída")
-                    atividade = "Plataforma Distribuída ";
-
-                if (atividade == "Tarefas correlacionadas à Implementação")
-                    atividade = "Tarefas correlacionadas à Implementação ";
-
-                if (artefato == "Alteração de Objetos de Integração e Negócio Java")
-                    artefato = "Alteração de Objetos de Integração e Negócio Java ";
-
-                if (artefato == "Criação CSS ou SCSS")
-                    artefato = "Criação CSS ou SCSS ";
-
-                if (artefato == "Alteração CSS ou SCSS")
-                    artefato = "Alteração CSS ou SCSS ";
-
-                if (atividade == "Software de Infraestrutura")
-                    atividade = "Software de Infraestrutura ";
-
                 selector = 'button[icon="pi pi-plus"]';
                 await pageGenti.waitForSelector(selector);
                 await pageGenti.click(selector, { delay: delayMedNetwork });

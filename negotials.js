@@ -18,7 +18,9 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.idea')
     && !line.includes('WebContent')
     && !line.includes('.md')
-    && !line.includes('package-lock')) {
+    && !line.includes('package-lock')
+    && !line.includes('.vscode')
+  ) {
     return true;
   }
 
@@ -246,8 +248,17 @@ module.exports.checkSpacesInStrings = (string) => {
 
   var arrayStrings = [
     "Plataforma Distribuída",
-    "Criação de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
-    "Alteração de scripts Shell em JavaScript, Shell, PowerShell, PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI",
+    "Tarefas correlacionadas à Implementação",
+    "Alteração de Objetos de Integração e Negócio Java",
+    "Criação CSS ou SCSS",
+    "Alteração CSS ou SCSS",
+    "Software de Infraestrutura",
+    `Criação de scripts Shell em 
+    JavaScript, Shell, PowerShell, 
+    PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI`,
+    `Alteração de scripts Shell em 
+    JavaScript, Shell, PowerShell, 
+    PowerCli ou linguagem de construção de scripts equivalente, utilizado para automação de construção de infraestrutura de TI `,
   ]
 
   if (arrayStrings.includes(string))
