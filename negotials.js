@@ -59,16 +59,27 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
 
   if (line.lastIndexOf(".") > 0) {
 
-    var extension = line.split(".")[1].split("#")[0];
+    var arr = line.split(".");
+    var extension = arr[arr.length - 1];
 
-    if (type == "M" && extension == "js") {
-      alterJS += `${line.substring(1)}#${hashCommit}\n`;
-      gitFiles.push(line + " (+" + alterJSPoints + "pts)");
-      alterJSQTD++;
-    } else if (type == "A" && extension == "js") {
-      createJS += `${line.substring(1)}#${hashCommit}\n`;
-      gitFiles.push(line + " (+" + createJSPoints + "pts)");
-      createJSQTD++;
+    if (type == "M" && (extension == "js" || extension == "ts")) {
+      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTestQTD++;
+      } else {
+        alterJS += `${line.substring(1)}#${hashCommit}\n`;
+        gitFiles.push(line + " (+" + alterJSPoints + "pts)");
+        alterJSQTD++;
+      }
+    } else if (type == "A" && (extension == "js" || extension == "ts")) {
+      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTestQTD++;
+      } else {
+        createJS += `${line.substring(1)}#${hashCommit}\n`;
+        gitFiles.push(line + " (+" + createJSPoints + "pts)");
+        createJSQTD++;
+      }
     } else if (type == "M" && (extension == "css" || extension == "scss")) {
       alterCSS += `${line.substring(1)}#${hashCommit}\n`;
       gitFiles.push(line + " (+" + alterCSSPoints + "pts)");
