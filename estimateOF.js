@@ -1,6 +1,6 @@
 const user = require('./user.json');
-const negotials = require('./negotials.js');
-const pointsList = require('./pointsList.json');
+const negotials = require('./modules/negotials.js');
+const pointsList = require('./modules/pointsList.json');
 const fs = require('fs');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
@@ -10,7 +10,7 @@ var yourName = user.yourName;
 var yourKey = user.yourKey;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
-var histories = user.histories;
+var tasks = user.tasks;
 var operations = user.operations;
 var repositories = user.repositories;
 let baseXLS = user.baseXLS;
@@ -224,10 +224,10 @@ async function processLineByLine() {
   if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
     SISBBPoints += (pointsList.points[17].value * repositories.length);
 
-  if (histories && histories.length > 0 && histories.every(function (i) { return i != "\n"; })) {
-    SISBBPoints += (pointsList.points[11].value * histories.length);
-    SISBBPoints += (pointsList.points[12].value * histories.length);
-    SISBBPoints += (pointsList.points[13].value * histories.length);
+  if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; })) {
+    SISBBPoints += (pointsList.points[11].value * tasks.length);
+    SISBBPoints += (pointsList.points[12].value * tasks.length);
+    SISBBPoints += (pointsList.points[13].value * tasks.length);
   }
 
   var nome = await execShellCommand(`echo -n 👤 Nome: ${yourName}`);
@@ -414,7 +414,7 @@ function returnSISBBStatus(diffDays) {
 
   } else {
 
-    if (diffDays > 25) {
+    if (diffDays > 20) {
       char = almostChars[Math.floor(Math.random() * almostChars.length)];
     } else if (diffDays > 5) {
       char = fewSadChars[Math.floor(Math.random() * fewSadChars.length)];
@@ -433,10 +433,6 @@ function returnSISBBStatus(diffDays) {
 }
 
 async function updateUserJsonFile(points, files) {
-
-  var filePath = `${directoryOF}/user.json`;
-
-  await execShellCommand('find . -name "user.json" -type f -delete');
 
   var opStr = "";
 
@@ -468,8 +464,8 @@ async function updateUserJsonFile(points, files) {
 
   var histStr = "";
 
-  if (histories) {
-    var histArray = histories.toString().split(",");
+  if (tasks) {
+    var histArray = tasks.toString().split(",");
 
     histStr += "[";
     histArray.forEach(history => {
@@ -508,13 +504,17 @@ async function updateUserJsonFile(points, files) {
     "otherDate": "${otherDate}",
     "operations": ${opStr},
     "repositories": ${repoStr},
-    "histories": ${histStr},
+    "tasks": ${histStr},
     "baseXLS": "${baseXLS}",
     "hermesXLS": "${hermesXLS}",
     "repeatFiles": "${repeatFiles}",
     "points": "${points}",
     "files": ${filesStr}
 }`;
+
+  var filePath = `${directoryOF}/user.json`;
+
+  await execShellCommand('find . -name "user.json" -type f -delete');
 
   fs.writeFile(filePath, userJsonFile, function (err) {
     if (err) { return console.log(err); }

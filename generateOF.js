@@ -1,6 +1,7 @@
 const user = require('./user.json');
-const negotials = require('./negotials.js');
-const pointsList = require('./pointsList.json');
+const negotials = require('./modules/negotials.js');
+const pointsList = require('./modules/pointsList.json');
+const fileManager = require('./modules/fileManager.js');
 const fs = require('fs');
 const readline = require('readline');
 var Excel = require('exceljs');
@@ -12,7 +13,7 @@ var yourName = user.yourName;
 var yourKey = user.yourKey;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
-var histories = user.histories;
+var tasks = user.tasks;
 var operations = user.operations;
 var repositories = user.repositories;
 let baseXLS = user.baseXLS;
@@ -118,63 +119,12 @@ var year = data.getFullYear();
 
 var fullReportFile = "";
 
-function writeToFiles(QTD, points, options, tmpFile, files, filesTXT, worksheet, rowCounter) {
+function addHistoryRito(tasks, ritosList, worksheet, rowCounter) {
 
-  if (QTD > 0) {
+  var tasksStr = "";
 
-    tmpFile += `${filesTXT}\n ${files}\n`;
-    tmpFile += `    Total: ${QTD} arquivos\n`;
-    tmpFile += `    Pontuação: ${QTD * points} SISBB\n\n`;
-
-  }
-
-  return { 'tmpFile': tmpFile, 'rowCounter': rowCounter };
-
-}
-
-function writeToXLS(QTD, options, files, worksheet, rowCounter) {
-
-  if (QTD > 0) {
-
-    let row = worksheet.getRow(rowCounter);
-    row.getCell(3).value = options[0];
-    row.getCell(4).value = options[1];
-    row.getCell(5).value = options[2];
-    row.getCell(7).value = options[3];
-    row.getCell(8).value = options[4];
-    row.getCell(11).value = QTD;
-    row.getCell(12).value = files;
-    row.commit();
-    rowCounter++;
-
-  }
-
-  return { 'rowCounter': rowCounter };
-
-}
-
-function cleanSpreedsheat(worksheet) {
-
-  for (var i = 0; i < 50; i++) {
-    let row = worksheet.getRow(i);
-    row.getCell(3).value = "";
-    row.getCell(4).value = "";
-    row.getCell(5).value = "";
-    row.getCell(7).value = "";
-    row.getCell(8).value = "";
-    row.getCell(11).value = "";
-    row.getCell(12).value = "";
-    row.commit();
-  }
-
-}
-
-function addHistoryRito(histories, ritosList, worksheet, rowCounter) {
-
-  var historiesStr = "";
-
-  histories.forEach(history => {
-    historiesStr += history;
+  tasks.forEach(history => {
+    tasksStr += history;
   });
 
   ritosList.forEach(rito => {
@@ -185,8 +135,8 @@ function addHistoryRito(histories, ritosList, worksheet, rowCounter) {
     row.getCell(5).value = rito[2];
     row.getCell(7).value = rito[3];
     row.getCell(8).value = rito[4];
-    row.getCell(11).value = histories.length;
-    row.getCell(12).value = historiesStr;
+    row.getCell(11).value = tasks.length;
+    row.getCell(12).value = tasksStr;
     row.commit();
     rowCounter++;
 
@@ -212,7 +162,7 @@ async function processLineByLine() {
   let workbook = new Excel.Workbook();
   await workbook.xlsx.readFile(baseXLS);
   let worksheet = workbook.getWorksheet("Orçamento");
-  cleanSpreedsheat(worksheet);
+  fileManager.cleanSpreedsheet(worksheet);
   workbook.xlsx.writeFile('SimuladorBase.xlsx');
 
   let rowCounter = 4;
@@ -371,35 +321,35 @@ async function processLineByLine() {
 
       tmpFile = projectName + " - " + user.yourName + " - " + user.yourKey + " - " + user.choosenDate + " - " + user.otherDate + "\n\n";
 
-      var tmpResult = writeToFiles(createJavaQTD, createJavaPoints, createJavaOptions, tmpFile, createJava, createJavaTXT, worksheet, rowCounter);
+      var tmpResult = fileManager.writeToFiles(createJavaQTD, createJavaPoints, createJavaOptions, tmpFile, createJava, createJavaTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterJavaQTD, alterJavaPoints, alterJavaOptions, tmpFile, alterJava, alterJavaTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterJavaQTD, alterJavaPoints, alterJavaOptions, tmpFile, alterJava, alterJavaTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterJavaCompQTD, alterJavaCompPoints, alterJavaCompOptions, tmpFile, alterJavaComp, alterJavaCompTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterJavaCompQTD, alterJavaCompPoints, alterJavaCompOptions, tmpFile, alterJavaComp, alterJavaCompTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createJavaTestQTD, createJavaTestPoints, createJavaTestOptions, tmpFile, createJavaTest, createJavaTestTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createJavaTestQTD, createJavaTestPoints, createJavaTestOptions, tmpFile, createJavaTest, createJavaTestTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createHTMLQTD, createHTMLPoints, createHTMLOptions, tmpFile, createHTML, createHTMLTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createHTMLQTD, createHTMLPoints, createHTMLOptions, tmpFile, createHTML, createHTMLTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterHTMLQTD, alterHTMLPoints, alterHTMLOptions, tmpFile, alterHTML, alterHTMLTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterHTMLQTD, alterHTMLPoints, alterHTMLOptions, tmpFile, alterHTML, alterHTMLTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createJSQTD, createJSPoints, createJSOptions, tmpFile, createJS, createJSTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createJSQTD, createJSPoints, createJSOptions, tmpFile, createJS, createJSTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterJSQTD, alterJSPoints, alterJSOptions, tmpFile, alterJS, alterJSTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterJSQTD, alterJSPoints, alterJSOptions, tmpFile, alterJS, alterJSTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createXMLQTD, createXMLPoints, createXMLOptions, tmpFile, createXML, createXMLTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createXMLQTD, createXMLPoints, createXMLOptions, tmpFile, createXML, createXMLTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterXMLQTD, alterXMLPoints, alterXMLOptions, tmpFile, alterXML, alterXMLTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterXMLQTD, alterXMLPoints, alterXMLOptions, tmpFile, alterXML, alterXMLTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createCSSQTD, createCSSPoints, createCSSOptions, tmpFile, createCSS, createCSSTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createCSSQTD, createCSSPoints, createCSSOptions, tmpFile, createCSS, createCSSTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterCSSQTD, alterCSSPoints, alterCSSOptions, tmpFile, alterCSS, alterCSSTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterCSSQTD, alterCSSPoints, alterCSSOptions, tmpFile, alterCSS, alterCSSTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createShellQTD, createShellPoints, createShellOptions, tmpFile, createShell, createShellTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createShellQTD, createShellPoints, createShellOptions, tmpFile, createShell, createShellTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(alterShellQTD, alterShellPoints, alterShellOptions, tmpFile, alterShell, alterShellTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(alterShellQTD, alterShellPoints, alterShellOptions, tmpFile, alterShell, alterShellTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-      tmpResult = writeToFiles(createSQLQTD, createSQLPoints, createShellOptions, tmpFile, createSQL, createSQLTXT, worksheet, rowCounter);
+      tmpResult = fileManager.writeToFiles(createSQLQTD, createSQLPoints, createShellOptions, tmpFile, createSQL, createSQLTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
 
       if (othersQTD > 0)
@@ -492,35 +442,35 @@ async function processLineByLine() {
     if (err) { return console.log(err); }
   });
 
-  var tmpResult = writeToXLS(createJavaFinalQTD, createJavaOptions, createJavaFinal, worksheet, rowCounter);
+  var tmpResult = fileManager.writeToXLS(createJavaFinalQTD, createJavaOptions, createJavaFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterJavaFinalQTD, alterJavaOptions, alterJavaFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterJavaFinalQTD, alterJavaOptions, alterJavaFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterJavaCompFinalQTD, alterJavaCompOptions, alterJavaCompFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterJavaCompFinalQTD, alterJavaCompOptions, alterJavaCompFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createJavaTestFinalQTD, createJavaTestOptions, createJavaTestFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createJavaTestFinalQTD, createJavaTestOptions, createJavaTestFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createHTMLFinalQTD, createHTMLOptions, createHTMLFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createHTMLFinalQTD, createHTMLOptions, createHTMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterHTMLFinalQTD, alterHTMLOptions, alterHTMLFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterHTMLFinalQTD, alterHTMLOptions, alterHTMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createJSFinalQTD, createJSOptions, createJSFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createJSFinalQTD, createJSOptions, createJSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterJSFinalQTD, alterJSOptions, alterJSFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterJSFinalQTD, alterJSOptions, alterJSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createXMLFinalQTD, createXMLOptions, createXMLFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createXMLFinalQTD, createXMLOptions, createXMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterXMLFinalQTD, alterXMLOptions, alterXMLFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterXMLFinalQTD, alterXMLOptions, alterXMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createCSSFinalQTD, createCSSOptions, createCSSFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createCSSFinalQTD, createCSSOptions, createCSSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterCSSFinalQTD, alterCSSOptions, alterCSSFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterCSSFinalQTD, alterCSSOptions, alterCSSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createShellFinalQTD, createShellOptions, createShellFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createShellFinalQTD, createShellOptions, createShellFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(alterShellFinalQTD, alterShellOptions, alterShellFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(alterShellFinalQTD, alterShellOptions, alterShellFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
+  tmpResult = fileManager.writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
 
   if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
@@ -529,8 +479,8 @@ async function processLineByLine() {
   if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
     rowCounter = addHistoryRito(repositories, repositoryList, worksheet, rowCounter);
 
-  if (histories && histories.length > 0 && histories.every(function (i) { return i != "\n"; }))
-    rowCounter = addHistoryRito(histories, ritosList, worksheet, rowCounter);
+  if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; }))
+    rowCounter = addHistoryRito(tasks, ritosList, worksheet, rowCounter);
 
   workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase2.xlsx`);
 

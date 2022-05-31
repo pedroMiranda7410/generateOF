@@ -1,7 +1,9 @@
-OFs Anteriores/
-Guia USTIBB/
-node_modules/
+*/
+!modules/
 passwords.json
 user.json
 user2.json
 *.xlsx
+*.txt
+*.zip
+*.pdf
