@@ -1,0 +1,24 @@
+{
+  "name": "of",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entregateOF.js",
+  "dependencies": {
+    "exceljs": "^4.2.1",
+    "puppeteer": "^14.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroMiranda7410/generateOF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroMiranda7410/generateOF/issues"
+  },
+  "homepage": "https://github.com/pedroMiranda7410/generateOF#readme"
+}
