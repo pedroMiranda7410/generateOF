@@ -1,21 +1,11 @@
 const user = require('./user.json');
 const passwords = require('./passwords.json');
+const system = require('./modules/system.js');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
 var directory = user.directory;
 var yourKey = user.yourKey;
 var yourPassword = passwords.sisbb;
-
-function system.execShellCommand(cmd) {
-  const { exec } = require("child_process");
-  return new Promise((resolve, reject) => {
-    exec(cmd, (error, stdout, stderr) => {
-      if (error)
-        console.warn(error);
-      resolve(stdout ? stdout : stderr);
-    });
-  });
-}
 
 var result = [];
 
