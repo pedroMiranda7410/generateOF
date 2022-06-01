@@ -1,6 +1,7 @@
 const user = require('./user.json');
 const negotials = require('./modules/negotials.js');
 const pointsList = require('./modules/pointsList.json');
+const system = require('./modules/system.js');
 const fs = require('fs');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
@@ -42,23 +43,12 @@ var gitFiles = [];
 
 var othersFinalQTD = 0;
 
-function execShellCommand(cmd) {
-  const { exec } = require("child_process");
-  return new Promise((resolve, reject) => {
-    exec(cmd, (error, stdout, stderr) => {
-      if (error)
-        console.warn(error);
-      resolve(stdout ? stdout : stderr);
-    });
-  });
-}
-
 async function processLineByLine() {
 
   var cmd = `cd ${directory} && ls`;
   var getGitCommits = `git log --name-status --no-merges --author=${yourKey} --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h'`;
 
-  var allProjects = await execShellCommand(cmd);
+  var allProjects = await system.execShellCommand(cmd);
   allProjects = allProjects.split("\n");
 
   var totalQtdBkp = 0;
@@ -70,7 +60,7 @@ async function processLineByLine() {
     if (projectName != null && projectName != "") {
 
       var generateGitCommits = `cd ${directory}/${projectName} && ${getGitCommits}`;
-      var commits = await execShellCommand(generateGitCommits);
+      var commits = await system.execShellCommand(generateGitCommits);
       commits = commits.split("\n");
       projectName += "/";
 
@@ -230,30 +220,30 @@ async function processLineByLine() {
     SISBBPoints += (pointsList.points[13].value * tasks.length);
   }
 
-  var nome = await execShellCommand(`echo -n 👤 Nome: ${yourName}`);
-  var chave = await execShellCommand(`echo -n 🔑 Chave: ${yourKey}`);
-  var periodo = await execShellCommand(`echo -n 📆 Período: ${choosenDate} à ${otherDate}`);
+  var nome = await system.execShellCommand(`echo -n 👤 Nome: ${yourName}`);
+  var chave = await system.execShellCommand(`echo -n 🔑 Chave: ${yourKey}`);
+  var periodo = await system.execShellCommand(`echo -n 📆 Período: ${choosenDate} à ${otherDate}`);
 
   var date1 = new Date();
   var date2 = new Date(otherDate);
 
-  const diffDays = negotials.getBusinessDatesCount(date1, date2)
+  const diffDays = negotials.getBusinessDatesCount(date1, date2);
 
   var tempo = "";
 
   if (diffDays > 0) {
-    tempo = await execShellCommand(`echo -n ⏳ Tempo restante: ${diffDays} dias`);
+    tempo = await system.execShellCommand(`echo -n ⏳ Tempo restante: ${diffDays} dias`);
   } else {
-    tempo = await execShellCommand(`echo -n ⌛ Tempo restante: 🚫`);
+    tempo = await system.execShellCommand(`echo -n ⌛ Tempo restante: 🚫`);
   }
 
-  var arquivos = await execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} arquivos`);
+  var arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} arquivos`);
 
   if (othersFinalQTD > 0)
-    arquivos = await execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`);
+    arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`);
 
   var char = returnSISBBStatus(diffDays);
-  var pontuacao = await execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char}`);
+  var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char}`);
 
   if (points == undefined || points == "undefined")
     points = 0;
@@ -514,7 +504,7 @@ async function updateUserJsonFile(points, files) {
 
   var filePath = `${directoryOF}/user.json`;
 
-  await execShellCommand('find . -name "user.json" -type f -delete');
+  await system.execShellCommand('find . -name "user.json" -type f -delete');
 
   fs.writeFile(filePath, userJsonFile, function (err) {
     if (err) { return console.log(err); }

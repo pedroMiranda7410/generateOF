@@ -1,7 +1,7 @@
 {
     "points": [
         {
-            "name": "ADIÇÃO DE CLASSE JAVA\n",
+            "name": "CRIAÇÃO_DE_JAVA\n",
             "value": 5.5,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -12,7 +12,7 @@
             ]
         },
         {
-            "name": "MODIFICAÇÃO DE CLASSE JAVA\n",
+            "name": "ALTERAÇÃO_DE_JAVA\n",
             "value": 3.5,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -23,7 +23,7 @@
             ]
         },
         {
-            "name": "MODIFICAÇÃO DE JAVA COMPONENTE\n",
+            "name": "ALTERAÇÃO_DE_JAVA_COMPONENTE\n",
             "value": 9,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE TESTES\n",
+            "name": "CRIAÇÃO_DE_TESTES\n",
             "value": 8,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE HTML\n",
+            "name": "CRIAÇÃO_DE_HTML\n",
             "value": 10,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -56,7 +56,7 @@
             ]
         },
         {
-            "name": "ALTERAÇÃO DE HTML\n",
+            "name": "ALTERAÇÃO_DE_HTML\n",
             "value": 5,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -67,7 +67,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE JS\n",
+            "name": "CRIAÇÃO_DE_JS\n",
             "value": 10,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -78,7 +78,7 @@
             ]
         },
         {
-            "name": "MODIFICAÇÃO DE JS\n",
+            "name": "ALTERAÇÃO_DE_JS\n",
             "value": 5,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -89,7 +89,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE XML\n",
+            "name": "CRIAÇÃO_DE_XML\n",
             "value": 10,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -100,7 +100,7 @@
             ]
         },
         {
-            "name": "MODIFICAÇÃO DE XML\n",
+            "name": "ALTERAÇÃO_DE_XML\n",
             "value": 5,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -114,7 +114,7 @@
             "name": "OUTROS\n"
         },
         {
-            "name": "",
+            "name": "PARTICIPAÇÃO_DE_RITOS",
             "value": 19,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -125,7 +125,7 @@
             ]
         },
         {
-            "name": "",
+            "name": "REFINAMENTO_DE_REQUISITOS",
             "value": 17,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -136,7 +136,7 @@
             ]
         },
         {
-            "name": "",
+            "name": "REFINAMENTO_DE_REQUISITOS",
             "value": 9,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -147,7 +147,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE CSS\n",
+            "name": "CRIAÇÃO_DE_CSS\n",
             "value": 8,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -158,7 +158,7 @@
             ]
         },
         {
-            "name": "MODIFICAÇÃO DE CSS\n",
+            "name": "ALTERAÇÃO_DE_CSS\n",
             "value": 4,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -169,7 +169,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE OPERAÇÃO\n",
+            "name": "CRIAÇÃO_DE_OPERAÇÃO\n",
             "value": 40,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -180,7 +180,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE REPOSITÓRIO\n",
+            "name": "CRIAÇÃO_DE_REPOSITÓRIO\n",
             "value": 30,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -191,7 +191,7 @@
             ]
         },
         {
-            "name": "CRIAÇÃO DE SCRIPTS SHELL\n",
+            "name": "CRIAÇÃO_DE_SCRIPTS_SHELL\n",
             "value": 4,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -202,7 +202,7 @@
             ]
         },
         {
-            "name": "ALTERAÇÃO DE SCRIPTS SHELL\n",
+            "name": "ALTERAÇÃO_DE_SCRIPTS_SHELL\n",
             "value": 2,
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
@@ -213,7 +213,7 @@
             ]
         },
         {
-            "name": "\n",
+            "name": "CRIAÇÃO_DE_SCRIPTS_SQL\n",
             "value": 16,
             "options": [
                 "ANÁLISE E PROJETO DE SOFTWARE",

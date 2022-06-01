@@ -6,7 +6,7 @@ var directory = user.directory;
 var yourKey = user.yourKey;
 var yourPassword = passwords.sisbb;
 
-function execShellCommand(cmd) {
+function system.execShellCommand(cmd) {
   const { exec } = require("child_process");
   return new Promise((resolve, reject) => {
     exec(cmd, (error, stdout, stderr) => {
@@ -24,7 +24,7 @@ async function gitPullAllRepositories() {
   var cmd = `cd ${directory} && ls`;
   var getGitStatus = `git status`;
 
-  var allProjects = await execShellCommand(cmd);
+  var allProjects = await system.execShellCommand(cmd);
 
   allProjects = allProjects.split("\n");
 
@@ -38,7 +38,7 @@ async function gitPullAllRepositories() {
     if (projectName != null && projectName != "") {
 
       var generateGitStatus = `cd ${directory}/${projectName} && ${getGitStatus}`;
-      var gitStatus = await execShellCommand(generateGitStatus);
+      var gitStatus = await system.execShellCommand(generateGitStatus);
 
       var obj = {
         projectName: projectName,
@@ -50,7 +50,7 @@ async function gitPullAllRepositories() {
 
         var getGitURL = `git config --get remote.origin.url`;
         var generateGitURL = `cd ${directory}/${projectName} && ${getGitURL}`;
-        var gitURL = await execShellCommand(generateGitURL);
+        var gitURL = await system.execShellCommand(generateGitURL);
         obj.URL = gitURL;
 
         var arrayURL = gitURL.split("//");
@@ -58,7 +58,7 @@ async function gitPullAllRepositories() {
 
         var getGitPull = `git pull ${strURL}`;
         var generateGitPull = `cd ${directory}/${projectName} && ${getGitPull}`;
-        var gitPull = await execShellCommand(generateGitPull);
+        var gitPull = await system.execShellCommand(generateGitPull);
 
         if (gitPull.includes("Already")) { obj.char = '✅'; }
         else if (gitPull.includes("denied")) { i = 9999; }

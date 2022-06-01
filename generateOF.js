@@ -2,6 +2,9 @@ const user = require('./user.json');
 const negotials = require('./modules/negotials.js');
 const pointsList = require('./modules/pointsList.json');
 const fileManager = require('./modules/fileManager.js');
+const termgraph = require('./modules/termgraph.js');
+const system = require('./modules/system.js');
+const utils = require('./modules/utils.js');
 const fs = require('fs');
 const readline = require('readline');
 var Excel = require('exceljs');
@@ -55,12 +58,12 @@ var ritoOptions1 = pointsList.points[11].options;
 var ritoOptions2 = pointsList.points[12].options;
 var ritoOptions3 = pointsList.points[13].options;
 
-var operationOptions1 = pointsList.points[16].options;
+var operationOptions = pointsList.points[16].options;
 
 var repositoryOptions = pointsList.points[17].options;
 
 var ritosList = [ritoOptions1, ritoOptions2, ritoOptions3];
-var operationList = [operationOptions1];
+var operationList = [operationOptions];
 var repositoryList = [repositoryOptions];
 
 var createJavaTXT = pointsList.points[0].name;
@@ -95,6 +98,7 @@ var alterCSSFinal = "";
 var createShellFinal = "";
 var alterShellFinal = "";
 var createSQLFinal = "";
+var othersFinal = "";
 
 var createJavaFinalQTD = 0;
 var alterJavaFinalQTD = 0;
@@ -112,6 +116,10 @@ var createShellFinalQTD = 0;
 var alterShellFinalQTD = 0;
 var createSQLFinalQTD = 0;
 var othersFinalQTD = 0;
+
+var totalQtdBkp = 0;
+var totalSISBBBkp = 0;
+var gitFiles = [];
 
 var data = new Date();
 var month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"][data.getMonth()].toUpperCase();
@@ -146,17 +154,6 @@ function addHistoryRito(tasks, ritosList, worksheet, rowCounter) {
 
 }
 
-function execShellCommand(cmd) {
-  const { exec } = require("child_process");
-  return new Promise((resolve, reject) => {
-    exec(cmd, (error, stdout, stderr) => {
-      if (error)
-        console.warn(error);
-      resolve(stdout ? stdout : stderr);
-    });
-  });
-}
-
 async function processLineByLine() {
 
   let workbook = new Excel.Workbook();
@@ -170,12 +167,10 @@ async function processLineByLine() {
   var cmd = `cd ${directory} && ls`;
   var getGitCommits = `git log --name-status --no-merges --author=${yourKey} --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h'> ${directoryOF}/input.txt`;
 
-  var allProjects = await execShellCommand(cmd);
+  var allProjects = await system.execShellCommand(cmd);
   allProjects = allProjects.split("\n");
 
-  var totalQtdBkp = 0;
-
-  await execShellCommand(`mkdir -p ${month}-${year}`);
+  await system.execShellCommand(`mkdir -p ${month}-${year}`);
   directoryOF = `${directoryOF}/${month}-${year}`;
 
   for (var i = 0; i < allProjects.length; i++) {
@@ -187,9 +182,9 @@ async function processLineByLine() {
       var generateGitCommits = `cd ${directory}/${projectName} && ${getGitCommits}`;
       var getFullReportGit = `cd ${directory}/${projectName} && git log --no-merges --graph --stat --author=${yourKey} --after=${choosenDate} --pretty=format:'%as - #%h - %s %cn'`;
 
-      await execShellCommand(generateGitCommits);
+      await system.execShellCommand(generateGitCommits);
 
-      var fullReportProject = await execShellCommand(getFullReportGit);
+      var fullReportProject = await system.execShellCommand(getFullReportGit);
 
       const fileStream = fs.createReadStream('input.txt');
 
@@ -240,7 +235,6 @@ async function processLineByLine() {
         crlfDelay: Infinity
       });
 
-
       var hashCommit = "###########";
 
       for await (var line of rl) {
@@ -257,7 +251,7 @@ async function processLineByLine() {
 
           if (!line.includes("commit:") && line != "" && negotials.checkValidLineFromCommit(line)) {
 
-            var obj = negotials.detectFilesCategory(line, projectName, [], linesFromInput, hashCommit,
+            var obj = negotials.detectFilesCategory(line, projectName, gitFiles, linesFromInput, hashCommit,
               alterJS, alterJSPoints, alterJSQTD,
               createJS, createJSPoints, createJSQTD,
               alterCSS, alterCSSPoints, alterCSSQTD,
@@ -375,6 +369,7 @@ async function processLineByLine() {
         + (createSQLQTD * createSQLPoints);
 
       totalQtdBkp += totalQtd;
+      totalSISBBBkp += totalSISBB;
 
       tmpFile += `Total Geral: ${totalQtd} arquivos\n`;
       tmpFile += `Pontuação Geral: ${totalSISBB} SISBB\n\n`;
@@ -411,6 +406,7 @@ async function processLineByLine() {
       createShellFinal += createShell;
       alterShellFinal += alterShell;
       createSQLFinal += createSQL;
+      othersFinal += others;
 
       createJavaFinalQTD += createJavaQTD;
       alterJavaFinalQTD += alterJavaQTD;
@@ -429,7 +425,7 @@ async function processLineByLine() {
       createSQLFinalQTD += createSQLQTD;
       othersFinalQTD += othersQTD;
 
-      await execShellCommand('find . -name "input.txt" -type f -delete');
+      await system.execShellCommand('find . -name "input.txt" -type f -delete');
 
     }
 
@@ -484,8 +480,94 @@ async function processLineByLine() {
 
   workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase2.xlsx`);
 
-  // var reportMessage = `"${totalQtdBkp} SISBB"`;
-  // await execShellCommand(`notify-send -i face-cool -t 1000 -u low "Pontuação Atual" ${reportMessage}`);
+  await updateCalDatFile();
+
+}
+
+async function updateCalDatFile() {
+
+  await system.execShellCommand('echo > cal.dat');
+
+  var arrTermOptions = [
+    { name: createJavaTXT, qtd: createJavaFinalQTD * createJavaPoints },
+    { name: alterJavaTXT, qtd: alterJavaFinalQTD * alterJavaPoints },
+    { name: alterJavaCompTXT, qtd: alterJavaCompFinalQTD * alterJavaCompPoints },
+    { name: createJavaTestTXT, qtd: createJavaTestFinalQTD * createJavaTestPoints },
+    { name: createHTMLTXT, qtd: createHTMLFinalQTD * createHTMLPoints },
+    { name: alterHTMLTXT, qtd: alterHTMLFinalQTD * alterHTMLPoints },
+    { name: createJSTXT, qtd: createJSFinalQTD * createJSPoints },
+    { name: alterJSTXT, qtd: alterJSFinalQTD * alterJSPoints },
+    { name: createXMLTXT, qtd: createXMLFinalQTD * createXMLPoints },
+    { name: alterXMLTXT, qtd: alterXMLFinalQTD * alterXMLPoints },
+    { name: createCSSTXT, qtd: createCSSFinalQTD * createCSSPoints },
+    { name: alterCSSTXT, qtd: alterCSSFinalQTD * alterCSSPoints },
+    { name: createShellTXT, qtd: createShellFinalQTD * createShellPoints },
+    { name: alterShellTXT, qtd: alterShellFinalQTD * alterShellPoints },
+    { name: createSQLTXT, qtd: createSQLFinalQTD * createSQLPoints }
+  ];
+
+  var ritosPoints = (pointsList.points[11].value +
+    pointsList.points[12].value +
+    pointsList.points[13].value) * utils.checkValidArrayLength(user.tasks);
+
+  var operationPoints = pointsList.points[16].value * utils.checkValidArrayLength(user.operations);
+  var repositoryPoints = pointsList.points[17].value * utils.checkValidArrayLength(user.repositories);
+
+  arrTermOptions.push({
+    name: "PARTICIPAÇÕES_EM_RITOS", qtd: ritosPoints
+  });
+
+  arrTermOptions.push({
+    name: "CRIAÇÃO_DE_OPERAÇÃO", qtd: operationPoints
+  });
+
+  arrTermOptions.push({
+    name: "CRIAÇÃO_DE_REPOSITÓRIO", qtd: repositoryPoints
+  });
+
+  totalSISBBBkp += ritosPoints;
+  totalSISBBBkp += operationPoints;
+  totalSISBBBkp += repositoryPoints;
+
+  var calDatFile = termgraph.generateCalDatFile(arrTermOptions);
+
+  var filePath = `${user.directoryOF}/cal.dat`;
+
+  fs.writeFile(filePath, calDatFile, function (err) {
+    if (err) { return console.log(err); }
+  });
+
+  console.log("");
+  console.log(await system.execShellCommand('echo -n 📊​ $(tput bold)RELATÓRIO DE OF$(tput sgr0)'));
+  console.log("");
+
+  if (othersFinalQTD > 0) {
+    console.log(await system.execShellCommand(`echo -n 📦 $(tput bold)Arquivos detectados:$(tput sgr0) ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`));
+  } else {
+    console.log(await system.execShellCommand(`echo -n 📦 $(tput bold)Arquivos detectados:$(tput sgr0) ${totalQtdBkp} arquivos`));
+  }
+
+  gitFiles.forEach(file => {
+    var fileArray = file.split("(");
+    fileArray[1] = fileArray[1].replace(")", "");
+    console.log(`\t📬 ${fileArray[0]}` + '(' + '\x1b[32m', "" + fileArray[1] + "", '\x1b[0m' + ') ');
+  });
+
+  if (othersFinalQTD > 0) {
+    var arr = othersFinal.split("\n");
+    arr.forEach(file => {
+      if (file != "")
+        console.log(`\t📬` + '\x1b[33m' + ` ${file}` + '\x1b[0m');
+    });
+  }
+
+  console.log(await system.execShellCommand('termgraph cal.dat'));
+
+
+  console.log(await system.execShellCommand(`echo -n 🎯 $(tput bold)Pontuação:$(tput sgr0) ${totalSISBBBkp}pts`));
+  console.log("");
+
+  await system.execShellCommand('find . -name "cal.dat" -type f -delete');
 
 }
 
