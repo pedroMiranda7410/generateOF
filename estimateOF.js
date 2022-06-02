@@ -19,6 +19,7 @@ let hermesXLS = user.hermesXLS;
 let points = user.points;
 let repeatFiles = user.repeatFiles;
 let userHermes = user.userHermes;
+let metaPoints = user.metaPoints;
 
 let files = user.files;
 
@@ -243,7 +244,7 @@ async function processLineByLine() {
     arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`);
 
   var char = returnSISBBStatus(diffDays);
-  var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char}`);
+  var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}`);
 
   if (points == undefined || points == "undefined")
     points = 0;
@@ -310,6 +311,9 @@ async function processLineByLine() {
 
 function returnSISBBStatus(diffDays) {
 
+  //var championChars = [`🎉​`, `🎊`, `​🎖️`, `​🏆`, `​🏅`, `​🥇`, `​⛳`];
+  var championChars = [`✅​`];
+  var superChars = [`🦸​`]
   var extremelyHappyChars = [`🚀`];
   var veryHappyChars = [`🥳`, `😎`, `😝`, `🤪`, `🥰`, `😍`, `🤩`];
   var happyChars = [`😁`, `😀`, `😊`, `😇`, `🙂`];
@@ -321,8 +325,11 @@ function returnSISBBStatus(diffDays) {
   var deadChars = [`💀`];
 
   var char = "";
+  var arrChars = [];
 
-  if (SISBBPoints > 599) {
+  if (SISBBPoints > 999) {
+    char = superChars[Math.floor(Math.random() * superChars.length)];
+  } else if (SISBBPoints > 599) {
     char = extremelyHappyChars[Math.floor(Math.random() * extremelyHappyChars.length)];
   } else if (SISBBPoints > 389) {
     char = veryHappyChars[Math.floor(Math.random() * veryHappyChars.length)];
@@ -338,7 +345,7 @@ function returnSISBBStatus(diffDays) {
 
   } else if (SISBBPoints > 280) {
 
-    if (diffDays > 15) {
+    if (diffDays > 10) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
     } else if (diffDays > 5) {
       char = almostChars[Math.floor(Math.random() * almostChars.length)];
@@ -352,12 +359,10 @@ function returnSISBBStatus(diffDays) {
 
   } else if (SISBBPoints > 200) {
 
-    if (diffDays > 20) {
+    if (diffDays > 10) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
-    } else if (diffDays > 15) {
-      char = almostChars[Math.floor(Math.random() * almostChars.length)];
     } else if (diffDays > 5) {
-      char = fewSadChars[Math.floor(Math.random() * fewSadChars.length)];
+      char = almostChars[Math.floor(Math.random() * almostChars.length)];
     } else if (diffDays > 1) {
       char = sadChars[Math.floor(Math.random() * sadChars.length)];
     } else if (diffDays == 1) {
@@ -368,11 +373,11 @@ function returnSISBBStatus(diffDays) {
 
   } else if (SISBBPoints > 150) {
 
-    if (diffDays > 25) {
+    if (diffDays > 20) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
-    } else if (diffDays > 20) {
-      char = almostChars[Math.floor(Math.random() * almostChars.length)];
     } else if (diffDays > 15) {
+      char = almostChars[Math.floor(Math.random() * almostChars.length)];
+    } else if (diffDays > 10) {
       char = fewSadChars[Math.floor(Math.random() * fewSadChars.length)];
     } else if (diffDays > 5) {
       char = sadChars[Math.floor(Math.random() * sadChars.length)];
@@ -386,16 +391,14 @@ function returnSISBBStatus(diffDays) {
 
   } else if (SISBBPoints > 95) {
 
-    if (diffDays > 30) {
+    if (diffDays > 15) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
-    } else if (diffDays > 25) {
+    } else if (diffDays > 10) {
       char = almostChars[Math.floor(Math.random() * almostChars.length)];
-    } else if (diffDays > 15) {
-      char = fewSadChars[Math.floor(Math.random() * fewSadChars.length)];
     } else if (diffDays > 5) {
-      char = sadChars[Math.floor(Math.random() * sadChars.length)];
+      char = fewSadChars[Math.floor(Math.random() * fewSadChars.length)];
     } else if (diffDays > 1) {
-      char = verySadChars[Math.floor(Math.random() * verySadChars.length)];
+      char = sadChars[Math.floor(Math.random() * sadChars.length)];
     } else if (diffDays == 1) {
       char = verySadChars[Math.floor(Math.random() * verySadChars.length)];
     } else {
@@ -418,7 +421,17 @@ function returnSISBBStatus(diffDays) {
 
   }
 
-  return char;
+  arrChars.push(char);
+
+  var diffToTarget = SISBBPoints - metaPoints;
+
+  if (diffToTarget >= 0) {
+    arrChars.push(championChars[Math.floor(Math.random() * championChars.length)]);
+  } else {
+    arrChars.push("\x1b[31m[" + Math.abs(diffToTarget) + "pts] \x1b[0m");
+  }
+
+  return arrChars;
 
 }
 
@@ -484,6 +497,9 @@ async function updateUserJsonFile(points, files) {
   if (!repeatFiles)
     repeatFiles = "false";
 
+  if (!metaPoints)
+    metaPoints = 285;
+
   var userJsonFile = `{
     "directory": "${directory}",
     "directoryOF": "${directoryOF}",
@@ -498,6 +514,7 @@ async function updateUserJsonFile(points, files) {
     "baseXLS": "${baseXLS}",
     "hermesXLS": "${hermesXLS}",
     "repeatFiles": "${repeatFiles}",
+    "metaPoints": "${metaPoints}",
     "points": "${points}",
     "files": ${filesStr}
 }`;

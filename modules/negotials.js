@@ -5,6 +5,7 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('www')
     && !line.includes('target')
     && !line.includes('.env')
+    && !line.includes('.csv')
     && !line.includes('.gitignore')
     && !line.includes('mvnw')
     && !line.includes('Dockerfile')
