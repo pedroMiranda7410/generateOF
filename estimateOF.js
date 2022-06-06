@@ -246,6 +246,10 @@ async function processLineByLine() {
   var char = returnSISBBStatus(diffDays);
   var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}`);
 
+  if (char[1] && char[2]) {
+    pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}${char[2]}`);
+  }
+
   if (points == undefined || points == "undefined")
     points = 0;
 
@@ -296,9 +300,9 @@ async function processLineByLine() {
   }
 
   if (pointsDiff > 0) {
-    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[32m', "+" + pointsDiff + "pts", '\x1b[0m' + ') ' + char);
+    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[32m', "+" + pointsDiff + 'pts \x1b[0m' + ') ' + char);
   } else if (pointsDiff < 0) {
-    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[31m', "" + pointsDiff + "pts", '\x1b[0m' + ') ' + char);
+    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[31m', "" + pointsDiff + 'pts \x1b[0m' + ') ' + char);
   } else {
     console.log(pontuacao);
   }
@@ -311,6 +315,8 @@ async function processLineByLine() {
 
 function returnSISBBStatus(diffDays) {
 
+  var percent = (SISBBPoints / metaPoints) * 100;
+
   //var championChars = [`🎉​`, `🎊`, `​🎖️`, `​🏆`, `​🏅`, `​🥇`, `​⛳`];
   var championChars = [`✅​`];
   var superChars = [`🦸​`]
@@ -322,20 +328,19 @@ function returnSISBBStatus(diffDays) {
   var fewSadChars = [`😣`, `😫`, `😩`];
   var sadChars = [`😨`, `😰`, `😓`];
   var verySadChars = [`😭`, `😱`];
-  var deadChars = [`💀`];
+  var deadChars = [`💀`];  
 
-  var char = "";
   var arrChars = [];
 
-  if (SISBBPoints > 999) {
+  if (percent >= 350) {
     char = superChars[Math.floor(Math.random() * superChars.length)];
-  } else if (SISBBPoints > 599) {
+  } else if (percent >= 210) {
     char = extremelyHappyChars[Math.floor(Math.random() * extremelyHappyChars.length)];
-  } else if (SISBBPoints > 389) {
+  } else if (percent >= 136) {
     char = veryHappyChars[Math.floor(Math.random() * veryHappyChars.length)];
-  } else if (SISBBPoints > 299) {
+  } else if (percent >= 104) {
     char = happyChars[Math.floor(Math.random() * happyChars.length)];
-  } else if (SISBBPoints > 284) {
+  } else if (percent >= 99) {
 
     if (diffDays > 1) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
@@ -343,7 +348,7 @@ function returnSISBBStatus(diffDays) {
       char = neutralChars[Math.floor(Math.random() * neutralChars.length)];
     }
 
-  } else if (SISBBPoints > 280) {
+  } else if (percent >= 98) {
 
     if (diffDays > 10) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
@@ -357,7 +362,7 @@ function returnSISBBStatus(diffDays) {
       char = deadChars[Math.floor(Math.random() * deadChars.length)];
     }
 
-  } else if (SISBBPoints > 200) {
+  } else if (percent >= 70) {
 
     if (diffDays > 10) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
@@ -371,7 +376,7 @@ function returnSISBBStatus(diffDays) {
       char = deadChars[Math.floor(Math.random() * deadChars.length)];
     }
 
-  } else if (SISBBPoints > 150) {
+  } else if (percent >= 50) {
 
     if (diffDays > 20) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
@@ -389,7 +394,7 @@ function returnSISBBStatus(diffDays) {
       char = deadChars[Math.floor(Math.random() * deadChars.length)];
     }
 
-  } else if (SISBBPoints > 95) {
+  } else if (percent >= 33) {
 
     if (diffDays > 15) {
       char = happyChars[Math.floor(Math.random() * happyChars.length)];
@@ -425,10 +430,21 @@ function returnSISBBStatus(diffDays) {
 
   var diffToTarget = SISBBPoints - metaPoints;
 
+  var date1 = new Date(choosenDate);
+  var date2 = new Date(otherDate);
+
+  var totalDiffDays = negotials.getBusinessDatesCount(date1, date2);
+
   if (diffToTarget >= 0) {
     arrChars.push(championChars[Math.floor(Math.random() * championChars.length)]);
   } else {
     arrChars.push("\x1b[31m[" + Math.abs(diffToTarget) + "pts] \x1b[0m");
+  }
+
+  var expected = Math.round((metaPoints / totalDiffDays) * diffDays);
+
+  if (SISBBPoints < expected) {
+    arrChars.push("\x1b[33m[" + Math.abs(expected) + "pts] \x1b[0m");
   }
 
   return arrChars;
