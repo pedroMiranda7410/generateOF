@@ -1,5 +1,6 @@
 */
 !modules/
+!config/
 passwords.json
 user.json
 user2.json

@@ -2,7 +2,10 @@ const user = require('./user.json');
 const negotials = require('./modules/negotials.js');
 const pointsList = require('./modules/pointsList.json');
 const system = require('./modules/system.js');
+const updateGit = require('./config/updateGit.js');
 const fs = require('fs');
+
+updateGit.updateGitRepository();
 
 // VERIFICAR VARIÁVEIS GLOBAIS
 var directory = user.directory;
@@ -442,13 +445,13 @@ function returnSISBBStatus(diffDays) {
   if (diffToTarget >= 0) {
     arrChars.push(championChars[Math.floor(Math.random() * championChars.length)]);
   } else {
-    arrChars.push("\x1b[31m[" + Math.abs(diffToTarget) + "pts] \x1b[0m");
+    arrChars.push("\x1b[33m[" + Math.abs(diffToTarget) + "pts] \x1b[0m");
   }
 
   var expected = Math.round((metaPoints / totalDiffDays) * diffDays);
 
   if (SISBBPoints < expected) {
-    arrChars.push("\x1b[33m[" + Math.abs(expected) + "pts] \x1b[0m");
+    arrChars.push("\x1b[31m[" + Math.abs(expected) + "pts] \x1b[0m");
   }
 
   return arrChars;
