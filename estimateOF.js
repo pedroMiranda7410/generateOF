@@ -244,7 +244,11 @@ async function processLineByLine() {
     arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`);
 
   var char = returnSISBBStatus(diffDays);
-  var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}`);
+  var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]}`);
+
+  if (char[1]) {
+    pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}`);
+  }
 
   if (char[1] && char[2]) {
     pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}${char[2]}`);
@@ -300,9 +304,9 @@ async function processLineByLine() {
   }
 
   if (pointsDiff > 0) {
-    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[32m', "+" + pointsDiff + 'pts \x1b[0m' + ') ' + char);
+    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[32m' + "+" + pointsDiff + 'pts\x1b[0m' + ') ' + char[0]);
   } else if (pointsDiff < 0) {
-    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[31m', "" + pointsDiff + 'pts \x1b[0m' + ') ' + char);
+    console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[31m' + "" + pointsDiff + 'pts\x1b[0m' + ') ' + char[0]);
   } else {
     console.log(pontuacao);
   }
@@ -328,7 +332,7 @@ function returnSISBBStatus(diffDays) {
   var fewSadChars = [`😣`, `😫`, `😩`];
   var sadChars = [`😨`, `😰`, `😓`];
   var verySadChars = [`😭`, `😱`];
-  var deadChars = [`💀`];  
+  var deadChars = [`💀`];
 
   var arrChars = [];
 
