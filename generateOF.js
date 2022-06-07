@@ -17,6 +17,7 @@ var yourKey = user.yourKey;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
 let baseXLS = user.baseXLS;
+let hermesXLS = user.hermesXLS;
 let repeatFiles = user.repeatFiles;
 
 var createJavaPoints = pointsList.points[0].value;
@@ -118,7 +119,7 @@ async function processLineByLine() {
   await workbook.xlsx.readFile(baseXLS);
   let worksheet = workbook.getWorksheet("Orçamento");
   fileManager.cleanSpreedsheet(worksheet);
-  workbook.xlsx.writeFile('SimuladorBase.xlsx');
+  workbook.xlsx.writeFile(baseXLS);
 
   let rowCounter = 4;
 
@@ -433,7 +434,7 @@ async function processLineByLine() {
   rowCounter = addRitoPointsJson.rowCounter;
   worksheet = addRitoPointsJson.worksheet;
 
-  workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase2.xlsx`);
+  workbook.xlsx.writeFile(`${directoryOF}/${hermesXLS}`);
 
   await updateCalDatFile();
 
