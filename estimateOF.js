@@ -1,11 +1,14 @@
+const checkPersonalFiles = require('./config/checkPersonalFiles.js');
+checkPersonalFiles.checkPersonalFiles();
+
+const updateGit = require('./config/updateGit.js');
+updateGit.updateGitRepository();
+
 const user = require('./user.json');
 const negotials = require('./modules/negotials.js');
 const pointsList = require('./modules/pointsList.json');
 const system = require('./modules/system.js');
-const updateGit = require('./config/updateGit.js');
 const fs = require('fs');
-
-updateGit.updateGitRepository();
 
 // VERIFICAR VARIÁVEIS GLOBAIS
 var directory = user.directory;

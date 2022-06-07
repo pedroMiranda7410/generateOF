@@ -1,5 +1,5 @@
 const user = require('./user.json');
-const passwords = require('./passwords.json');
+const passwords = require('./config/passwords.json');
 const system = require('./modules/system.js');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
