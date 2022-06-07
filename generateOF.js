@@ -16,9 +16,6 @@ var yourName = user.yourName;
 var yourKey = user.yourKey;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
-var tasks = user.tasks;
-var operations = user.operations;
-var repositories = user.repositories;
 let baseXLS = user.baseXLS;
 let repeatFiles = user.repeatFiles;
 
@@ -53,18 +50,6 @@ var alterCSSOptions = pointsList.points[15].options;
 var createShellOptions = pointsList.points[18].options;
 var alterShellOptions = pointsList.points[19].options;
 var createSQLOptions = pointsList.points[20].options;
-
-var ritoOptions1 = pointsList.points[11].options;
-var ritoOptions2 = pointsList.points[12].options;
-var ritoOptions3 = pointsList.points[13].options;
-
-var operationOptions = pointsList.points[16].options;
-
-var repositoryOptions = pointsList.points[17].options;
-
-var ritosList = [ritoOptions1, ritoOptions2, ritoOptions3];
-var operationList = [operationOptions];
-var repositoryList = [repositoryOptions];
 
 var createJavaTXT = pointsList.points[0].name;
 var alterJavaTXT = pointsList.points[1].name;
@@ -126,33 +111,6 @@ var month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"
 var year = data.getFullYear();
 
 var fullReportFile = "";
-
-function addHistoryRito(tasks, ritosList, worksheet, rowCounter) {
-
-  var tasksStr = "";
-
-  tasks.forEach(history => {
-    tasksStr += history;
-  });
-
-  ritosList.forEach(rito => {
-
-    let row = worksheet.getRow(rowCounter);
-    row.getCell(3).value = rito[0];
-    row.getCell(4).value = rito[1];
-    row.getCell(5).value = rito[2];
-    row.getCell(7).value = rito[3];
-    row.getCell(8).value = rito[4];
-    row.getCell(11).value = tasks.length;
-    row.getCell(12).value = tasksStr;
-    row.commit();
-    rowCounter++;
-
-  });
-
-  return rowCounter;
-
-}
 
 async function processLineByLine() {
 
@@ -469,14 +427,11 @@ async function processLineByLine() {
   tmpResult = fileManager.writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
 
-  if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
-    rowCounter = addHistoryRito(operations, operationList, worksheet, rowCounter);
+  var addRitoPointsJson = negotials.addRitosPoints(totalSISBBBkp, rowCounter, worksheet);
 
-  if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
-    rowCounter = addHistoryRito(repositories, repositoryList, worksheet, rowCounter);
-
-  if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; }))
-    rowCounter = addHistoryRito(tasks, ritosList, worksheet, rowCounter);
+  totalSISBBBkp = addRitoPointsJson.SISBBPoints;
+  rowCounter = addRitoPointsJson.rowCounter;
+  worksheet = addRitoPointsJson.worksheet;
 
   workbook.xlsx.writeFile(`${directoryOF}/SimuladorBase2.xlsx`);
 
@@ -524,10 +479,6 @@ async function updateCalDatFile() {
   arrTermOptions.push({
     name: "CRIAÇÃO_DE_REPOSITÓRIO", qtd: repositoryPoints
   });
-
-  totalSISBBBkp += ritosPoints;
-  totalSISBBBkp += operationPoints;
-  totalSISBBBkp += repositoryPoints;
 
   var calDatFile = termgraph.generateCalDatFile(arrTermOptions);
 

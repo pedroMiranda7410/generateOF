@@ -1,6 +1,5 @@
 const user = require('./user.json');
 const passwords = require('./config/passwords.json');
-const negotials = require('./modules/negotials.js');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
 let baseXLS = user.hermesXLS;
@@ -52,9 +51,9 @@ async function readXLS() {
 
             if (disciplina && disciplina != "" && disciplina != null) {
 
-                disciplina = negotials.checkSpacesInStrings(disciplina);
-                atividade = negotials.checkSpacesInStrings(atividade);
-                artefato = negotials.checkSpacesInStrings(artefato);
+                disciplina = utils.checkSpacesInStrings(disciplina);
+                atividade = utils.checkSpacesInStrings(atividade);
+                artefato = utils.checkSpacesInStrings(artefato);
 
                 selector = 'button[icon="pi pi-plus"]';
                 await pageGenti.waitForSelector(selector);

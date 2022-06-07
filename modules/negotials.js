@@ -1,3 +1,20 @@
+const user = require('../user.json');
+const pointsList = require('../modules/pointsList.json');
+const fileManager = require('../modules/fileManager.js');
+
+var tasks = user.tasks;
+var operations = user.operations;
+var repositories = user.repositories;
+
+var ritoOptions1 = pointsList.points[11].options;
+var ritoOptions2 = pointsList.points[12].options;
+var ritoOptions3 = pointsList.points[13].options;
+
+var operationOptions = pointsList.points[16].options;
+var repositoryOptions = pointsList.points[17].options;
+var ritosList = [ritoOptions1, ritoOptions2, ritoOptions3];
+var operationList = [operationOptions];
+var repositoryList = [repositoryOptions];
 
 module.exports.checkValidLineFromCommit = (line) => {
 
@@ -235,34 +252,39 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
 
 }
 
-module.exports.getBusinessDatesCount = (startDate, endDate) => {
-  let count = 0;
-  let curDate = +startDate;
-  while (curDate <= +endDate) {
-    const dayOfWeek = new Date(curDate).getDay();
-    const isWeekend = (dayOfWeek === 6) || (dayOfWeek === 0);
-    if (!isWeekend) {
-      count++;
-    }
-    curDate = curDate + 24 * 60 * 60 * 1000
+module.exports.addRitosPoints = (SISBBPoints, rowCounter, worksheet) => {
+
+  if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
+    SISBBPoints += (pointsList.points[16].value * operations.length);
+
+  if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
+    SISBBPoints += (pointsList.points[17].value * repositories.length);
+
+  if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; })) {
+    SISBBPoints += (pointsList.points[11].value * tasks.length);
+    SISBBPoints += (pointsList.points[12].value * tasks.length);
+    SISBBPoints += (pointsList.points[13].value * tasks.length);
   }
-  return count;
-}
 
-module.exports.checkSpacesInStrings = (string) => {
+  if (rowCounter != null) {
 
-  var arrayStrings = [
-    "Plataforma Distribuída",
-    "Tarefas correlacionadas à Implementação",
-    "Alteração de Objetos de Integração e Negócio Java",
-    "Criação CSS ou SCSS",
-    "Alteração CSS ou SCSS",
-    "Software de Infraestrutura"
-  ]
+    if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
+      rowCounter = fileManager.addHistoryRito(operations, operationList, worksheet, rowCounter);
 
-  if (arrayStrings.includes(string))
-    string = string + " ";
+    if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
+      rowCounter = fileManager.addHistoryRito(repositories, repositoryList, worksheet, rowCounter);
 
-  return string;
+    if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; }))
+      rowCounter = fileManager.addHistoryRito(tasks, ritosList, worksheet, rowCounter);
+
+  }
+
+  var jsonReturn = {
+    "SISBBPoints": SISBBPoints,
+    "rowCounter": rowCounter,
+    "worksheet": worksheet
+  };
+
+  return jsonReturn;
 
 }

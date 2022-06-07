@@ -1,8 +1,5 @@
 const system = require('../modules/system');
-const user = require('../user.json');
 const fs = require('fs');
-
-var directoryOF = user.directoryOF;
 
 var defaultPasswords = `
 {
@@ -10,29 +7,16 @@ var defaultPasswords = `
     "hermes": ""
 }`;
 
-var defaultUserJson = `
-{
-    {
-        "directory": "",
-        "directoryOF": "",
-        "yourName": "",
-        "yourKey": "",
-        "userHermes": "",
-        "choosenDate": "",
-        "otherDate": "",
-        "operations": [],
-        "repositories": [],
-        "tasks": [],
-        "baseXLS": "",
-        "hermesXLS": "",
-        "repeatFiles": "",
-        "metaPoints": "",
-        "points": "",
-        "files": []
-    }
-}`;
-
 module.exports.checkPersonalFiles = async () => {
+
+    var hasPassword = false;
+
+    try {
+        const user = require('../user.json');
+        var directoryOF = user.directoryOF;
+    } catch (error) {
+        return false;
+    }
 
     var cmd = `cd ${directoryOF} && ls`;
     var result = await system.execShellCommand(cmd);
@@ -42,21 +26,13 @@ module.exports.checkPersonalFiles = async () => {
     var resultConfig = await system.execShellCommand(cmdConfig);
     var filesConfig = resultConfig.split("\n");
 
-    var hasPassword = false;
-    var hasUserJson = false;
-
     files.forEach(file => {
-
-        if (file.includes("user.json"))
-            hasUserJson = true;
 
     });
 
     filesConfig.forEach(file => {
-
         if (file.includes("passwords.json"))
             hasPassword = true;
-
     });
 
     if (!hasPassword) {
@@ -69,14 +45,6 @@ module.exports.checkPersonalFiles = async () => {
 
     }
 
-    if (!hasUserJson) {
-
-        var filePath = `${directoryOF}/user.json`;
-
-        fs.writeFile(filePath, defaultUserJson, function (err) {
-            if (err) { return console.log(err); }
-        });
-
-    }
+    return true;
 
 }
