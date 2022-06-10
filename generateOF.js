@@ -5,17 +5,14 @@ const fileManager = require('./modules/fileManager.js');
 const termgraph = require('./modules/termgraph.js');
 const system = require('./modules/system.js');
 const utils = require('./modules/utils.js');
+const shellComands = require('./modules/shellCommands.js');
 const fs = require('fs');
 const readline = require('readline');
 var Excel = require('exceljs');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
-var directory = user.directory;
 var directoryOF = user.directoryOF;
 var yourName = user.yourName;
-var yourKey = user.yourKey;
-var choosenDate = user.choosenDate;
-var otherDate = user.otherDate;
 let baseXLS = user.baseXLS;
 let hermesXLS = user.hermesXLS;
 let repeatFiles = user.repeatFiles;
@@ -123,10 +120,7 @@ async function processLineByLine() {
 
   let rowCounter = 4;
 
-  var cmd = `cd ${directory} && ls`;
-  var getGitCommits = `git log --name-status --no-merges --author=${yourKey} --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h'> ${directoryOF}/input.txt`;
-
-  var allProjects = await system.execShellCommand(cmd);
+  var allProjects = await system.execShellCommand(shellComands.cdAndLs);
   allProjects = allProjects.split("\n");
 
   await system.execShellCommand(`mkdir -p ${month}-${year}`);
@@ -138,12 +132,9 @@ async function processLineByLine() {
 
     if (projectName != null && projectName != "") {
 
-      var generateGitCommits = `cd ${directory}/${projectName} && ${getGitCommits}`;
-      var getFullReportGit = `cd ${directory}/${projectName} && git log --no-merges --graph --stat --author=${yourKey} --after=${choosenDate} --pretty=format:'%as - #%h - %s %cn'`;
+      await system.execShellCommand(shellComands.generateGitCommitsOutput(projectName));
 
-      await system.execShellCommand(generateGitCommits);
-
-      var fullReportProject = await system.execShellCommand(getFullReportGit);
+      var fullReportProject = await system.execShellCommand(shellComands.getFullReportGit(projectName));
 
       const fileStream = fs.createReadStream('input.txt');
 

@@ -1,5 +1,4 @@
 const user = require('../user.json');
-const pointsList = require('../modules/pointsList.json');
 const system = require('./system.js');
 const fs = require('fs');
 

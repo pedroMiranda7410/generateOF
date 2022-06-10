@@ -14,8 +14,8 @@ async function processLineByLine() {
     const system = require('./modules/system.js');
     const utils = require('./modules/utils.js');
     const fileManager = require('./modules/fileManager.js');
+    const shellCommands = require('./modules/shellCommands.js');
 
-    var directory = user.directory;
     var yourName = user.yourName;
     var yourKey = user.yourKey;
     var choosenDate = user.choosenDate;
@@ -46,10 +46,7 @@ async function processLineByLine() {
 
     var othersFinalQTD = 0;
 
-    var cmd = `cd ${directory} && ls`;
-    var getGitCommits = `git log --name-status --no-merges --author=${yourKey} --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h'`;
-
-    var allProjects = await system.execShellCommand(cmd);
+    var allProjects = await system.execShellCommand(shellCommands.cdAndLs);
     allProjects = allProjects.split("\n");
 
     var totalQtdBkp = 0;
@@ -60,8 +57,7 @@ async function processLineByLine() {
 
       if (projectName != null && projectName != "") {
 
-        var generateGitCommits = `cd ${directory}/${projectName} && ${getGitCommits}`;
-        var commits = await system.execShellCommand(generateGitCommits);
+        var commits = await system.execShellCommand(shellCommands.generateGitCommits(projectName));
         commits = commits.split("\n");
         projectName += "/";
 
