@@ -7,6 +7,7 @@ async function processLineByLine() {
 
     const updateGit = require('./config/updateGit.js');
     updateGit.updateGitRepository();
+    await checkPersonalFiles.checkBashFunctions();
 
     const user = require('./user.json');
     const userConfig = require('./config/userConfig.json');

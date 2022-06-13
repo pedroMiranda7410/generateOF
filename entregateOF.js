@@ -1,4 +1,3 @@
-const user = require('./user.json');
 const userConfig = require('./config/userConfig.json');
 const passwords = require('./config/passwords.json');
 var Excel = require('exceljs');

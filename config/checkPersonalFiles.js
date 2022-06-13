@@ -1,22 +1,44 @@
 const system = require('../modules/system');
 const fs = require('fs');
 
-var defaultPasswords = `
-{
-    "sisbb": "senhaDaChaveC/senhaDoSISBB",
-    "hermes": "senhaDoHermes"
-}`;
+module.exports.checkBashFunctions = async () => {
 
-var defaultUserJson = `
-{
-    "choosenDate": "1997-05-02",
-    "otherDate": "1997-12-31",
-    "operations": ["\n"],
-    "repositories": ["\n"],
-    "tasks": ["\n"],
-    "points": "0",
-    "files": []
-}`;
+    try {
+
+        const userConfig = require('../config/userConfig.json');
+        const defaultFiles = require('./defaultFiles');
+
+        userConfig.terminalConfig.forEach(config => {
+
+            var directory = `${userConfig.home}/${config}`;
+
+            if (fs.existsSync(directory)) {
+
+                system.execShellCommand(`cd && cat ${config}`).then(response => {
+
+                    if (!response.includes("git () {")) {
+
+                        response += defaultFiles.defaultGitFunction;
+
+                        fs.writeFile(directory, response, function (err) {
+                            if (err) { return console.log(err); }
+                        });
+
+                    }
+
+                });
+
+            }
+
+        });
+
+    } catch (error) {
+        return false;
+    }
+
+    return true;
+
+}
 
 module.exports.checkPersonalFiles = async () => {
 
@@ -25,6 +47,7 @@ module.exports.checkPersonalFiles = async () => {
 
     try {
         const userConfig = require('../config/userConfig.json');
+        const defaultFiles = require('./defaultFiles');
         var directoryOF = userConfig.directoryOF;
     } catch (error) {
         return false;
@@ -40,7 +63,7 @@ module.exports.checkPersonalFiles = async () => {
 
     files.forEach(file => {
         if (file.includes("user.json"))
-        hasUserJson = true;
+            hasUserJson = true;
     });
 
     filesConfig.forEach(file => {
@@ -52,7 +75,7 @@ module.exports.checkPersonalFiles = async () => {
 
         var filePath = `${directoryOF}/config/passwords.json`;
 
-        fs.writeFile(filePath, defaultPasswords, function (err) {
+        fs.writeFile(filePath, defaultFiles.defaultPasswords, function (err) {
             if (err) { return console.log(err); }
         });
 
@@ -62,7 +85,7 @@ module.exports.checkPersonalFiles = async () => {
 
         var filePath = `${directoryOF}/user.json`;
 
-        fs.writeFile(filePath, defaultUserJson, function (err) {
+        fs.writeFile(filePath, defaultFiles.defaultUserJson, function (err) {
             if (err) { return console.log(err); }
         });
 
