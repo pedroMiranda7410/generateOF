@@ -1,9 +1,11 @@
 const user = require('./user.json');
+const userConfig = require('./config/userConfig.json');
 const passwords = require('./config/passwords.json');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
-let baseXLS = user.hermesXLS;
-let userHermes = user.userHermes;
+let baseXLS = userConfig.hermesXLS;
+let baseSheet = userConfig.baseSheet;
+let userHermes = userConfig.userHermes;
 let passHermes = passwords.hermes;
 
 async function readXLS() {
@@ -11,7 +13,7 @@ async function readXLS() {
     //Carregando as informações da planilha
     let workbook = new Excel.Workbook();
     await workbook.xlsx.readFile(baseXLS);
-    let worksheet = workbook.getWorksheet("Orçamento");
+    let worksheet = workbook.getWorksheet(baseSheet);
 
     //Carregando a página do Hermes
     var delayTyping = 50;

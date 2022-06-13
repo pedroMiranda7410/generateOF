@@ -3,17 +3,29 @@ const fs = require('fs');
 
 var defaultPasswords = `
 {
-    "sisbb": "",
-    "hermes": ""
+    "sisbb": "senhaDaChaveC/senhaDoSISBB",
+    "hermes": "senhaDoHermes"
+}`;
+
+var defaultUserJson = `
+{
+    "choosenDate": "1997-05-02",
+    "otherDate": "1997-12-31",
+    "operations": ["\n"],
+    "repositories": ["\n"],
+    "tasks": ["\n"],
+    "points": "0",
+    "files": []
 }`;
 
 module.exports.checkPersonalFiles = async () => {
 
     var hasPassword = false;
+    var hasUserJson = false;
 
     try {
-        const user = require('../user.json');
-        var directoryOF = user.directoryOF;
+        const userConfig = require('../config/userConfig.json');
+        var directoryOF = userConfig.directoryOF;
     } catch (error) {
         return false;
     }
@@ -27,7 +39,8 @@ module.exports.checkPersonalFiles = async () => {
     var filesConfig = resultConfig.split("\n");
 
     files.forEach(file => {
-
+        if (file.includes("user.json"))
+        hasUserJson = true;
     });
 
     filesConfig.forEach(file => {
@@ -40,6 +53,16 @@ module.exports.checkPersonalFiles = async () => {
         var filePath = `${directoryOF}/config/passwords.json`;
 
         fs.writeFile(filePath, defaultPasswords, function (err) {
+            if (err) { return console.log(err); }
+        });
+
+    }
+
+    if (!hasUserJson) {
+
+        var filePath = `${directoryOF}/user.json`;
+
+        fs.writeFile(filePath, defaultUserJson, function (err) {
             if (err) { return console.log(err); }
         });
 

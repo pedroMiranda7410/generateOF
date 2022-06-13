@@ -1,4 +1,5 @@
 const user = require('./user.json');
+const userConfig = require('./config/userConfig.json');
 const negotials = require('./modules/negotials.js');
 const pointsList = require('./modules/pointsList.json');
 const fileManager = require('./modules/fileManager.js');
@@ -11,11 +12,12 @@ const readline = require('readline');
 var Excel = require('exceljs');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
-var directoryOF = user.directoryOF;
-var yourName = user.yourName;
-let baseXLS = user.baseXLS;
-let hermesXLS = user.hermesXLS;
-let repeatFiles = user.repeatFiles;
+var directoryOF = userConfig.directoryOF;
+var yourName = userConfig.yourName;
+let baseXLS = userConfig.baseXLS;
+let baseSheet = userConfig.baseSheet;
+let hermesXLS = userConfig.hermesXLS;
+let repeatFiles = userConfig.repeatFiles;
 
 var createJavaPoints = pointsList.points[0].value;
 var alterJavaPoints = pointsList.points[1].value;
@@ -114,7 +116,7 @@ async function processLineByLine() {
 
   let workbook = new Excel.Workbook();
   await workbook.xlsx.readFile(baseXLS);
-  let worksheet = workbook.getWorksheet("Orçamento");
+  let worksheet = workbook.getWorksheet(baseSheet);
   fileManager.cleanSpreedsheet(worksheet);
   workbook.xlsx.writeFile(baseXLS);
 
@@ -474,7 +476,7 @@ async function updateCalDatFile() {
 
   var calDatFile = termgraph.generateCalDatFile(arrTermOptions);
 
-  var filePath = `${user.directoryOF}/cal.dat`;
+  var filePath = `${userConfig.directoryOF}/cal.dat`;
 
   fs.writeFile(filePath, calDatFile, function (err) {
     if (err) { return console.log(err); }

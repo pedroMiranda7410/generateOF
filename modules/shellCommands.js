@@ -1,8 +1,9 @@
 const user = require('../user.json');
+const userConfig = require('../config/userConfig.json');
 
-var directory = user.directory;
-var directoryOF = user.directoryOF;
-var yourKey = user.yourKey;
+var directory = userConfig.directory;
+var directoryOF = userConfig.directoryOF;
+var yourKey = userConfig.yourKey;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
 
@@ -14,5 +15,3 @@ module.exports.getGitCommitsOutput = `git log --name-status --no-merges --author
 module.exports.generateGitCommitsOutput = (projectName) => { return `cd ${directory}/${projectName} && ${this.getGitCommitsOutput}`; }
 
 module.exports.getFullReportGit = (projectName) => { return `cd ${directory}/${projectName} && git log --no-merges --graph --stat --author=${yourKey} --after=${choosenDate} --pretty=format:'%as - #%h - %s %cn'`; }
-
-

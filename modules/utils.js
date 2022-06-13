@@ -1,8 +1,9 @@
 const user = require('../user.json');
+const userConfig = require('../config/userConfig.json');
 
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
-let metaPoints = user.metaPoints;
+let metaPoints = userConfig.metaPoints;
 
 module.exports.checkValidArrayLength = (array) => {
 

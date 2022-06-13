@@ -1,21 +1,19 @@
 const user = require('../user.json');
+const userConfig = require('../config/userConfig.json');
 const system = require('./system.js');
 const fs = require('fs');
 
-var directory = user.directory;
-var directoryOF = user.directoryOF;
-var yourName = user.yourName;
-var yourKey = user.yourKey;
+var directoryOF = userConfig.directoryOF;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
 var tasks = user.tasks;
 var operations = user.operations;
 var repositories = user.repositories;
-let baseXLS = user.baseXLS;
-let hermesXLS = user.hermesXLS;
-let repeatFiles = user.repeatFiles;
-let userHermes = user.userHermes;
-let metaPoints = user.metaPoints;
+let baseXLS = userConfig.baseXLS;
+let baseSheet = userConfig.baseSheet;
+let hermesXLS = userConfig.hermesXLS;
+let repeatFiles = userConfig.repeatFiles;
+let metaPoints = userConfig.metaPoints;
 
 module.exports.cleanSpreedsheet = (worksheet) => {
 
@@ -157,24 +155,21 @@ module.exports.updateUserJsonFile = async (points, files) => {
     if (!repeatFiles)
         repeatFiles = "false";
 
-    if (!metaPoints)
-        metaPoints = 285;
+    if (!baseXLS)
+        baseXLS = "SimuladorBase.xlsx";
+
+    if (!hermesXLS)
+        hermesXLS = "SimuladorBase2.xlsx";
+
+    if (!baseSheet)
+        baseSheet = "Orçamento";
 
     var userJsonFile = `{
-      "directory": "${directory}",
-      "directoryOF": "${directoryOF}",
-      "yourName": "${yourName}",
-      "yourKey": "${yourKey}",
-      "userHermes": "${userHermes}",
       "choosenDate": "${choosenDate}",
       "otherDate": "${otherDate}",
       "operations": ${opStr},
       "repositories": ${repoStr},
       "tasks": ${histStr},
-      "baseXLS": "${baseXLS}",
-      "hermesXLS": "${hermesXLS}",
-      "repeatFiles": "${repeatFiles}",
-      "metaPoints": "${metaPoints}",
       "points": "${points}",
       "files": ${filesStr}
   }`;

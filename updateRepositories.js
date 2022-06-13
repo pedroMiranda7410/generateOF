@@ -1,10 +1,10 @@
-const user = require('./user.json');
+const userConfig = require('./config/userConfig.json');
 const passwords = require('./config/passwords.json');
 const system = require('./modules/system.js');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
-var directory = user.directory;
-var yourKey = user.yourKey;
+var directory = userConfig.directory;
+var yourKey = userConfig.yourKey;
 var yourPassword = passwords.sisbb;
 
 var result = [];

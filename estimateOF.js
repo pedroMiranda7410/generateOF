@@ -9,6 +9,7 @@ async function processLineByLine() {
     updateGit.updateGitRepository();
 
     const user = require('./user.json');
+    const userConfig = require('./config/userConfig.json');
     const negotials = require('./modules/negotials.js');
     const pointsList = require('./modules/pointsList.json');
     const system = require('./modules/system.js');
@@ -16,12 +17,13 @@ async function processLineByLine() {
     const fileManager = require('./modules/fileManager.js');
     const shellCommands = require('./modules/shellCommands.js');
 
-    var yourName = user.yourName;
-    var yourKey = user.yourKey;
+    var yourName = userConfig.yourName;
+    var yourKey = userConfig.yourKey;
+    let repeatFiles = userConfig.repeatFiles;
+
     var choosenDate = user.choosenDate;
     var otherDate = user.otherDate;
     let points = user.points;
-    let repeatFiles = user.repeatFiles;
 
     let files = user.files;
 
@@ -302,7 +304,7 @@ async function processLineByLine() {
     await fileManager.updateUserJsonFile(SISBBPoints, gitFiles);
 
   } else {
-    console.log("🚨​ Módulo user.json não foi encontrado 🚨​​");
+    console.log("🚨​ Módulo userConfig.json não foi encontrado 🚨​​");
   }
 
 }
