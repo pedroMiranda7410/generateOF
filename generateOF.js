@@ -506,9 +506,9 @@ async function updateCalDatFile() {
     });
   }
 
-  console.log(await system.execShellCommand('termgraph cal.dat'));
+  //console.log(await system.execShellCommand('termgraph cal.dat'));
 
-
+  console.log("");
   console.log(await system.execShellCommand(`echo -n 🎯 $(tput bold)Pontuação:$(tput sgr0) ${totalSISBBBkp}pts`));
   console.log("");
 
