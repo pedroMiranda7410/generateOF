@@ -7,26 +7,19 @@ async function processLineByLine() {
 
     const updateGit = require('./config/updateGit.js');
     updateGit.updateGitRepository();
-    await checkPersonalFiles.checkBashFunctions();
 
-    const user = require('./user.json');
+    await checkPersonalFiles.checkBashFunctions();
+    await checkPersonalFiles.checkNodeModules();
+
     const userConfig = require('./config/userConfig.json');
     const negotials = require('./modules/negotials.js');
     const pointsList = require('./modules/pointsList.json');
     const system = require('./modules/system.js');
-    const utils = require('./modules/utils.js');
     const fileManager = require('./modules/fileManager.js');
     const shellCommands = require('./modules/shellCommands.js');
+    const terminalReport = require('./modules/terminalReport.js');
 
-    var yourName = userConfig.yourName;
-    var yourKey = userConfig.yourKey;
     let repeatFiles = userConfig.repeatFiles;
-
-    var choosenDate = user.choosenDate;
-    var otherDate = user.otherDate;
-    let points = user.points;
-
-    let files = user.files;
 
     var createJavaPoints = pointsList.points[0].value;
     var alterJavaPoints = pointsList.points[1].value;
@@ -60,7 +53,7 @@ async function processLineByLine() {
 
       if (projectName != null && projectName != "") {
 
-        var commits = await system.execShellCommand(shellCommands.generateGitCommits(projectName));
+        var commits = await system.execShellCommandCheckFolders(shellCommands.generateGitCommits(projectName));
         commits = commits.split("\n");
         projectName += "/";
 
@@ -210,98 +203,7 @@ async function processLineByLine() {
 
     SISBBPoints = negotials.addRitosPoints(SISBBPoints, null, "").SISBBPoints;
 
-    var nome = await system.execShellCommand(`echo -n 👤 Nome: ${yourName}`);
-    var chave = await system.execShellCommand(`echo -n 🔑 Chave: ${yourKey}`);
-    var periodo = await system.execShellCommand(`echo -n 📆 Período: ${choosenDate} à ${otherDate}`);
-
-    var date1 = new Date();
-    var date2 = new Date(otherDate);
-
-    const diffDays = utils.getBusinessDatesCount(date1, date2);
-
-    var tempo = "";
-
-    if (diffDays > 0) {
-      tempo = await system.execShellCommand(`echo -n ⏳ Tempo restante: ${diffDays} dias`);
-    } else {
-      tempo = await system.execShellCommand(`echo -n ⌛ Tempo restante: 🚫`);
-    }
-
-    var arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} arquivos`);
-
-    if (othersFinalQTD > 0)
-      arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} + '\x1b[33m'${othersFinalQTD}'\x1b[0m' arquivos`);
-
-    var char = utils.returnSISBBStatus(diffDays, SISBBPoints);
-    var pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]}`);
-
-    if (char[1]) {
-      pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}`);
-    }
-
-    if (char[1] && char[2]) {
-      pontuacao = await system.execShellCommand(`echo -n 🎯 Pontuação: ${SISBBPoints}pts ${char[0]} ${char[1]}${char[2]}`);
-    }
-
-    if (points == undefined || points == "undefined")
-      points = 0;
-
-    var pointsDiff = SISBBPoints - points;
-    var pontuacaoArr = pontuacao.split("pts");
-
-    if (files == undefined || files == "undefined")
-      files = [];
-
-    var auxFiles = [];
-
-    gitFiles.forEach(gitFile => {
-
-      var alreadyHas = false;
-
-      gitFile = gitFile.replace("\t", "");
-      gitFile = gitFile.substring(1);
-
-      files.forEach(file => {
-        if (file == gitFile) { alreadyHas = true; }
-      });
-
-      if (!alreadyHas)
-        auxFiles.push(gitFile);
-
-    });
-
-    console.log("=================================");
-    console.log(nome);
-    console.log(chave);
-    console.log(periodo);
-    console.log(tempo);
-
-    if (auxFiles.length > 0) {
-
-      console.log(`📦 Arquivos: ${totalQtdBkp} arquivos ` + '(' + '\x1b[32m', "+" + auxFiles.length + " arquivos", '\x1b[0m' + ') ');
-
-      auxFiles.forEach(file => {
-        var fileArray = file.split("(");
-        fileArray[1] = fileArray[1].replace(")", "");
-        console.log(`\t📬 ${fileArray[0]}` + '(' + '\x1b[32m', "" + fileArray[1] + "", '\x1b[0m' + ') ');
-      });
-
-      console.log("");
-
-    } else {
-      console.log(arquivos);
-    }
-
-    if (pointsDiff > 0) {
-      console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[32m' + "+" + pointsDiff + 'pts\x1b[0m' + ') ' + char[0]);
-    } else if (pointsDiff < 0) {
-      console.log(pontuacaoArr[0] + 'pts ' + '(' + '\x1b[31m' + "" + pointsDiff + 'pts\x1b[0m' + ') ' + char[0]);
-    } else {
-      console.log(pontuacao);
-    }
-
-    console.log("=================================");
-
+    await terminalReport.printEstimateTerminalReport(totalQtdBkp, othersFinalQTD, SISBBPoints, gitFiles);
     await fileManager.updateUserJsonFile(SISBBPoints, gitFiles);
 
   } else {

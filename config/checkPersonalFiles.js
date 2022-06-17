@@ -1,29 +1,23 @@
-const system = require('../modules/system');
-const fs = require('fs');
-
 module.exports.checkBashFunctions = async () => {
 
     try {
 
         const userConfig = require('../config/userConfig.json');
+        const fileManager = require('../modules/fileManager.js');
         const defaultFiles = require('./defaultFiles');
+        const system = require('../modules/system');
 
         userConfig.terminalConfig.forEach(config => {
 
             var directory = `${userConfig.home}/${config}`;
 
-            if (fs.existsSync(directory)) {
+            if (fileManager.existsSync(directory)) {
 
                 system.execShellCommand(`cd && cat ${config}`).then(response => {
 
                     if (!response.includes("git () {")) {
-
                         response += defaultFiles.defaultGitFunction;
-
-                        fs.writeFile(directory, response, function (err) {
-                            if (err) { return console.log(err); }
-                        });
-
+                        fileManager.writeFile(directory, response);
                     }
 
                 });
@@ -31,6 +25,32 @@ module.exports.checkBashFunctions = async () => {
             }
 
         });
+
+    } catch (error) {
+        return false;
+    }
+
+    return true;
+
+}
+
+module.exports.checkNodeModules = async () => {
+
+    try {
+
+        const userConfig = require('../config/userConfig.json');
+        const fileManager = require('../modules/fileManager.js');
+        const system = require('../modules/system');
+
+        var directory = `${userConfig.directoryOF}/node_modules`;
+
+        if (!fileManager.existsSync(directory)) {
+
+            system.execShellCommand(`npm install --force`).then(response => {
+                return true;
+            });
+
+        }
 
     } catch (error) {
         return false;
@@ -48,7 +68,9 @@ module.exports.checkPersonalFiles = async () => {
     try {
 
         const userConfig = require('../config/userConfig.json');
+        const fileManager = require('../modules/fileManager.js');
         const defaultFiles = require('./defaultFiles.js');
+        const system = require('../modules/system');
 
         var directoryOF = userConfig.directoryOF;
 
@@ -71,23 +93,13 @@ module.exports.checkPersonalFiles = async () => {
         });
 
         if (!hasPassword) {
-
             var filePath = `${directoryOF}/config/passwords.json`;
-
-            fs.writeFile(filePath, defaultFiles.defaultPasswords, function (err) {
-                if (err) { return console.log(err); }
-            });
-
+            fileManager.writeFile(filePath, defaultFiles.defaultPasswords);
         }
 
         if (!hasUserJson) {
-
             var filePath = `${directoryOF}/user.json`;
-
-            fs.writeFile(filePath, defaultFiles.defaultUserJson, function (err) {
-                if (err) { return console.log(err); }
-            });
-
+            fileManager.writeFile(filePath, defaultFiles.defaultUserJson);
         }
 
         return true;

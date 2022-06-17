@@ -3,11 +3,11 @@ const userConfig = require('./config/userConfig.json');
 const negotials = require('./modules/negotials.js');
 const pointsList = require('./modules/pointsList.json');
 const fileManager = require('./modules/fileManager.js');
+const xlsManager = require('./modules/xlsManager.js');
 const termgraph = require('./modules/termgraph.js');
 const system = require('./modules/system.js');
 const utils = require('./modules/utils.js');
 const shellComands = require('./modules/shellCommands.js');
-const fs = require('fs');
 const readline = require('readline');
 var Excel = require('exceljs');
 
@@ -117,8 +117,8 @@ async function processLineByLine() {
   let workbook = new Excel.Workbook();
   await workbook.xlsx.readFile(baseXLS);
   let worksheet = workbook.getWorksheet(baseSheet);
-  fileManager.cleanSpreedsheet(worksheet);
-  workbook.xlsx.writeFile(baseXLS);
+  xlsManager.cleanSpreedsheet(worksheet);
+  await workbook.xlsx.writeFile(baseXLS);
 
   let rowCounter = 4;
 
@@ -134,11 +134,11 @@ async function processLineByLine() {
 
     if (projectName != null && projectName != "") {
 
-      await system.execShellCommand(shellComands.generateGitCommitsOutput(projectName));
+      await system.execShellCommandCheckFolders(shellComands.generateGitCommitsOutput(projectName));
 
-      var fullReportProject = await system.execShellCommand(shellComands.getFullReportGit(projectName));
+      var fullReportProject = await system.execShellCommandCheckFolders(shellComands.getFullReportGit(projectName));
 
-      const fileStream = fs.createReadStream('input.txt');
+      const fileStream = fileManager.createReadStream('input.txt');
 
       var output = `${projectName}-${month}-${data.getFullYear()}`;
       projectName += "/";
@@ -328,9 +328,7 @@ async function processLineByLine() {
 
       if (totalQtd > 0) {
 
-        fs.writeFile(filePath, tmpFile, function (err) {
-          if (err) { return console.log(err); }
-        });
+        fileManager.writeFile(filePath, tmpFile);
 
         var projectTitle = `${projectName} `;
 
@@ -386,39 +384,37 @@ async function processLineByLine() {
   var output = `${yourName}-${month}-${data.getFullYear()}`;
   var filePath = `${directoryOF}/${output}.txt`;
 
-  fs.writeFile(filePath, fullReportFile, function (err) {
-    if (err) { return console.log(err); }
-  });
+  fileManager.writeFile(filePath, fullReportFile);
 
-  var tmpResult = fileManager.writeToXLS(createJavaFinalQTD, createJavaOptions, createJavaFinal, worksheet, rowCounter);
+  var tmpResult = xlsManager.writeToXLS(createJavaFinalQTD, createJavaOptions, createJavaFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterJavaFinalQTD, alterJavaOptions, alterJavaFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterJavaFinalQTD, alterJavaOptions, alterJavaFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterJavaCompFinalQTD, alterJavaCompOptions, alterJavaCompFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterJavaCompFinalQTD, alterJavaCompOptions, alterJavaCompFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createJavaTestFinalQTD, createJavaTestOptions, createJavaTestFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createJavaTestFinalQTD, createJavaTestOptions, createJavaTestFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createHTMLFinalQTD, createHTMLOptions, createHTMLFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createHTMLFinalQTD, createHTMLOptions, createHTMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterHTMLFinalQTD, alterHTMLOptions, alterHTMLFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterHTMLFinalQTD, alterHTMLOptions, alterHTMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createJSFinalQTD, createJSOptions, createJSFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createJSFinalQTD, createJSOptions, createJSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterJSFinalQTD, alterJSOptions, alterJSFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterJSFinalQTD, alterJSOptions, alterJSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createXMLFinalQTD, createXMLOptions, createXMLFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createXMLFinalQTD, createXMLOptions, createXMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterXMLFinalQTD, alterXMLOptions, alterXMLFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterXMLFinalQTD, alterXMLOptions, alterXMLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createCSSFinalQTD, createCSSOptions, createCSSFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createCSSFinalQTD, createCSSOptions, createCSSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterCSSFinalQTD, alterCSSOptions, alterCSSFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterCSSFinalQTD, alterCSSOptions, alterCSSFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createShellFinalQTD, createShellOptions, createShellFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createShellFinalQTD, createShellOptions, createShellFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(alterShellFinalQTD, alterShellOptions, alterShellFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(alterShellFinalQTD, alterShellOptions, alterShellFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
-  tmpResult = fileManager.writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
+  tmpResult = xlsManager.writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
 
   var addRitoPointsJson = negotials.addRitosPoints(totalSISBBBkp, rowCounter, worksheet);
@@ -478,9 +474,7 @@ async function updateCalDatFile() {
 
   var filePath = `${userConfig.directoryOF}/cal.dat`;
 
-  fs.writeFile(filePath, calDatFile, function (err) {
-    if (err) { return console.log(err); }
-  });
+  fileManager.writeFile(filePath, calDatFile);
 
   console.log("");
   console.log(await system.execShellCommand('echo -n 📊​ $(tput bold)RELATÓRIO DE OF$(tput sgr0)'));

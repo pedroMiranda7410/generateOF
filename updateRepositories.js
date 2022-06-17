@@ -1,5 +1,6 @@
 const userConfig = require('./config/userConfig.json');
 const passwords = require('./config/passwords.json');
+const shellCommands = require('./modules/shellCommands.js');
 const system = require('./modules/system.js');
 
 // VERIFICAR VARIÁVEIS GLOBAIS
@@ -11,7 +12,7 @@ var result = [];
 
 async function gitPullAllRepositories() {
 
-  var cmd = `cd ${directory} && ls`;
+  var cmd = shellCommands.cdAndLs;
   var getGitStatus = `git status`;
 
   var allProjects = await system.execShellCommand(cmd);

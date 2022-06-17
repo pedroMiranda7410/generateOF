@@ -34,6 +34,17 @@ module.exports.getBusinessDatesCount = (startDate, endDate) => {
     return count;
 }
 
+module.exports.formatDateTerminalReport = (date) => {
+
+    var month = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+
+    var a = date.split("-");
+    var result = a[2] + "/" + (month[parseInt(a[1]) - 1])
+
+    return result;
+
+}
+
 module.exports.checkSpacesInStrings = (string) => {
 
     var arrayStrings = [

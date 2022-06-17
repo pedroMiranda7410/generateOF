@@ -20,9 +20,9 @@ module.exports.defaultUserJson = `
 {
     "choosenDate": "1997-05-02",
     "otherDate": "1997-12-31",
-    "operations": ["\n"],
-    "repositories": ["\n"],
-    "tasks": ["\n"],
+    "operations": [],
+    "repositories": [],
+    "tasks": [],
     "points": "0",
     "files": []
 }`;
