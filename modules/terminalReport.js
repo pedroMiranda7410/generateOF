@@ -91,7 +91,7 @@ module.exports.printEstimateTerminalReport = async (totalQtdBkp, othersFinalQTD,
         });
 
         var fortune = await system.execShellCommandDontShowErrors('fortune /usr/share/games/fortunes/brasil');
-        fortune = fortune.replaceAll('\n', '').replaceAll('\t', '');
+        fortune = fortune.replace('\n', '').replace('\t', '');
 
         if (!fortune.includes("not found")) {
             console.log("");
