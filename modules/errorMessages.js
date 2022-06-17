@@ -1,0 +1,1 @@
+module.exports.notAGitRepository = (folder) => { return `🚨​ ${folder} não é um repositório Git 🚨​` };
