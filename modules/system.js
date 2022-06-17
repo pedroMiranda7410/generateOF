@@ -25,3 +25,12 @@ module.exports.execShellCommandCheckFolders = (cmd) => {
     });
   });
 }
+
+module.exports.execShellCommandDontShowErrors = (cmd) => {
+  const { exec } = require("child_process");
+  return new Promise((resolve, reject) => {
+    exec(cmd, (error, stdout, stderr) => {
+      resolve(stdout ? stdout : stderr);
+    });
+  });
+}

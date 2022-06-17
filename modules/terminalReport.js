@@ -90,7 +90,14 @@ module.exports.printEstimateTerminalReport = async (totalQtdBkp, othersFinalQTD,
             console.log(`\t📬 ${fileArray[0]}` + '(' + '\x1b[32m', "" + fileArray[1] + "", '\x1b[0m' + ') ');
         });
 
-        console.log("");
+        var fortune = await system.execShellCommandDontShowErrors('fortune /usr/share/games/fortunes/brasil');
+        fortune = fortune.replaceAll('\n', '').replaceAll('\t', '');
+
+        if (!fortune.includes("not found")) {
+            console.log("");
+            console.log(`\t 🧙 ${fortune}`);
+            console.log("");
+        }
 
     } else {
         console.log(arquivos);
