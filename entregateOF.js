@@ -3,6 +3,7 @@ const passwords = require('./config/passwords.json');
 const utils = require('./modules/utils.js');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
+
 let baseXLS = userConfig.hermesXLS;
 let baseSheet = userConfig.baseSheet;
 let userHermes = userConfig.userHermes;

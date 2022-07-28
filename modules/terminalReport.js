@@ -2,9 +2,13 @@ const userConfig = require('../config/userConfig.json');
 const user = require('../user.json');
 const system = require('./system.js');
 const utils = require('./utils.js');
+const holiday = require('./holiday.js');
 
 var yourName = userConfig.yourName;
 var yourKey = userConfig.yourKey;
+var yourCountry = userConfig.yourCountry;
+var yourState = userConfig.yourState;
+var yourCity = userConfig.yourCity;
 
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
@@ -21,14 +25,33 @@ module.exports.printEstimateTerminalReport = async (totalQtdBkp, othersFinalQTD,
     var date1 = new Date();
     var date2 = new Date(otherDate);
 
-    const diffDays = utils.getBusinessDatesCount(date1, date2);
+    var diffDays = utils.getBusinessDatesCount(date1, date2);
 
+    var choosenDateObj = new Date(choosenDate);
+    var otherDateObj = new Date(otherDate);
+    var holidays = holiday.getHolidayBetweenDates(choosenDateObj, otherDateObj, yourCountry, yourState, yourCity);
     var tempo = "";
 
+    if (holidays.length > 0) {
+        holidays.forEach(feriado => {
+            if (!feriado.isPast) { diffDays--; }
+        });
+    }
+
     if (diffDays > 0) {
-        tempo = await system.execShellCommand(`echo -n ⏳ Tempo restante: ${diffDays} dias`);
+        tempo = await system.execShellCommand(`echo -n ⏳ Tempo restante: ${diffDays - holidays.length} dias`);
     } else {
         tempo = await system.execShellCommand(`echo -n ⌛ Tempo restante: 🚫`);
+    }
+
+    if (holidays.length > 0) {
+
+        if (holidays.length < 10) {
+            tempo += ` [\x1b[32m0${holidays.length} feriados 🏖️ ​\x1b[0m] `;
+        } else {
+            tempo += ` [\x1b[32m${holidays.length} feriados 🏖️ ​\x1b[0m] `;
+        }
+
     }
 
     var arquivos = await system.execShellCommand(`echo -n 📦 Arquivos: ${totalQtdBkp} arquivos`);
@@ -80,6 +103,16 @@ module.exports.printEstimateTerminalReport = async (totalQtdBkp, othersFinalQTD,
     console.log(periodo);
     console.log(tempo);
 
+    if (holidays.length > 0) {
+        holidays.forEach(feriado => {
+            if (feriado.isPast) {
+                console.log('\t' + '\x1b[9m', "" + `🏖️  ${feriado.dia} - (${utils.getDayByDate(feriado.m)} ${utils.formatDate2TerminalReport(feriado.d)})` + "", '\x1b[0m' + ' ');
+            } else {
+                console.log('\t' + '\x1b[0m', "" + `🏖️  ${feriado.dia} - (${utils.getDayByDate(feriado.m)} ${utils.formatDate2TerminalReport(feriado.d)})` + "", '\x1b[0m' + ' ');
+            }
+        });
+    }
+
     if (auxFiles.length > 0) {
 
         console.log(`📦 Arquivos: ${totalQtdBkp} arquivos ` + '(' + '\x1b[32m', "+" + auxFiles.length + " arquivos", '\x1b[0m' + ') ');
@@ -91,7 +124,10 @@ module.exports.printEstimateTerminalReport = async (totalQtdBkp, othersFinalQTD,
         });
 
         var fortune = await system.execShellCommandDontShowErrors('fortune /usr/share/games/fortunes/brasil');
-        fortune = fortune.replace('\n', '').replace('\t', '');
+
+        while (fortune.includes("\n") || fortune.includes("\t")) {
+            fortune = fortune.replace('\n', '').replace('\t', '');
+        }
 
         if (!fortune.includes("not found")) {
             console.log("");

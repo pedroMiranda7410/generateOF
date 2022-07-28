@@ -45,6 +45,21 @@ module.exports.formatDateTerminalReport = (date) => {
 
 }
 
+module.exports.formatDate2TerminalReport = (date) => {
+
+    var month = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+    var a = date.replace('/', '-').replace('/', '-').split("-");
+    var result = a[0] + "/" + (month[parseInt(a[1]) - 1]);
+    return result;
+}
+
+module.exports.getDayByDate = (date) => {
+
+    var dias = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
+    return dias[date.getDay()];
+
+}
+
 module.exports.checkSpacesInStrings = (string) => {
 
     var arrayStrings = [
@@ -200,3 +215,16 @@ module.exports.returnSISBBStatus = (diffDays, SISBBPoints) => {
     return arrChars;
 
 }
+
+Date.prototype.addDays = function (days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+
+Date.prototype.addYears = function (year) {
+    var date = new Date(this.valueOf());
+    date.setFullYear(date.getFullYear() + year);
+    return date;
+}
+
