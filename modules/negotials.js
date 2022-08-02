@@ -141,7 +141,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       createHTML += `${line.substring(1)}#${hashCommit}\n`;
       gitFiles.push(line + " (+" + createHTMLPoints + "pts)");
       createHTMLQTD++;
-    } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json")) {
+    } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile'))) {
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -155,7 +155,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         alterXMLQTD++;
       }
 
-    } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json") {
+    } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile')) {
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -179,6 +179,10 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       //   alterShellQTD++;
       // } 
 
+    } else if ((type == "M" || type == "A") && (extension == "sql")) {
+      createSQL += `${line.substring(1)}#${hashCommit}\n`;
+      gitFiles.push(line + " (+" + createSQLPoints + "pts)");
+      createSQLQTD++;
     } else if ((type == "M" || type == "A") && (extension == "sql")) {
       createSQL += `${line.substring(1)}#${hashCommit}\n`;
       gitFiles.push(line + " (+" + createSQLPoints + "pts)");
