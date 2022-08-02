@@ -79,12 +79,10 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
 
   var type = line.charAt(0);
 
-  if (line.lastIndexOf(".") > 0 && type != "R") {
+  if ((line.lastIndexOf(".") > 0 && type != "R") || line.includes("Dockerfile") || line.includes("Jenkinsfile")) {
 
     var arr = line.split(".");
     var extension = arr[arr.length - 1];
-
-    console.log(line);
 
     if (type == "M" && (extension == "js" || extension == "ts")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
