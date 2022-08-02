@@ -116,7 +116,7 @@ module.exports.returnSISBBStatus = (diffDays, SISBBPoints) => {
     } else if (percent >= 98) {
 
         if (diffDays > 10) {
-            char = happyChars[Math.floor(Math.random() * happyChars.length)];
+            char = neutralChars[Math.floor(Math.random() * neutralChars.length)];
         } else if (diffDays > 5) {
             char = almostChars[Math.floor(Math.random() * almostChars.length)];
         } else if (diffDays > 1) {
@@ -130,7 +130,7 @@ module.exports.returnSISBBStatus = (diffDays, SISBBPoints) => {
     } else if (percent >= 70) {
 
         if (diffDays > 10) {
-            char = happyChars[Math.floor(Math.random() * happyChars.length)];
+            char = neutralChars[Math.floor(Math.random() * neutralChars.length)];
         } else if (diffDays > 5) {
             char = almostChars[Math.floor(Math.random() * almostChars.length)];
         } else if (diffDays > 1) {
@@ -144,7 +144,7 @@ module.exports.returnSISBBStatus = (diffDays, SISBBPoints) => {
     } else if (percent >= 50) {
 
         if (diffDays > 20) {
-            char = happyChars[Math.floor(Math.random() * happyChars.length)];
+            char = neutralChars[Math.floor(Math.random() * neutralChars.length)];
         } else if (diffDays > 15) {
             char = almostChars[Math.floor(Math.random() * almostChars.length)];
         } else if (diffDays > 10) {
@@ -162,7 +162,7 @@ module.exports.returnSISBBStatus = (diffDays, SISBBPoints) => {
     } else if (percent >= 33) {
 
         if (diffDays > 15) {
-            char = happyChars[Math.floor(Math.random() * happyChars.length)];
+            char = neutralChars[Math.floor(Math.random() * neutralChars.length)];
         } else if (diffDays > 10) {
             char = almostChars[Math.floor(Math.random() * almostChars.length)];
         } else if (diffDays > 5) {
@@ -206,7 +206,7 @@ module.exports.returnSISBBStatus = (diffDays, SISBBPoints) => {
         arrChars.push("\x1b[33m[" + Math.abs(diffToTarget) + "pts] \x1b[0m");
     }
 
-    var expected = Math.round((metaPoints / totalDiffDays) * diffDays);
+    var expected = Math.round((metaPoints / totalDiffDays) * (totalDiffDays - diffDays));
 
     if (SISBBPoints < expected) {
         arrChars.push("\x1b[31m[" + Math.abs(expected) + "pts] \x1b[0m");
@@ -227,4 +227,3 @@ Date.prototype.addYears = function (year) {
     date.setFullYear(date.getFullYear() + year);
     return date;
 }
-
