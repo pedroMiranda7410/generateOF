@@ -27,6 +27,7 @@ module.exports.checkBashFunctions = async () => {
         });
 
     } catch (error) {
+        console.log(error);
         return false;
     }
 
