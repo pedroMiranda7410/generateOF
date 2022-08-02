@@ -2,6 +2,7 @@ async function processLineByLine() {
 
   const checkPersonalFiles = require('./config/checkPersonalFiles.js');
   var checkPersonalFilesResult = await checkPersonalFiles.checkPersonalFiles();
+  console.log(checkPersonalFilesResult);
 
   if (checkPersonalFilesResult) {
 
