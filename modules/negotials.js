@@ -85,7 +85,6 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
     var extension = arr[arr.length - 1];
 
     console.log(line);
-    console.log(line.includes("Dockerfile"));
 
     if (type == "M" && (extension == "js" || extension == "ts")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
