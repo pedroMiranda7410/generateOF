@@ -84,6 +84,9 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
     var arr = line.split(".");
     var extension = arr[arr.length - 1];
 
+    console.log(line);
+    console.log(line.includes("Dockerfile"));
+
     if (type == "M" && (extension == "js" || extension == "ts")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
         createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
@@ -143,6 +146,8 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       createHTMLQTD++;
     } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile'))) {
 
+      console.log("a");
+
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
           alterXML += `${line.substring(1)}#${hashCommit}\n`;
@@ -155,7 +160,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         alterXMLQTD++;
       }
 
-    } else if (type == "A" && extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile')) {
+    } else if (type == "A" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile'))) {
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
