@@ -146,8 +146,6 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       createHTMLQTD++;
     } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile'))) {
 
-      console.log("a");
-
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
           alterXML += `${line.substring(1)}#${hashCommit}\n`;
