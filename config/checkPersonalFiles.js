@@ -1,7 +1,5 @@
 module.exports.checkBashFunctions = async () => {
 
-    console.log("ASDF");
-
     try {
 
         const userConfig = require('../config/userConfig.json');
@@ -28,9 +26,7 @@ module.exports.checkBashFunctions = async () => {
 
         });
 
-
     } catch (error) {
-        console.log(error);
         return false;
     }
 
