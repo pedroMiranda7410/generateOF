@@ -1,8 +1,8 @@
 module.exports.checkBashFunctions = async () => {
 
-    try {
+    console.log("ASDF");
 
-        console.log("A");
+    try {
 
         const userConfig = require('../config/userConfig.json');
         const fileManager = require('../modules/fileManager.js');
@@ -28,7 +28,6 @@ module.exports.checkBashFunctions = async () => {
 
         });
 
-        console.log("b");
 
     } catch (error) {
         console.log(error);
