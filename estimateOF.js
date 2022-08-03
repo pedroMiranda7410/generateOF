@@ -207,7 +207,7 @@ async function processLineByLine() {
     await fileManager.updateUserJsonFile(SISBBPoints, gitFiles);
 
   } else {
-    console.log("🚨​ Módulo userConfig.json não foi encontrado 🚨​​");
+    console.log("🚨​ Módulos Json não encontrados ou mal formatados 🚨​​");
   }
 
 }

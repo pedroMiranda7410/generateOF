@@ -2,8 +2,6 @@ module.exports.checkBashFunctions = async () => {
 
     try {
 
-        console.log("AAA");
-
         const userConfig = require('../config/userConfig.json');
         const fileManager = require('../modules/fileManager.js');
         const defaultFiles = require('./defaultFiles');
