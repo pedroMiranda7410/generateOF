@@ -68,7 +68,8 @@ module.exports.checkSpacesInStrings = (string) => {
         "Alteração de Objetos de Integração e Negócio Java",
         "Criação CSS ou SCSS",
         "Alteração CSS ou SCSS",
-        "Software de Infraestrutura"
+        "Software de Infraestrutura",
+        "Serviços de integração externa"
     ]
 
     if (arrayStrings.includes(string))
