@@ -1,6 +1,7 @@
 const userConfig = require('./config/userConfig.json');
 const passwords = require('./config/passwords.json');
 const utils = require('./modules/utils.js');
+const system = require('./modules/system.js');
 var Excel = require('exceljs');
 const puppeteer = require('puppeteer');
 
@@ -99,12 +100,14 @@ async function readXLS() {
                 await pageGenti.click(selector, { delay: delayFastNetwork });
 
                 await pageGenti.reload();
+
             }
 
         }
 
     }
 
+    await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
     await pageGenti.close();
     await browser.close();
 
