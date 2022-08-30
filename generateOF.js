@@ -424,7 +424,7 @@ async function processLineByLine() {
   worksheet = addRitoPointsJson.worksheet;
 
   workbook.xlsx.writeFile(`${directoryOF}/${hermesXLS}`);
-  await system.execShellCommand(`find . -name "${hermesXLS}" -type f -delete`);
+  //await system.execShellCommand(`find . -name "${hermesXLS}" -type f -delete`);
   await updateCalDatFile();
 
 }
