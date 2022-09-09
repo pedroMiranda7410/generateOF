@@ -1,6 +1,11 @@
 // Instalação do Fortune
 //sudo apt-get install -y fortune-mod fortunes fortunes-br
 
+//Configuração do Git para funcionamento perfeito
+// git config --global grep.extendedRegexp true
+// git config --global log.abbrevcommit yes
+// git config --global core.abbrev 10
+
 //Indicação de medalhas pra saber quem tem mais pontos
 
 //Verificar formatação de json
