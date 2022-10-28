@@ -481,8 +481,8 @@ async function updateCalDatFile() {
     { name: createShellTXT, qtd: createShellFinalQTD * createShellPoints },
     { name: alterShellTXT, qtd: alterShellFinalQTD * alterShellPoints },
     { name: createSQLTXT, qtd: createSQLFinalQTD * createSQLPoints },
-    { name: createPythonTXT, qtd: createPythonQTD * createPythonPoints },
-    { name: alterPythonTXT, qtd: alterPythonQTD * alterPythonPoints }
+    { name: createPythonTXT, qtd: createPythonFinalQTD * createPythonPoints },
+    { name: alterPythonTXT, qtd: alterPythonFinalQTD * alterPythonPoints }
   ];
 
   var ritosPoints = (pointsList.points[11].value +
