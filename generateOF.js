@@ -480,8 +480,8 @@ async function updateCalDatFile() {
     { name: alterCSSTXT, qtd: alterCSSFinalQTD * alterCSSPoints },
     { name: createShellTXT, qtd: createShellFinalQTD * createShellPoints },
     { name: alterShellTXT, qtd: alterShellFinalQTD * alterShellPoints },
-    { name: createSQLTXT, qtd: createSQLFinalQTD * createSQLPoints }
-    { name: createPythonTXT, qtd: createPythonQTD * createPythonPoints }
+    { name: createSQLTXT, qtd: createSQLFinalQTD * createSQLPoints },
+    { name: createPythonTXT, qtd: createPythonQTD * createPythonPoints },
     { name: alterPythonTXT, qtd: alterPythonQTD * alterPythonPoints }
   ];
 

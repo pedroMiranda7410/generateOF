@@ -32,3 +32,7 @@
 // Histórias do Kanban
 //5.15.3 => criação python
 //5.15.4 => alteração python
+
+// Pra instalar o puppeteer
+// cd ./node_modules/puppeteer
+// npm run install
