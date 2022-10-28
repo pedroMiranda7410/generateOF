@@ -222,6 +222,28 @@
                 "Padrão",
                 "N/A"
             ]
+        },
+        {
+            "name": "CRIAÇÃO_DE_PYTHON\n",
+            "value": 17,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Software de Infraestrutura",
+                "Criação de módulo em Python",
+                "Padrão",
+                "N/A"
+            ]
+        },
+        {
+            "name": "ALTERAÇÃO_DE_PYTHON\n",
+            "value": 18,
+            "options": [
+                "IMPLEMENTAÇÃO DE SOFTWARE",
+                "Software de Infraestrutura",
+                "Alteração de módulo em Python",
+                "Padrão",
+                "N/A"
+            ]
         }
     ]
 }

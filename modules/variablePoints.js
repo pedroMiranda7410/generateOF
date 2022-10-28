@@ -15,3 +15,5 @@ module.exports.alterCSS = pointsList.points[15].value;
 module.exports.createShell = pointsList.points[18].value;
 module.exports.alterShell = pointsList.points[19].value;
 module.exports.createSQL = pointsList.points[20].value;
+module.exports.createPython = pointsList.points[21].value;
+module.exports.alterPython = pointsList.points[22].value;

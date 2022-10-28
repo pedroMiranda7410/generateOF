@@ -36,6 +36,8 @@ async function processLineByLine() {
     var createShellPoints = pointsList.points[18].value;
     var alterShellPoints = pointsList.points[19].value;
     var createSQLPoints = pointsList.points[20].value;
+    var createPythonPoints = pointsList.points[21].value;
+    var alterPythonPoints = pointsList.points[22].value;
 
     var SISBBPoints = 0;
     var gitFiles = [];
@@ -74,6 +76,8 @@ async function processLineByLine() {
         var createShell = "";
         var alterShell = "";
         var createSQL = "";
+        var createPython = "";
+        var alterPython = "";
         var others = "";
 
         var createJavaQTD = 0;
@@ -91,6 +95,8 @@ async function processLineByLine() {
         var createShellQTD = 0;
         var alterShellQTD = 0;
         var createSQLQTD = 0;
+        var createPythonQTD = 0;
+        var alterPythonQTD = 0;
         var othersQTD = 0;
 
         var hashCommit = "###########";
@@ -127,6 +133,8 @@ async function processLineByLine() {
                 createShell, createShellPoints, createShellQTD,
                 alterShell, alterShellPoints, alterShellQTD,
                 createSQL, createSQLPoints, createSQLQTD,
+                createPython, createPythonPoints, createPythonQTD,
+                alterPython, alterPythonPoints, alterPythonQTD,
                 others, othersQTD
               );
 
@@ -165,6 +173,8 @@ async function processLineByLine() {
               createShellQTD = obj.createShellQTD;
               createSQL = obj.createSQL;
               createSQLQTD = obj.createSQLQTD;
+              createPythonQTD = obj.createPythonQTD;
+              alterPythonQTD = obj.alterPythonQTD;
               others = obj.others;
               othersQTD = obj.othersQTD;
 
@@ -176,7 +186,9 @@ async function processLineByLine() {
 
         var totalQtd = createJavaQTD + alterJavaQTD + alterJavaCompQTD + createJavaTestQTD
           + createHTMLQTD + alterHTMLQTD + createJSQTD + alterJSQTD + createXMLQTD
-          + createCSSQTD + alterCSSQTD + alterXMLQTD + createShellQTD + alterShellQTD + createSQLQTD;
+          + createCSSQTD + alterCSSQTD + alterXMLQTD + createShellQTD + alterShellQTD + createSQLQTD
+          + createPythonQTD + alterPythonQTD;
+
 
         var totalSISBB = (createJavaQTD * createJavaPoints)
           + (alterJavaQTD * alterJavaPoints)
@@ -191,7 +203,9 @@ async function processLineByLine() {
           + (alterXMLQTD * alterXMLPoints)
           + (createShellQTD * createShellPoints)
           + (alterShellQTD * alterShellPoints)
-          + (createSQLQTD * createSQLPoints);
+          + (createSQLQTD * createSQLPoints)
+          + (createPythonQTD * createPythonPoints)
+          + (alterPythonQTD * alterPythonPoints);
 
         othersFinalQTD += othersQTD;
         totalQtdBkp += totalQtd;

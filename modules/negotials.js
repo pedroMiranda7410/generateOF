@@ -64,6 +64,8 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
   createShell, createShellPoints, createShellQTD,
   alterShell, alterShellPoints, alterShellQTD,
   createSQL, createSQLPoints, createSQLQTD,
+  createPython, createPythonPoints, createPythonQTD,
+  alterPython, alterPythonPoints, alterPythonQTD,
   others, othersQTD
 ) => {
 
@@ -169,20 +171,28 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         createXMLQTD++;
       }
 
-      // } else if (type == "A" && (extension == "sh")) {
-      //   createShell += `${line.substring(1)}#${hashCommit}\n`;
-      //   gitFiles.push(line + " (+" + createShellPoints + "pts)");
-      //   createShellQTD++;
-      // } else if (type == "M" && (extension == "sh")) {
-      //   alterShell += `${line.substring(1)}#${hashCommit}\n`;
-      //   gitFiles.push(line + " (+" + alterShellPoints + "pts)");
-      //   alterShellQTD++;
-      // } 
-
     } else if ((type == "M" || type == "A") && (extension == "sql")) {
       createSQL += `${line.substring(1)}#${hashCommit}\n`;
       gitFiles.push(line + " (+" + createSQLPoints + "pts)");
       createSQLQTD++;
+    } else if (type == "M" && (extension == "py")) {
+      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTestQTD++;
+      } else {
+        alterPython += `${line.substring(1)}#${hashCommit}\n`;
+        gitFiles.push(line + " (+" + alterPythonPoints + "pts)");
+        alterPythonQTD++;
+      }
+    } else if (type == "A" && (extension == "py")) {
+      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTestQTD++;
+      } else {
+        createPython += `${line.substring(1)}#${hashCommit}\n`;
+        gitFiles.push(line + " (+" + createPythonPoints + "pts)");
+        createPythonQTD++;
+      }
     } else {
       others += `${line}#${hashCommit}\n`;
       othersQTD++;
@@ -244,6 +254,12 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
     createSQL: createSQL,
     createSQLPoints: createSQLPoints,
     createSQLQTD: createSQLQTD,
+    createPython: createPython,
+    createPythonPoints: createPythonPoints,
+    createPythonQTD: createPythonQTD,
+    alterPython: alterPython,
+    alterPythonPoints: alterPythonPoints,
+    alterPythonQTD: alterPythonQTD,
     others: others,
     othersQTD: othersQTD
   }

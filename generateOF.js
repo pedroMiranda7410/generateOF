@@ -34,6 +34,8 @@ var alterCSSPoints = pointsList.points[15].value;
 var createShellPoints = pointsList.points[18].value;
 var alterShellPoints = pointsList.points[19].value;
 var createSQLPoints = pointsList.points[20].value;
+var createPythonPoints = pointsList.points[21].value;
+var alterPythonPoints = pointsList.points[22].value;
 
 var createJavaOptions = pointsList.points[0].options;
 var alterJavaOptions = pointsList.points[1].options;
@@ -50,6 +52,8 @@ var alterCSSOptions = pointsList.points[15].options;
 var createShellOptions = pointsList.points[18].options;
 var alterShellOptions = pointsList.points[19].options;
 var createSQLOptions = pointsList.points[20].options;
+var createPythonOptions = pointsList.points[21].options;
+var alterPythonOptions = pointsList.points[22].options;
 
 var createJavaTXT = pointsList.points[0].name;
 var alterJavaTXT = pointsList.points[1].name;
@@ -67,6 +71,8 @@ var alterCSSTXT = pointsList.points[15].name;
 var createShellTXT = pointsList.points[18].name;
 var alterShellTXT = pointsList.points[19].name;
 var createSQLTXT = pointsList.points[20].name;
+var createPythonTXT = pointsList.points[21].name;
+var alterPythonTXT = pointsList.points[22].name;
 
 var createJavaFinal = "";
 var alterJavaFinal = "";
@@ -83,6 +89,8 @@ var alterCSSFinal = "";
 var createShellFinal = "";
 var alterShellFinal = "";
 var createSQLFinal = "";
+var createPythonFinal = "";
+var alterPythonFinal = "";
 var othersFinal = "";
 
 var createJavaFinalQTD = 0;
@@ -100,6 +108,8 @@ var alterCSSFinalQTD = 0;
 var createShellFinalQTD = 0;
 var alterShellFinalQTD = 0;
 var createSQLFinalQTD = 0;
+var createPythonFinalQTD = 0;
+var alterPythonFinalQTD = 0;
 var othersFinalQTD = 0;
 
 var totalQtdBkp = 0;
@@ -163,6 +173,8 @@ async function processLineByLine() {
       var createShell = "";
       var alterShell = "";
       var createSQL = "";
+      var createPython = "";
+      var alterPython = "";
       var others = "";
 
       var createJavaQTD = 0;
@@ -180,6 +192,8 @@ async function processLineByLine() {
       var createShellQTD = 0;
       var alterShellQTD = 0;
       var createSQLQTD = 0;
+      var createPythonQTD = 0;
+      var alterPythonQTD = 0;
       var othersQTD = 0;
 
       const rl = readline.createInterface({
@@ -219,6 +233,8 @@ async function processLineByLine() {
               createShell, createShellPoints, createShellQTD,
               alterShell, alterShellPoints, alterShellQTD,
               createSQL, createSQLPoints, createSQLQTD,
+              createPython, createPythonPoints, createPythonQTD,
+              alterPython, alterPythonPoints, alterPythonQTD,
               others, othersQTD
             );
 
@@ -256,6 +272,8 @@ async function processLineByLine() {
             createShellQTD = obj.createShellQTD;
             createSQL = obj.createSQL;
             createSQLQTD = obj.createSQLQTD;
+            createPythonQTD = obj.createPythonQTD;
+            alterPythonQTD = obj.alterPythonQTD;
             others = obj.others;
             othersQTD = obj.othersQTD;
 
@@ -297,13 +315,17 @@ async function processLineByLine() {
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
       tmpResult = fileManager.writeToFiles(createSQLQTD, createSQLPoints, createShellOptions, tmpFile, createSQL, createSQLTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
-
+      tmpResult = fileManager.writeToFiles(createPythonQTD, createPythonPoints, createPythonOptions, tmpFile, createPython, createPythonTXT, worksheet, rowCounter);
+      tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
+      tmpResult = fileManager.writeToFiles(alterPythonQTD, alterPythonPoints, alterPythonOptions, tmpFile, alterPython, alterPythonTXT, worksheet, rowCounter);
+      tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
       if (othersQTD > 0)
         tmpFile += `${othersTXT}\n ${others}\n`;
 
       var totalQtd = createJavaQTD + alterJavaQTD + alterJavaCompQTD + createJavaTestQTD
         + createHTMLQTD + alterHTMLQTD + createJSQTD + alterJSQTD + createXMLQTD
-        + createCSSQTD + alterCSSQTD + alterXMLQTD + createShellQTD + alterShellQTD + createSQLQTD;
+        + createCSSQTD + alterCSSQTD + alterXMLQTD + createShellQTD + alterShellQTD + createSQLQTD
+        + createPythonQTD + alterPythonQTD;
 
       var totalSISBB = (createJavaQTD * createJavaPoints)
         + (alterJavaQTD * alterJavaPoints)
@@ -318,7 +340,9 @@ async function processLineByLine() {
         + (alterXMLQTD * alterXMLPoints)
         + (createShellQTD * createShellPoints)
         + (alterShellQTD * alterShellPoints)
-        + (createSQLQTD * createSQLPoints);
+        + (createSQLQTD * createSQLPoints)
+        + (createPythonQTD * createPythonPoints)
+        + (alterPythonQTD * alterPythonPoints);
 
       totalQtdBkp += totalQtd;
       totalSISBBBkp += totalSISBB;
@@ -356,6 +380,8 @@ async function processLineByLine() {
       createShellFinal += createShell;
       alterShellFinal += alterShell;
       createSQLFinal += createSQL;
+      createPythonFinal += createPython;
+      alterPythonFinal += alterPython;
       othersFinal += others;
 
       createJavaFinalQTD += createJavaQTD;
@@ -373,6 +399,8 @@ async function processLineByLine() {
       createShellFinalQTD += createShellQTD;
       alterShellFinalQTD += alterShellQTD;
       createSQLFinalQTD += createSQLQTD;
+      createPythonFinalQTD += createPythonQTD;
+      alterPythonFinalQTD += alterPythonQTD;
       othersFinalQTD += othersQTD;
 
       await system.execShellCommand('find . -name "input.txt" -type f -delete');
@@ -416,6 +444,10 @@ async function processLineByLine() {
   rowCounter = tmpResult.rowCounter;
   tmpResult = xlsManager.writeToXLS(createSQLFinalQTD, createSQLOptions, createSQLFinal, worksheet, rowCounter);
   rowCounter = tmpResult.rowCounter;
+  tmpResult = xlsManager.writeToXLS(createPythonFinalQTD, createPythonOptions, createPythonFinal, worksheet, rowCounter);
+  rowCounter = tmpResult.rowCounter;
+  tmpResult = xlsManager.writeToXLS(alterPythonFinalQTD, alterPythonOptions, alterPythonFinal, worksheet, rowCounter);
+  rowCounter = tmpResult.rowCounter;
 
   var addRitoPointsJson = negotials.addRitosPoints(totalSISBBBkp, rowCounter, worksheet);
 
@@ -449,6 +481,8 @@ async function updateCalDatFile() {
     { name: createShellTXT, qtd: createShellFinalQTD * createShellPoints },
     { name: alterShellTXT, qtd: alterShellFinalQTD * alterShellPoints },
     { name: createSQLTXT, qtd: createSQLFinalQTD * createSQLPoints }
+    { name: createPythonTXT, qtd: createPythonQTD * createPythonPoints }
+    { name: alterPythonTXT, qtd: alterPythonQTD * alterPythonPoints }
   ];
 
   var ritosPoints = (pointsList.points[11].value +

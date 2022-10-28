@@ -16,3 +16,19 @@
 
 //Pra configurações de VDI tem que usar o 5.23.1
 //Pra passagem de conhecimento tem que usar o impl-software para integração - passagem
+
+//Documentar funcionalidade -> 2.1.3
+//5.26.1 -> documentação
+//5.26.2 -> documentação
+
+//Para broncas com regexp no MacOS
+//brew upgrade git
+
+// Histórias do Kanban
+//5.17.16
+//5.17.17
+//5.17.18
+
+// Histórias do Kanban
+//5.15.3 => criação python
+//5.15.4 => alteração python
