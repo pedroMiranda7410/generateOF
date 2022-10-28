@@ -272,7 +272,9 @@ async function processLineByLine() {
             createShellQTD = obj.createShellQTD;
             createSQL = obj.createSQL;
             createSQLQTD = obj.createSQLQTD;
+            createPython = obj.createPython;
             createPythonQTD = obj.createPythonQTD;
+            alterPython = obj.alterPython;
             alterPythonQTD = obj.alterPythonQTD;
             others = obj.others;
             othersQTD = obj.othersQTD;
