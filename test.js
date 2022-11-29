@@ -29,9 +29,14 @@
 //5.17.17
 //5.17.18
 
-// Histórias do Kanban
+// Histórias para Python
 //5.15.3 => criação python
 //5.15.4 => alteração python
+
+// Histórias para Novatos
+//5.17.6
+//5.17.7
+//5.17.8
 
 // Pra instalar o puppeteer
 // cd ./node_modules/puppeteer

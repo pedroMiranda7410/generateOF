@@ -39,75 +39,92 @@ async function readXLS() {
     await pageGenti.waitForSelector(selector);
     await pageGenti.click(selector, { delay: delayMedNetwork });
 
-    //Carregando a página do Hermes
-    for (var i = 0; i < 50; i++) {
+    try {
 
-        let row = worksheet.getRow(i);
+        //Carregando a página do Hermes
+        for (var i = 0; i < 50; i++) {
 
-        if (row.getCell(3).value != null && row.getCell(3).value != "") {
+            let row = worksheet.getRow(i);
 
-            var disciplina = row.getCell(3).value;
-            var atividade = row.getCell(4).value;
-            var artefato = row.getCell(5).value;
-            var complexidade = row.getCell(7).value;
-            var componente = row.getCell(8).value;
-            var arquivos = row.getCell(12).value.split("\t");
+            if (row.getCell(3).value != null && row.getCell(3).value != "") {
 
-            if (disciplina && disciplina != "" && disciplina != null) {
+                var disciplina = row.getCell(3).value;
+                var atividade = row.getCell(4).value;
+                var artefato = row.getCell(5).value;
+                var complexidade = row.getCell(7).value;
+                var componente = row.getCell(8).value;
+                var arquivos = row.getCell(12).value.split("\t");
 
-                disciplina = utils.checkSpacesInStrings(disciplina);
-                atividade = utils.checkSpacesInStrings(atividade);
-                artefato = utils.checkSpacesInStrings(artefato);
+                if (disciplina && disciplina != "" && disciplina != null) {
 
-                selector = 'button[icon="pi pi-plus"]';
-                await pageGenti.waitForSelector(selector);
-                await pageGenti.click(selector, { delay: delayMedNetwork });
+                    disciplina = utils.checkSpacesInStrings(disciplina);
+                    atividade = utils.checkSpacesInStrings(atividade);
+                    artefato = utils.checkSpacesInStrings(artefato);
 
-                selector = 'p-dropdown[placeholder="Disciplina"]';
-                await pageGenti.waitForSelector(selector);
-                await pageGenti.click(selector, { delay: delayMedNetwork });
-                selector = 'li[aria-label="' + disciplina + '"]';
-                await pageGenti.click(selector, { delay: delayMedNetwork });
+                    selector = 'button[icon="pi pi-plus"]';
+                    await pageGenti.waitForSelector(selector);
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                selector = 'p-dropdown[placeholder="Atividade"]';
-                await pageGenti.click(selector, { delay: delayFastNetwork });
-                selector = 'li[aria-label="' + atividade + '"]';
-                await pageGenti.click(selector, { delay: delayMedNetwork });
+                    selector = 'p-dropdown[placeholder="Disciplina"]';
+                    await pageGenti.waitForSelector(selector);
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
+                    selector = 'li[aria-label="' + disciplina + '"]';
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                selector = 'p-dropdown[placeholder="Descrição/Artefato"]';
-                await pageGenti.click(selector, { delay: delayFastNetwork });
-                selector = 'li[aria-label="' + artefato + '"]';
-                await pageGenti.click(selector, { delay: delayMedNetwork });
+                    selector = 'p-dropdown[placeholder="Atividade"]';
+                    await pageGenti.click(selector, { delay: delayFastNetwork });
+                    selector = 'li[aria-label="' + atividade + '"]';
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                selector = 'p-dropdown[placeholder="Complexidade"]';
-                await pageGenti.click(selector, { delay: delayFastNetwork });
-                selector = 'li[aria-label="' + complexidade + '"]';
-                await pageGenti.click(selector, { delay: delayMedNetwork });
+                    selector = 'p-dropdown[placeholder="Descrição/Artefato"]';
+                    await pageGenti.click(selector, { delay: delayFastNetwork });
+                    selector = 'li[aria-label="' + artefato + '"]';
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                selector = 'p-dropdown[placeholder="Componente/Item"]';
-                await pageGenti.click(selector, { delay: delayFastNetwork });
-                selector = 'li[aria-label="' + componente + '"]';
-                await pageGenti.click(selector, { delay: delayMedNetwork });
+                    selector = 'p-dropdown[placeholder="Complexidade"]';
+                    await pageGenti.click(selector, { delay: delayFastNetwork });
+                    selector = 'li[aria-label="' + complexidade + '"]';
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                selector = 'textarea[rows="7"]';
-                await pageGenti.type(selector, arquivos);
-                pageGenti.keyboard.press('Enter');
+                    selector = 'p-dropdown[placeholder="Componente/Item"]';
+                    await pageGenti.click(selector, { delay: delayFastNetwork });
+                    selector = 'li[aria-label="' + componente + '"]';
+                    await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                selector = 'button[style="margin-top: 23px; height: 86%;"]';
-                await pageGenti.click(selector, { delay: delayFastNetwork });
+                    selector = 'textarea[rows="7"]';
+                    await pageGenti.type(selector, arquivos);
+                    pageGenti.keyboard.press('Enter');
 
-                selector = 'button[label="GRAVAR"]';
-                await pageGenti.click(selector, { delay: delayFastNetwork });
+                    selector = 'button[style="margin-top: 23px; height: 86%;"]';
+                    await pageGenti.click(selector, { delay: delayFastNetwork });
 
-                await pageGenti.reload();
+                    selector = 'button[label="GRAVAR"]';
+                    await pageGenti.click(selector, { delay: delayFastNetwork });
+
+                    await pageGenti.reload();
+
+                }
 
             }
 
         }
 
+    } catch (errorOpening) {
+
+        console.log(error);
+
+        try {
+
+        } catch (errorOnExit) {
+
+            console.log("errorOnExit");
+            console.log(errorOnExit);
+
+        }
+
     }
 
-    await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
+    //await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
     await pageGenti.close();
     await browser.close();
 
