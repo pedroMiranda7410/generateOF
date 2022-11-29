@@ -111,7 +111,8 @@ async function readXLS() {
 
     } catch (errorOpening) {
 
-        console.log(error);
+        console.log("errorOpening");
+        console.log(errorOpening);
 
         try {
 
