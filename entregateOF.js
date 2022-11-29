@@ -39,6 +39,8 @@ async function readXLS() {
     await pageGenti.waitForSelector(selector);
     await pageGenti.click(selector, { delay: delayMedNetwork });
 
+    var bkp = 0;
+
     try {
 
         //Carregando a página do Hermes
@@ -101,6 +103,8 @@ async function readXLS() {
                     selector = 'button[label="GRAVAR"]';
                     await pageGenti.click(selector, { delay: delayFastNetwork });
 
+                    bkp = i;
+
                     await pageGenti.reload();
 
                 }
@@ -112,13 +116,21 @@ async function readXLS() {
     } catch (errorOpening) {
 
         console.log("errorOpening");
+        console.log(bkp);
         console.log(errorOpening);
+
+        var disciplina = row.getCell(3).value;
+        var atividade = row.getCell(4).value;
+        var artefato = row.getCell(5).value;
+        var complexidade = row.getCell(7).value;
+        var componente = row.getCell(8).value;
 
         try {
 
         } catch (errorOnExit) {
 
             console.log("errorOnExit");
+            console.log(bkp);
             console.log(errorOnExit);
 
         }
