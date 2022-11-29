@@ -119,12 +119,6 @@ async function readXLS() {
         console.log(bkp);
         console.log(errorOpening);
 
-        var disciplina = row.getCell(3).value;
-        var atividade = row.getCell(4).value;
-        var artefato = row.getCell(5).value;
-        var complexidade = row.getCell(7).value;
-        var componente = row.getCell(8).value;
-
         try {
 
         } catch (errorOnExit) {
