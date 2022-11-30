@@ -10,6 +10,39 @@ let baseSheet = userConfig.baseSheet;
 let userHermes = userConfig.userHermes;
 let passHermes = passwords.hermes;
 
+async function cleanHermesActivities(browser, selector, pageGenti, delayMedNetwork, baseXLS, system, flagEnd) {
+
+    try {
+
+        await pageGenti.reload();
+
+        //Limpando a página do Hermes
+        for (var i = 0; i < 50; i++) {
+
+            selector = 'button[icon="pi pi-trash"]';
+            await pageGenti.waitForSelector(selector);
+            await pageGenti.click(selector, { delay: delayMedNetwork });
+
+            selector = 'button[aria-label="Sim"]';
+            await pageGenti.waitForSelector(selector);
+            await pageGenti.click(selector, { delay: delayMedNetwork });
+
+            await pageGenti.reload();
+
+        }
+
+    } catch (errorOnExit) {
+
+        if (flagEnd) {
+            await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
+            await pageGenti.close();
+            await browser.close();
+        }
+
+    }
+
+}
+
 async function readXLS() {
 
     //Carregando as informações da planilha
@@ -40,6 +73,8 @@ async function readXLS() {
     await pageGenti.click(selector, { delay: delayMedNetwork });
 
     var bkp = 0;
+
+    await cleanHermesActivities(browser, selector, pageGenti, delayMedNetwork, baseXLS, system, false);
 
     try {
 
@@ -115,23 +150,14 @@ async function readXLS() {
 
     } catch (errorOpening) {
 
-        console.log("errorOpening");
-        console.log(bkp);
+        console.log("Erro ao inserir a linha " + bkp + " da planilha");
         console.log(errorOpening);
 
-        try {
-
-        } catch (errorOnExit) {
-
-            console.log("errorOnExit");
-            console.log(bkp);
-            console.log(errorOnExit);
-
-        }
+        await cleanHermesActivities(browser, selector, pageGenti, delayMedNetwork, baseXLS, system, true);
 
     }
 
-    //await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
+    await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
     await pageGenti.close();
     await browser.close();
 
