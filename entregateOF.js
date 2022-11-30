@@ -34,7 +34,7 @@ async function cleanHermesActivities(browser, selector, pageGenti, delayMedNetwo
     } catch (errorOnExit) {
 
         if (flagEnd) {
-            await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
+            //await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
             await pageGenti.close();
             await browser.close();
         }
@@ -157,7 +157,7 @@ async function readXLS() {
 
     }
 
-    await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
+    //await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
     await pageGenti.close();
     await browser.close();
 
