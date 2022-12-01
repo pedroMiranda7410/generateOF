@@ -154,7 +154,9 @@ async function readXLS() {
         console.log(errorOpening);
 
         await cleanHermesActivities(browser, selector, pageGenti, delayMedNetwork, baseXLS, system, true);
-
+        await pageGenti.close();
+        await browser.close();
+        
     }
 
     //await system.execShellCommand(`find . -name "${baseXLS}" -type f -delete`);
