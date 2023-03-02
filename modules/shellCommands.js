@@ -8,10 +8,10 @@ var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
 
 module.exports.cdAndLs = `cd ${directory} && ls`;
-module.exports.getGitCommits = `git log --name-status --no-merges --perl-regexp --author='${yourKey.toLowerCase()}|${yourKey.toUpperCase()}' --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h' --all`;
+module.exports.getGitCommits = `git whatchanged -p -w --name-status --no-merges --perl-regexp --author='${yourKey.toLowerCase()}|${yourKey.toUpperCase()}' --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h' --all`;
 module.exports.generateGitCommits = (projectName) => { return `cd ${directory}/${projectName} && ${this.getGitCommits}`; }
 
-module.exports.getGitCommitsOutput = `git log --name-status --no-merges --perl-regexp --author='${yourKey.toLowerCase()}|${yourKey.toUpperCase()}' --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h' --all> ${directoryOF}/input.txt`;
+module.exports.getGitCommitsOutput = `git whatchanged -p -w --name-status --no-merges --perl-regexp --author='${yourKey.toLowerCase()}|${yourKey.toUpperCase()}' --after=${choosenDate} --before=${otherDate} --pretty=format:'commit: #%h' --all> ${directoryOF}/input.txt`;
 module.exports.generateGitCommitsOutput = (projectName) => { return `cd ${directory}/${projectName} && ${this.getGitCommitsOutput}`; }
 
-module.exports.getFullReportGit = (projectName) => { return `cd ${directory}/${projectName} && git log --no-merges --graph --stat --perl-regexp --author='${yourKey.toLowerCase()}|${yourKey.toUpperCase()}' --after=${choosenDate} --pretty=format:'%as - #%h - %s %cn' --all`; }
+module.exports.getFullReportGit = (projectName) => { return `cd ${directory}/${projectName} && git whatchanged -p -w --no-merges --graph --stat --perl-regexp --author='${yourKey.toLowerCase()}|${yourKey.toUpperCase()}' --after=${choosenDate} --pretty=format:'%as - #%h - %s %cn' --all`; }

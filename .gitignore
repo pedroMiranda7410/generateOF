@@ -10,3 +10,5 @@ config/userConfig.json
 *.txt
 *.zip
 *.pdf
+
+ponto.js

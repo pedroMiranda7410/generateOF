@@ -321,6 +321,7 @@ async function processLineByLine() {
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
       tmpResult = fileManager.writeToFiles(alterPythonQTD, alterPythonPoints, alterPythonOptions, tmpFile, alterPython, alterPythonTXT, worksheet, rowCounter);
       tmpFile = tmpResult.tmpFile; rowCounter = tmpResult.rowCounter;
+      
       if (othersQTD > 0)
         tmpFile += `${othersTXT}\n ${others}\n`;
 

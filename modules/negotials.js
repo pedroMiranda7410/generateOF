@@ -85,74 +85,79 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
 
     var arr = line.split(".");
     var extension = arr[arr.length - 1];
+    let filename = `${line.substring(1)}#${hashCommit}\n`;
+
+    if (!filename.includes(projectName)) {
+      filename = (projectName + filename).replace(/\s/g, "");
+    }
 
     if (type == "M" && (extension == "js" || extension == "ts")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTest += filename;
         createJavaTestQTD++;
       } else {
-        alterJS += `${line.substring(1)}#${hashCommit}\n`;
+        alterJS += filename;
         gitFiles.push(line + " (+" + alterJSPoints + "pts)");
         alterJSQTD++;
       }
     } else if (type == "A" && (extension == "js" || extension == "ts")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTest += filename;
         createJavaTestQTD++;
       } else {
-        createJS += `${line.substring(1)}#${hashCommit}\n`;
+        createJS += filename;
         gitFiles.push(line + " (+" + createJSPoints + "pts)");
         createJSQTD++;
       }
     } else if (type == "M" && (extension == "css" || extension == "scss")) {
-      alterCSS += `${line.substring(1)}#${hashCommit}\n`;
+      alterCSS += filename;
       gitFiles.push(line + " (+" + alterCSSPoints + "pts)");
       alterCSSQTD++;
     } else if (type == "A" && (extension == "css" || extension == "scss")) {
-      createCSS += `${line.substring(1)}#${hashCommit}\n`;
+      createCSS += filename;
       gitFiles.push(line + " (+" + createCSSPoints + "pts)");
       createCSSQTD++;
     } else if (type == "M" && extension == "java") {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTest += filename;
         gitFiles.push(line + " (+" + createJavaTestPoints + "pts)");
         createJavaTestQTD++;
       } else {
-        alterJava += `${line.substring(1)}#${hashCommit}\n`;
+        alterJava += filename;
         gitFiles.push(line + " (+" + alterJavaPoints + "pts)");
         alterJavaQTD++;
       }
     } else if (type == "A" && extension == "java") {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTest += filename;
         createJavaTestQTD++;
       } else {
-        createJava += `${line.substring(1)}#${hashCommit}\n`;
+        createJava += filename;
         gitFiles.push(line + " (+" + createJavaPoints + "pts)");
         createJavaQTD++;
       }
     } else if ((type.lastIndexOf('R') > 0 || type == "D") && extension == "java") {
-      alterJavaComp += `${line.substring(1)}#${hashCommit}\n`;
+      alterJavaComp += filename;
       gitFiles.push(line + " (+" + alterJavaCompPoints + "pts)");
       alterJavaCompQTD++;
     } else if (type == "M" && (extension == "html" || extension == "xhtml")) {
-      alterHTML += `${line.substring(1)}#${hashCommit}\n`;
+      alterHTML += filename;
       gitFiles.push(line + " (+" + alterHTMLPoints + "pts)");
       alterHTMLQTD++;
     } else if (type == "A" && (extension == "html" || extension == "xhtml")) {
-      createHTML += `${line.substring(1)}#${hashCommit}\n`;
+      createHTML += filename;
       gitFiles.push(line + " (+" + createHTMLPoints + "pts)");
       createHTMLQTD++;
     } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml'))) {
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
-          alterXML += `${line.substring(1)}#${hashCommit}\n`;
+          alterXML += filename;
           gitFiles.push(line + " (+" + alterXMLPoints + "pts)");
           alterXMLQTD++;
         }
       } else {
-        alterXML += `${line.substring(1)}#${hashCommit}\n`;
+        alterXML += filename;
         gitFiles.push(line + " (+" + alterXMLPoints + "pts)");
         alterXMLQTD++;
       }
@@ -161,35 +166,35 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
-          createXML += `${line.substring(1)}#${hashCommit}\n`;
+          createXML += filename;
           gitFiles.push(line + " (+" + createXMLPoints + "pts)");
           createXMLQTD++;
         }
       } else {
-        createXML += `${line.substring(1)}#${hashCommit}\n`;
+        createXML += filename;
         gitFiles.push(line + " (+" + createXMLPoints + "pts)");
         createXMLQTD++;
       }
 
     } else if ((type == "M" || type == "A") && (extension == "sql")) {
-      createSQL += `${line.substring(1)}#${hashCommit}\n`;
+      createSQL += filename;
       gitFiles.push(line + " (+" + createSQLPoints + "pts)");
       createSQLQTD++;
     } else if (type == "M" && (extension == "py")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTest += filename;
         createJavaTestQTD++;
       } else {
-        alterPython += `${line.substring(1)}#${hashCommit}\n`;
+        alterPython += filename;
         gitFiles.push(line + " (+" + alterPythonPoints + "pts)");
         alterPythonQTD++;
       }
     } else if (type == "A" && (extension == "py")) {
       if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
-        createJavaTest += `${line.substring(1)}#${hashCommit}\n`;
+        createJavaTest += filename;
         createJavaTestQTD++;
       } else {
-        createPython += `${line.substring(1)}#${hashCommit}\n`;
+        createPython += filename;
         gitFiles.push(line + " (+" + createPythonPoints + "pts)");
         createPythonQTD++;
       }
