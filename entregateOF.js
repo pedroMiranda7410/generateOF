@@ -128,7 +128,7 @@ async function readXLS() {
                     selector = 'li[aria-label="' + componente + '"]';
                     await pageGenti.click(selector, { delay: delayMedNetwork });
 
-                    selector = 'textarea[rows="7"]';
+                    selector = 'textarea[rows="8"]';
                     await pageGenti.type(selector, arquivos);
                     pageGenti.keyboard.press('Enter');
 
