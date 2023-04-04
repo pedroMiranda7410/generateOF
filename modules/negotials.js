@@ -40,6 +40,7 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.vscode')
     && !line.includes('.editorconfig')
     && !line.includes('.DS_Store')
+    && !line.includes('/lib/')
   ) {
     return true;
   }
