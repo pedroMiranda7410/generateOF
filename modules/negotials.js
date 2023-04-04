@@ -24,6 +24,7 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.env')
     && !line.includes('.csv')
     && !line.includes('.gitignore')
+    && !line.includes('.gitkeep')
     && !line.includes('mvnw')
     && !line.includes('jacoco')
     && !line.includes('coverage')
@@ -41,6 +42,7 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.editorconfig')
     && !line.includes('.DS_Store')
     && !line.includes('/venv')
+    && !line.includes('/__pycache__')
   ) {
     return true;
   }
@@ -177,7 +179,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         createXMLQTD++;
       }
 
-    } else if ((type == "M" || type == "A") && (extension == "sql")) {
+    } else if ((type == "M" || type == "A") && (extension == "sql" || extension == "sqlite")) {
       createSQL += filename;
       gitFiles.push(line + " (+" + createSQLPoints + "pts)");
       createSQLQTD++;
