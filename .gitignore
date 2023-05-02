@@ -6,7 +6,7 @@ passwords.json
 user.json
 user2.json
 config/userConfig.json
-*.xlsx
+SimuladorBase2.xlsx
 *.txt
 *.zip
 *.pdf
