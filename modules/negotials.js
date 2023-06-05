@@ -43,6 +43,7 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.DS_Store')
     && !line.includes('/venv')
     && !line.includes('venv/lib/')
+    && !line.includes('venv/bin/')
     && !line.includes('/__pycache__')
   ) {
     return true;
@@ -152,7 +153,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       createHTML += filename;
       gitFiles.push(line + " (+" + createHTMLPoints + "pts)");
       createHTMLQTD++;
-    } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml'))) {
+    } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml') || line.includes('.ipynb'))) {
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
@@ -166,7 +167,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         alterXMLQTD++;
       }
 
-    } else if (type == "A" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml'))) {
+    } else if (type == "A" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml') || line.includes('.ipynb'))) {
 
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
