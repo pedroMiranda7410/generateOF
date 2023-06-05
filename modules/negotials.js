@@ -42,6 +42,7 @@ module.exports.checkValidLineFromCommit = (line) => {
     && !line.includes('.editorconfig')
     && !line.includes('.DS_Store')
     && !line.includes('/venv')
+    && !line.includes('venv/lib/')
     && !line.includes('/__pycache__')
   ) {
     return true;
