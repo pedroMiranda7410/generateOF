@@ -4,6 +4,9 @@ const system = require('./system.js');
 const fs = require('fs');
 
 var directoryOF = userConfig.directoryOF;
+var chave = user.chave;
+var numeroOF = user.numeroOF;
+var numeroOrdemContratacao = user.numeroOrdemContratacao;
 var choosenDate = user.choosenDate;
 var otherDate = user.otherDate;
 var tasks = user.tasks;
@@ -127,6 +130,9 @@ module.exports.updateUserJsonFile = async (points, files) => {
         baseSheet = "Orçamento";
 
     var userJsonFile = `{
+      "chave": "${chave}",
+      "numeroOF": "${numeroOF}",
+      "numeroOrdemContratacao": ${numeroOrdemContratacao},
       "choosenDate": "${choosenDate}",
       "otherDate": "${otherDate}",
       "operations": ${opStr},

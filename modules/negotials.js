@@ -1,6 +1,6 @@
-const user = require('../user.json');
-const pointsList = require('../modules/pointsList.json');
-const fileManager = require('../modules/fileManager.js');
+const user = require("../user.json");
+const pointsList = require("../modules/pointsList.json");
+const fileManager = require("../modules/fileManager.js");
 
 var tasks = user.tasks;
 var operations = user.operations;
@@ -17,89 +17,139 @@ var operationList = [operationOptions];
 var repositoryList = [repositoryOptions];
 
 module.exports.checkValidLineFromCommit = (line) => {
-
-  if (!line.includes('node_modules')
-    && !line.includes('www')
-    && !line.includes('target')
-    && !line.includes('.env')
-    && !line.includes('.csv')
-    && !line.includes('.gitignore')
-    && !line.includes('.gitkeep')
-    && !line.includes('mvnw')
-    && !line.includes('jacoco')
-    && !line.includes('coverage')
-    && !line.includes('wrapper')
-    && !line.includes('.classpath')
-    && !line.includes('.project')
-    && !line.includes('.settings')
-    && !line.includes('.dockerignore')
-    && !line.includes('.bbdev')
-    && !line.includes('.idea')
-    && !line.includes('WebContent')
-    && !line.includes('.md')
-    && !line.includes('package-lock')
-    && !line.includes('.vscode')
-    && !line.includes('.editorconfig')
-    && !line.includes('.DS_Store')
-    && !line.includes('/venv')
-    && !line.includes('venv/')
-    && !line.includes('venv/lib/')
-    && !line.includes('venv/bin/')
-    && !line.includes('/__pycache__')
-    && !line.includes('__pycache__/')
+  if (
+    !line.includes("node_modules") &&
+    !line.includes("www") &&
+    !line.includes("target") &&
+    !line.includes(".env") &&
+    !line.includes(".csv") &&
+    !line.includes(".gitignore") &&
+    !line.includes(".gitkeep") &&
+    !line.includes("mvnw") &&
+    !line.includes("jacoco") &&
+    !line.includes("coverage") &&
+    !line.includes("wrapper") &&
+    !line.includes(".classpath") &&
+    !line.includes(".project") &&
+    !line.includes(".settings") &&
+    !line.includes(".dockerignore") &&
+    !line.includes(".bbdev") &&
+    !line.includes(".idea") &&
+    !line.includes("WebContent") &&
+    !line.includes(".md") &&
+    !line.includes("package-lock") &&
+    !line.includes(".vscode") &&
+    !line.includes(".editorconfig") &&
+    !line.includes(".DS_Store") &&
+    !line.includes("/venv") &&
+    !line.includes("venv/") &&
+    !line.includes("venv/lib/") &&
+    !line.includes("venv/bin/") &&
+    !line.includes("/__pycache__") &&
+    !line.includes("__pycache__/")
   ) {
     return true;
   }
 
   return false;
+};
 
-}
-
-module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInput, hashCommit,
-  alterJS, alterJSPoints, alterJSQTD,
-  createJS, createJSPoints, createJSQTD,
-  alterCSS, alterCSSPoints, alterCSSQTD,
-  createCSS, createCSSPoints, createCSSQTD,
-  createJavaTest, createJavaTestPoints, createJavaTestQTD,
-  createJava, createJavaPoints, createJavaQTD,
-  alterJava, alterJavaPoints, alterJavaQTD,
-  alterJavaComp, alterJavaCompPoints, alterJavaCompQTD,
-  alterHTML, alterHTMLPoints, alterHTMLQTD,
-  createHTML, createHTMLPoints, createHTMLQTD,
-  alterXML, alterXMLPoints, alterXMLQTD,
-  createXML, createXMLPoints, createXMLQTD,
-  createShell, createShellPoints, createShellQTD,
-  alterShell, alterShellPoints, alterShellQTD,
-  createSQL, createSQLPoints, createSQLQTD,
-  createPython, createPythonPoints, createPythonQTD,
-  alterPython, alterPythonPoints, alterPythonQTD,
-  others, othersQTD
+module.exports.detectFilesCategory = (
+  line,
+  projectName,
+  gitFiles,
+  linesFromInput,
+  hashCommit,
+  alterJS,
+  alterJSPoints,
+  alterJSQTD,
+  createJS,
+  createJSPoints,
+  createJSQTD,
+  alterCSS,
+  alterCSSPoints,
+  alterCSSQTD,
+  createCSS,
+  createCSSPoints,
+  createCSSQTD,
+  createJavaTest,
+  createJavaTestPoints,
+  createJavaTestQTD,
+  createJava,
+  createJavaPoints,
+  createJavaQTD,
+  alterJava,
+  alterJavaPoints,
+  alterJavaQTD,
+  alterJavaComp,
+  alterJavaCompPoints,
+  alterJavaCompQTD,
+  alterHTML,
+  alterHTMLPoints,
+  alterHTMLQTD,
+  createHTML,
+  createHTMLPoints,
+  createHTMLQTD,
+  alterXML,
+  alterXMLPoints,
+  alterXMLQTD,
+  createXML,
+  createXMLPoints,
+  createXMLQTD,
+  createShell,
+  createShellPoints,
+  createShellQTD,
+  alterShell,
+  alterShellPoints,
+  alterShellQTD,
+  createSQL,
+  createSQLPoints,
+  createSQLQTD,
+  createPython,
+  createPythonPoints,
+  createPythonQTD,
+  alterPython,
+  alterPythonPoints,
+  alterPythonQTD,
+  others,
+  othersQTD
 ) => {
-
   linesFromInput.push(line);
 
   var n = line.lastIndexOf("src");
   var a = line.lastIndexOf("pom");
   var b = line.lastIndexOf("values");
 
-  if (n > 0) { line = line.substring(0, n) + projectName + line.substring(n); }
-  else if (a > 0) { line = line.substring(0, a) + projectName + line.substring(a); }
-  else if (b > 0) { line = line.substring(0, b) + projectName + line.substring(b); }
+  if (n > 0) {
+    line = line.substring(0, n) + projectName + line.substring(n);
+  } else if (a > 0) {
+    line = line.substring(0, a) + projectName + line.substring(a);
+  } else if (b > 0) {
+    line = line.substring(0, b) + projectName + line.substring(b);
+  }
 
   var type = line.charAt(0);
 
-  if ((line.lastIndexOf(".") > 0) || line.includes("Dockerfile") || line.includes("Jenkinsfile")) {
-
+  if (
+    line.lastIndexOf(".") > 0 ||
+    line.includes("Dockerfile") ||
+    line.includes("Jenkinsfile")
+  ) {
     var arr = line.split(".");
     var extension = arr[arr.length - 1];
     let filename = `${line.substring(1)}#${hashCommit}\n`;
 
-    if (!filename.includes(projectName)) {
+    if (
+      !filename.includes(projectName) ||
+      filename.includes('des-') ||
+      filename.includes('hml-') ||
+      filename.includes('prd-')
+    ) {
       filename = (projectName + filename).replace(/\s/g, "");
     }
 
     if (type == "M" && (extension == "js" || extension == "ts")) {
-      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+      if (line.lastIndexOf("test") > 0 || line.lastIndexOf("Test") > 0) {
         createJavaTest += filename;
         createJavaTestQTD++;
       } else {
@@ -108,7 +158,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         alterJSQTD++;
       }
     } else if (type == "A" && (extension == "js" || extension == "ts")) {
-      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+      if (line.lastIndexOf("test") > 0 || line.lastIndexOf("Test") > 0) {
         createJavaTest += filename;
         createJavaTestQTD++;
       } else {
@@ -125,7 +175,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       gitFiles.push(line + " (+" + createCSSPoints + "pts)");
       createCSSQTD++;
     } else if (type == "M" && extension == "java") {
-      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+      if (line.lastIndexOf("test") > 0 || line.lastIndexOf("Test") > 0) {
         createJavaTest += filename;
         gitFiles.push(line + " (+" + createJavaTestPoints + "pts)");
         createJavaTestQTD++;
@@ -135,7 +185,7 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         alterJavaQTD++;
       }
     } else if (type == "A" && extension == "java") {
-      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+      if (line.lastIndexOf("test") > 0 || line.lastIndexOf("Test") > 0) {
         createJavaTest += filename;
         createJavaTestQTD++;
       } else {
@@ -143,7 +193,10 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         gitFiles.push(line + " (+" + createJavaPoints + "pts)");
         createJavaQTD++;
       }
-    } else if ((type.lastIndexOf('R') > 0 || type == "D") && extension == "java") {
+    } else if (
+      (type.lastIndexOf("R") > 0 || type == "D") &&
+      extension == "java"
+    ) {
       alterJavaComp += filename;
       gitFiles.push(line + " (+" + alterJavaCompPoints + "pts)");
       alterJavaCompQTD++;
@@ -155,8 +208,18 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       createHTML += filename;
       gitFiles.push(line + " (+" + createHTMLPoints + "pts)");
       createHTMLQTD++;
-    } else if (type == "M" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml') || line.includes('.ipynb'))) {
-
+    } else if (
+      type == "M" &&
+      (extension == "xml" ||
+        extension == "yaml" ||
+        extension == "minimal" ||
+        extension == "properties" ||
+        extension == "json" ||
+        line.includes("Dockerfile") ||
+        line.includes("Jenkinsfile") ||
+        line.includes(".iml") ||
+        line.includes(".ipynb"))
+    ) {
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
           alterXML += filename;
@@ -168,9 +231,18 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         gitFiles.push(line + " (+" + alterXMLPoints + "pts)");
         alterXMLQTD++;
       }
-
-    } else if (type == "A" && (extension == "xml" || extension == "yaml" || extension == "minimal" || extension == "properties" || extension == "json" || line.includes('Dockerfile') || line.includes('Jenkinsfile') || line.includes('.iml') || line.includes('.ipynb'))) {
-
+    } else if (
+      type == "A" &&
+      (extension == "xml" ||
+        extension == "yaml" ||
+        extension == "minimal" ||
+        extension == "properties" ||
+        extension == "json" ||
+        line.includes("Dockerfile") ||
+        line.includes("Jenkinsfile") ||
+        line.includes(".iml") ||
+        line.includes(".ipynb"))
+    ) {
       if (extension == "minimal") {
         if (line.split(".")[2].split("#")[0] == "yaml") {
           createXML += filename;
@@ -182,13 +254,15 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         gitFiles.push(line + " (+" + createXMLPoints + "pts)");
         createXMLQTD++;
       }
-
-    } else if ((type == "M" || type == "A") && (extension == "sql" || extension == "sqlite")) {
+    } else if (
+      (type == "M" || type == "A") &&
+      (extension == "sql" || extension == "sqlite")
+    ) {
       createSQL += filename;
       gitFiles.push(line + " (+" + createSQLPoints + "pts)");
       createSQLQTD++;
-    } else if (type == "M" && (extension == "py")) {
-      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+    } else if (type == "M" && extension == "py") {
+      if (line.lastIndexOf("test") > 0 || line.lastIndexOf("Test") > 0) {
         createJavaTest += filename;
         createJavaTestQTD++;
       } else {
@@ -196,8 +270,8 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
         gitFiles.push(line + " (+" + alterPythonPoints + "pts)");
         alterPythonQTD++;
       }
-    } else if (type == "A" && (extension == "py")) {
-      if (line.lastIndexOf('test') > 0 || line.lastIndexOf('Test') > 0) {
+    } else if (type == "A" && extension == "py") {
+      if (line.lastIndexOf("test") > 0 || line.lastIndexOf("Test") > 0) {
         createJavaTest += filename;
         createJavaTestQTD++;
       } else {
@@ -209,7 +283,6 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
       others += `${line}#${hashCommit}\n`;
       othersQTD++;
     }
-
   } else {
     others += `${line}#${hashCommit}\n`;
     othersQTD++;
@@ -273,46 +346,92 @@ module.exports.detectFilesCategory = (line, projectName, gitFiles, linesFromInpu
     alterPythonPoints: alterPythonPoints,
     alterPythonQTD: alterPythonQTD,
     others: others,
-    othersQTD: othersQTD
-  }
+    othersQTD: othersQTD,
+  };
 
   return obj;
-
-}
+};
 
 module.exports.addRitosPoints = (SISBBPoints, rowCounter, worksheet) => {
+  if (
+    operations &&
+    operations.length > 0 &&
+    operations.every(function (i) {
+      return i != "\n";
+    })
+  )
+    SISBBPoints += pointsList.points[16].value * operations.length;
 
-  if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
-    SISBBPoints += (pointsList.points[16].value * operations.length);
+  if (
+    repositories &&
+    repositories.length > 0 &&
+    repositories.every(function (i) {
+      return i != "\n";
+    })
+  )
+    SISBBPoints += pointsList.points[17].value * repositories.length;
 
-  if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
-    SISBBPoints += (pointsList.points[17].value * repositories.length);
-
-  if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; })) {
-    SISBBPoints += (pointsList.points[11].value * tasks.length);
-    SISBBPoints += (pointsList.points[12].value * tasks.length);
-    SISBBPoints += (pointsList.points[13].value * tasks.length);
+  if (
+    tasks &&
+    tasks.length > 0 &&
+    tasks.every(function (i) {
+      return i != "\n";
+    })
+  ) {
+    SISBBPoints += pointsList.points[11].value * tasks.length;
+    SISBBPoints += pointsList.points[12].value * tasks.length;
+    SISBBPoints += pointsList.points[13].value * tasks.length;
   }
 
   if (rowCounter != null) {
+    if (
+      operations &&
+      operations.length > 0 &&
+      operations.every(function (i) {
+        return i != "\n";
+      })
+    )
+      rowCounter = fileManager.addHistoryRito(
+        operations,
+        operationList,
+        worksheet,
+        rowCounter
+      );
 
-    if (operations && operations.length > 0 && operations.every(function (i) { return i != "\n"; }))
-      rowCounter = fileManager.addHistoryRito(operations, operationList, worksheet, rowCounter);
+    if (
+      repositories &&
+      repositories.length > 0 &&
+      repositories.every(function (i) {
+        return i != "\n";
+      })
+    )
+      rowCounter = fileManager.addHistoryRito(
+        repositories,
+        repositoryList,
+        worksheet,
+        rowCounter
+      );
 
-    if (repositories && repositories.length > 0 && repositories.every(function (i) { return i != "\n"; }))
-      rowCounter = fileManager.addHistoryRito(repositories, repositoryList, worksheet, rowCounter);
-
-    if (tasks && tasks.length > 0 && tasks.every(function (i) { return i != "\n"; }))
-      rowCounter = fileManager.addHistoryRito(tasks, ritosList, worksheet, rowCounter);
-
+    if (
+      tasks &&
+      tasks.length > 0 &&
+      tasks.every(function (i) {
+        return i != "\n";
+      })
+    )
+      rowCounter = fileManager.addHistoryRito(
+        tasks,
+        ritosList,
+        worksheet,
+        rowCounter
+      );
   }
 
   var jsonReturn = {
-    "SISBBPoints": SISBBPoints,
-    "rowCounter": rowCounter,
-    "worksheet": worksheet
+    SISBBPoints: SISBBPoints,
+    rowCounter: rowCounter,
+    worksheet: worksheet,
   };
 
   return jsonReturn;
-
-}
+};

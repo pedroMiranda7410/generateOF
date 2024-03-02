@@ -3,6 +3,8 @@
         {
             "name": "CRIAÇÃO_DE_JAVA\n",
             "value": 5.5,
+            "code": "5.10.9",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -14,6 +16,8 @@
         {
             "name": "ALTERAÇÃO_DE_JAVA\n",
             "value": 3.5,
+            "code": "5.10.10",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -25,6 +29,8 @@
         {
             "name": "ALTERAÇÃO_DE_JAVA_COMPONENTE\n",
             "value": 9,
+            "code": "5.10.20",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -36,6 +42,8 @@
         {
             "name": "CRIAÇÃO_DE_TESTES\n",
             "value": 8,
+            "code": "5.10.18",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -47,6 +55,8 @@
         {
             "name": "CRIAÇÃO_DE_HTML\n",
             "value": 10,
+            "code": "5.10.1",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -58,6 +68,8 @@
         {
             "name": "ALTERAÇÃO_DE_HTML\n",
             "value": 5,
+            "code": "5.10.2",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -69,6 +81,8 @@
         {
             "name": "CRIAÇÃO_DE_JS\n",
             "value": 10,
+            "code": "5.10.5",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -80,6 +94,8 @@
         {
             "name": "ALTERAÇÃO_DE_JS\n",
             "value": 5,
+            "code": "5.10.6",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -91,6 +107,8 @@
         {
             "name": "CRIAÇÃO_DE_XML\n",
             "value": 10,
+            "code": "5.10.7",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -102,6 +120,8 @@
         {
             "name": "ALTERAÇÃO_DE_XML\n",
             "value": 5,
+            "code": "5.10.8",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -116,6 +136,8 @@
         {
             "name": "PARTICIPAÇÃO_DE_RITOS",
             "value": 19,
+            "code": "5.17.6",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Tarefas correlacionadas à Implementação",
@@ -127,6 +149,8 @@
         {
             "name": "REFINAMENTO_DE_REQUISITOS",
             "value": 17,
+            "code": "5.17.7",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Tarefas correlacionadas à Implementação",
@@ -138,6 +162,8 @@
         {
             "name": "REFINAMENTO_DE_REQUISITOS",
             "value": 9,
+            "code": "5.17.8",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Tarefas correlacionadas à Implementação",
@@ -149,6 +175,8 @@
         {
             "name": "CRIAÇÃO_DE_CSS\n",
             "value": 8,
+            "code": "5.10.3",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -160,6 +188,8 @@
         {
             "name": "ALTERAÇÃO_DE_CSS\n",
             "value": 4,
+            "code": "5.10.4",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Plataforma Distribuída",
@@ -171,6 +201,8 @@
         {
             "name": "CRIAÇÃO_DE_OPERAÇÃO\n",
             "value": 40,
+            "code": "5.23.15",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Softwares para Integração de Ambiente Tradicional e Cloud",
@@ -182,6 +214,8 @@
         {
             "name": "CRIAÇÃO_DE_REPOSITÓRIO\n",
             "value": 30,
+            "code": "5.19.4",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Serviços de integração externa",
@@ -193,6 +227,8 @@
         {
             "name": "CRIAÇÃO_DE_SCRIPTS_SHELL\n",
             "value": 4,
+            "code": "5.15.1",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Software de Infraestrutura",
@@ -204,6 +240,8 @@
         {
             "name": "ALTERAÇÃO_DE_SCRIPTS_SHELL\n",
             "value": 2,
+            "code": "5.15.2",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Software de Infraestrutura",
@@ -215,6 +253,8 @@
         {
             "name": "CRIAÇÃO_DE_SCRIPTS_SQL\n",
             "value": 16,
+            "code": "4.7.5",
+            "complexity": "Padrão",
             "options": [
                 "ANÁLISE E PROJETO DE SOFTWARE",
                 "Modelagem estatística",
@@ -226,6 +266,8 @@
         {
             "name": "CRIAÇÃO_DE_PYTHON\n",
             "value": 9,
+            "code": "5.15.3",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Software de Infraestrutura",
@@ -237,6 +279,8 @@
         {
             "name": "ALTERAÇÃO_DE_PYTHON\n",
             "value": 4,
+            "code": "5.15.4",
+            "complexity": "Padrão",
             "options": [
                 "IMPLEMENTAÇÃO DE SOFTWARE",
                 "Software de Infraestrutura",
